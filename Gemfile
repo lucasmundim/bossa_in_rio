@@ -31,3 +31,7 @@ gem 'ruby-debug19', :require => 'ruby-debug'
 
 # Javascript runtime
 gem "therubyracer", :require => 'v8'
+
+# Mongoid
+gem "mongoid", "~> 2.3"
+gem "bson_ext", "~> 1.4"
