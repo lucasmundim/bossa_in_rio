@@ -35,3 +35,4 @@ gem "therubyracer", :require => 'v8'
 # Mongoid
 gem "mongoid", "~> 2.3"
 gem "bson_ext", "~> 1.4"
+gem 'mongoid_globalize'
