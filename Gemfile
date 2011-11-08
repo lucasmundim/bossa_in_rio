@@ -37,10 +37,14 @@ gem "mongoid", "~> 2.3"
 gem "bson_ext", "~> 1.4"
 gem 'mongoid_globalize'
 
-# Rspec
-gem 'rspec-rails', '>= 2.7.0', :group => [:development, :test]
-# use the database_cleaner gem to reset the test database
-gem 'database_cleaner', '>= 0.6.7', :group => :test
-# include RSpec matchers from the mongoid-rspec gem
-gem 'mongoid-rspec', '>= 1.4.4', :group => :test
-gem 'factory_girl_rails', '>= 1.3.0', :group => :test
+group :test do
+  # Rspec
+  gem 'rspec-rails', '>= 2.7.0', :group => [:development, :test]
+  # use the database_cleaner gem to reset the test database
+  gem 'database_cleaner', '>= 0.6.7', :group => :test
+  # include RSpec matchers from the mongoid-rspec gem
+  gem 'mongoid-rspec', '>= 1.4.4', :group => :test
+  gem 'factory_girl_rails', '>= 1.3.0', :group => :test
+
+  gem 'capybara'
+end
