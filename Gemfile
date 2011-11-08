@@ -37,6 +37,8 @@ gem "mongoid", "~> 2.3"
 gem "bson_ext", "~> 1.4"
 gem 'mongoid_globalize'
 
+gem 'RedCloth'
+
 group :test do
   # Rspec
   gem 'rspec-rails', '>= 2.7.0', :group => [:development, :test]
