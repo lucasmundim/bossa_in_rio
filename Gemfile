@@ -35,6 +35,9 @@ gem "therubyracer", :require => 'v8'
 # Mongoid
 gem "mongoid", "~> 2.3"
 gem "bson_ext", "~> 1.4"
+
+# I18n
+gem 'rails-i18n'
 gem 'mongoid_globalize'
 
 gem 'RedCloth'
