@@ -1,8 +1,14 @@
 class Snippet
   include Mongoid::Document
+  include Mongoid::Globalize
 
   field :section
-  field :body
+  
+  translates do
+    field :body
+  end
+  
+  accepts_nested_attributes_for :translations
   
   validates_presence_of :section
   validates_uniqueness_of :section

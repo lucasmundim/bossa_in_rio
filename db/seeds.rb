@@ -10,21 +10,27 @@
 
 Page.create :slug => :home, :snippets_attributes => [
   {
-    :section => :bottom_left, :body => %(
+    :section => :bottom_left,
+    :translations => [{
+      :locale => 'pt-BR',
+      :body => %(
 h1(destaque). Bem-vindo ao <br>Bossa in Rio Hostel
 
 h3. Rio de Janeiro | Brasil
 
-Desenhado para satisfazer todas as suas expectativas e proporcionar uma estada inesquecível, num ambiente requintado, com atmosfera propensa a amizade.
-)
+Desenhado para satisfazer todas as suas expectativas e proporcionar uma estada inesquecível, num ambiente requintado, com atmosfera propensa a amizade.)
+    }]
   },
   {
-    :section => :bottom_right, :body => %(
+    :section => :bottom_right,
+    :translations => [{
+      :locale => 'pt-BR',
+      :body => %(
 h2(destaque). Estamos no bairro <br> mais charmoso do Rio
 
 h3. Rio de Janeiro | Brasil
 
-Repleto de arte, lojas, bares e restaurantes. Suas ruas recebem festivais de artes e gastronomia, blocos de carnaval, apresentações de samba e cultura.
-)
+Repleto de arte, lojas, bares e restaurantes. Suas ruas recebem festivais de artes e gastronomia, blocos de carnaval, apresentações de samba e cultura.)
+    }]
   }
 ]
