@@ -6,6 +6,9 @@ class Page
   embeds_many :snippets
 
   accepts_nested_attributes_for :snippets
+  
+  validates_presence_of :slug
+  validates_uniqueness_of :slug
 
   class << self
     def from_slug(slug)
