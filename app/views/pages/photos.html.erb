@@ -1,0 +1,48 @@
+<div class="tituloSecao">
+  <h2>Fotos</h2>
+</div>
+
+<div class="conteudoPrincipal">
+  <h3>Formulário</h3>
+
+  <p>Nosso bar funciona até meia noite, para que os que planejam sair já possam chegar animados nas festas, e para os que pretendem descansar tenham uma boa noite de sono.</p>
+
+  <h3>Bar</h3>
+
+  <p>Nosso bar funciona até meia noite, para que os que planejam sair já possam chegar animados nas festas, e para os que pretendem descansar tenham uma boa noite de sono.</p>
+  <p>Servimos á preços justos, caipirinhas, drinks internacionais, cervejas, refrigerantes e sucos.</p>
+
+  <h4>Cozinha coletiva</h4>
+
+  <p>Nosso bar funciona até meia noite, para que os que planejam sair já possam chegar animados nas festas, e para os que pretendem descansar tenham uma boa noite de sono.</p>
+</div><!-- conteudoPrincipal -->
+
+<div class="conteudoSecundario">
+  <h3>Fotos Tal</h3>
+  <% @page.photos.each do |photo| %>
+    <div class="fotoGaleria">
+      <%= link_to photo.image.url, :class => "fancybox", :title => photo.caption, :rel => 'photos' do %>
+        <%= image_tag photo.image.thumb.url, :alt => photo.caption, :title => photo.caption %>
+      <% end %>
+    </div>
+  <% end %>
+  <div class="clear"></div>
+</div><!-- /conteudoSecundario -->
+<div class="clear"></div>
+
+<div class="conteudoPrincipalTotal">
+  <h3>Áreas Comuns</h3>
+
+  <p>As áreas comuns são agradáveis e ideais para a confraternização. Em nossa sala, você poderá acompanhar os principais campeonatos esportivos internacionais, além de assistir filmes e seriados em uma TV tela plana de 42 polegadas.</p>
+  <p>Também oferecemos mesa de sinuca, jogos de tabuleiro e lounge, além de violão e instrumentos de percussão.</p>
+  <p>Temos um ambiente convidativo pra você curtir aquele dia de descanso, ou de chuva.</p>
+
+  <h3>Bar</h3>
+
+  <p>Nosso bar funciona até meia noite, para que os que planejam sair já possam chegar animados nas festas, e para os que pretendem descansar tenham uma boa noite de sono.</p>
+  <p>Servimos á preços justos, caipirinhas, drinks internacionais, cervejas, refrigerantes e sucos.</p>
+
+  <h4>Cozinha coletiva</h4>
+
+  <p>Nosso bar funciona até meia noite, para que os que planejam sair já possam chegar animados nas festas, e para os que pretendem descansar tenham uma boa noite de sono.</p>
+</div><!-- /conteudoPrincipalTotal -->

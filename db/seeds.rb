@@ -8,6 +8,7 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
+#### Home Page
 Page.create :slug => :home, :snippets_attributes => [
   {
     :section => :bottom_left,
@@ -34,3 +35,9 @@ Repleto de arte, lojas, bares e restaurantes. Suas ruas recebem festivais de art
     }]
   }
 ]
+
+#### Photos Page
+page = Page.create :slug => :photos
+page.photos.create :caption => "A sample image", :image => File.open(Rails.root.join('spec/fixtures/my_photo.png'))
+page.photos.create :caption => "Another sample image", :image => File.open(Rails.root.join('spec/fixtures/my_photo.png'))
+page.photos.create :caption => "Yet another sample image", :image => File.open(Rails.root.join('spec/fixtures/my_photo.png'))

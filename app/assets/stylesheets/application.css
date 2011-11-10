@@ -3,6 +3,7 @@
  * and any sub-directories. You're free to add application-wide styles to this file and they'll appear at
  * the top of the compiled file, but it's generally better to create a new file per style scope.
  *= require_self
+ *= require fancybox
  *= require_tree .
 */
 
@@ -68,7 +69,7 @@ body#pgIn {
      -moz-box-shadow:0 0px 24px -11px #000;
           box-shadow:0 0px 24px -11px #000;
   position: relative;
-  z-index: 10000;
+  z-index: 100;
 }
 
 #footer {
@@ -110,7 +111,7 @@ body#pgIn {
   margin: 8px auto 0 auto;
   padding-top: 5px;
   position: relative;
-  z-index: 12000;
+  z-index: 120;
 }
 
 /* Navegacao do menu */
@@ -691,3 +692,5 @@ p {
 .redes p { font-size: 14px; line-height: 30px; margin: 0; font-weight: bold; color: #006699; }
 
 p.erroP { font-size: 12px; color:#ee0000; line-height: 14px; margin: 1px 0 8px 0; font-style: italic; }
+
+#fancybox-wrap tr { background-color: inherit }

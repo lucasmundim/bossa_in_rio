@@ -1,5 +1,8 @@
 BossaInRio::Application.routes.draw do
   root :to => 'pages#index'
+
+  match 'fotos' => 'pages#photos', :as => :photos
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
