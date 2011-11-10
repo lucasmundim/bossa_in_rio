@@ -6,9 +6,4 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require fancybox
-//= require_tree ./site
-
-$(document).ready(function() {
-  $("a.fancybox").fancybox();
-});
+//= require_tree ./admin

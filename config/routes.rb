@@ -1,4 +1,8 @@
 BossaInRio::Application.routes.draw do
+  namespace :admin do
+    resources :pages
+  end
+
   localized(I18n.available_locales, :verbose => true) do
     scope "/:i18n_locale", :constraints => {:i18n_locale => /#{I18n.available_locales.join('|')}/} do
       resources :pages
