@@ -1,0 +1,1 @@
+I18n.available_locales = [:"pt-BR", :"en", :"es", :"fr"]

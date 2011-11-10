@@ -1,0 +1,6 @@
+pt-BR:
+  path_names:
+    new: 'nova'
+    edit: 'editar'
+  resources:
+    pages: 'paginas'
