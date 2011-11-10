@@ -3,8 +3,18 @@ require "spec_helper"
 describe "Home Page" do
   let!(:home_page) do
     Page.create :slug => :home, :snippets_attributes => [
-      { :section => :bottom_left, :body => "Some contents here" },
-      { :section => :bottom_right, :body => "Some more contents here" }
+      {
+        :section => :bottom_left,
+        :translations => [
+          { :locale => 'pt-BR', :body => "Some contents here" }
+        ]
+      },
+      {
+        :section => :bottom_right,
+        :translations => [
+          { :locale => 'pt-BR', :body => "Some more contents here" }
+        ]
+      }
     ]
   end
 
