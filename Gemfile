@@ -42,6 +42,11 @@ gem 'mongoid_globalize'
 
 gem 'RedCloth'
 
+gem 'carrierwave'
+gem 'carrierwave-mongoid', :require => 'carrierwave/mongoid'
+
+gem 'rmagick'
+
 group :test do
   # Rspec
   gem 'rspec-rails', '>= 2.7.0', :group => [:development, :test]
