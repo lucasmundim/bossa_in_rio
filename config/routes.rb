@@ -1,6 +1,8 @@
 BossaInRio::Application.routes.draw do
   namespace :admin do
-    resources :pages
+    resources :pages, :only => [:index, :show] do
+      resources :snippets, :only => [:edit, :update]
+    end
   end
 
   localized(I18n.available_locales, :verbose => true) do
