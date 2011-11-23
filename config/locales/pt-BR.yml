@@ -4,3 +4,63 @@ pt-BR:
     edit: 'editar'
   resources:
     pages: 'paginas'
+  meta:
+    keywords: 'hostel, Rio, Rio de Janeiro, bossa'
+    description: 'Bossa in Rio Hostel'
+  header:
+    logo:
+      title: 'Bossa in Rio Hostel'
+  footer:
+    title: 'Bossa in Rio Hostel'
+    contacts:
+      title: 'Mantenha contato'
+      twitter: 'Siga-nos no Twitter'
+      facebook: 'Adicione no Facebook'
+    indications:
+      title: 'Bossa in Rio indica'
+    developed_by: 'Desenvolvido por'
+    where:
+      title: 'Onde estamos'
+      references: 'A 10 minutos do Cristo Redentor. <br>A 20 minutos de Copacabana.'
+  menu:
+    hostel:
+      title: 'Hostel'
+      submenus:
+        hostel:
+          title: 'O Hostel'
+        services:
+          title: 'Serviços'
+    facilities:
+      title: 'Instalações'
+      submenus:
+        suites:
+          title: 'Suítes'
+        dorms:
+          title: 'Quartos Coletivos'
+    photos:
+      title: 'Fotos'
+    location:
+      title: 'Localização'
+      submenus:
+        location:
+          title: 'Localização'
+        santa:
+          title: 'Santa Teresa'
+    reservation:
+      title: 'Reserva'
+    contact:
+      title: 'Contato'
+  pages:
+    home:
+      breakfast:
+        title: 'O tradicional café da manhã brasileiro, para começar bem o dia.'
+        body: 'Café da manhã'
+      wifi:
+        title: 'Computadores com acesso à internet e rede WiFi em todo o hostel.'
+        body: 'Banda larga'
+      air:
+        title: 'Clima fresco e agradável em todos os quartos e suítes do hostel.'
+        body: 'Ar condicionado'
+      security:
+        title: 'Armário individual, cofre e luggage storage, para sua tranquilidade.'
+        body: 'Segurança'

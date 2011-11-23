@@ -4,8 +4,8 @@
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
   <title>Bossa in Rio Hostel</title>
 
-  <meta name="keywords" content="hostel, Rio, Rio de Janeiro, bossa" />
-  <meta name="description" content="Hostel Rio de Janeiro" />
+  <meta name="keywords" content="<%= t('meta.keywords') %>" />
+  <meta name="description" content="<%= t('meta.description') %>" />
 
   <%= stylesheet_link_tag    "application" %>
   <%= javascript_include_tag "application" %>
@@ -13,7 +13,7 @@
 
   <script type="text/javascript">
     $(document).ready(function(){
-      $(".subMenu").hover(function(){
+      $("[data-toggle-hover]").hover(function(){
         id = $(this).attr('rel');
         $("#"+id).slideToggle("fast");
         $(this).toggleClass("botInfoHide");
@@ -24,8 +24,8 @@
 <body>
 
 <div id="header">
-  <%= link_to root_path, :class => "logoHome", :title => "Bossa in Rio Hostel" do %>
-    <%= image_tag "logo_bossainrio.png", :alt => "Bossa in Rio Hostel" %>
+  <%= link_to root_path, :class => "logoHome", :title => t('header.logo.title') do %>
+    <%= image_tag "logo_bossainrio.png", :alt => t('header.logo.title') %>
   <% end %>
 
   <div class="linguas">
@@ -40,29 +40,35 @@
   <div class="menu">
     <ul>
       <li>
-        <%= link_to 'O HOSTEL', '', :class => 'subMenu', :rel => 'subMenuHostel' %>
-        <ul id="subMenuHostel" style="display:none;">
-          <li><a href="#">ITEM 1</a></li>
-          <li><a href="#">ITEM 2</a></li>
-          <li><a href="#">ITEM 3</a></li>
-          <li><a href="#">ITEM 4</a></li>
+        <%= link_to t('menu.hostel.title'), root_path, :class => 'menu', :"data-toggle-hover" => "true", :rel => 'sub-menu-hostel' %>
+        <ul id="sub-menu-hostel" style="display:none;">
+          <li><%= link_to t('menu.hostel.submenus.hostel.title'), '#' %></li>
+          <li><%= link_to t('menu.hostel.submenus.services.title'), '#' %></li>
         </ul>
       </li>
       <li>
-        <%= link_to 'HABITAÇÕES', '', :class => 'subMenu', :rel => 'subMenuHab' %>
-        <ul id="subMenuHab" style="display:none;">
-          <li><%= link_to "Suíte Master", '' %></li>
-          <li><%= link_to "Suíte", '' %></li>
-          <li><%= link_to "Dormitório 2 pessoas", '' %></li>
-          <li><%= link_to "Dormitório 4 pessoas", '' %></li>
-          <li><%= link_to "Dormitório 6 pessoas", '' %></li>
-          <li><%= link_to "Dormitório 10 pessoas", '' %></li>
+        <%= link_to t('menu.facilities.title'), '#', :class => 'menu', :"data-toggle-hover" => "true", :rel => 'sub-menu-facilities' %>
+        <ul id="sub-menu-facilities" style="display:none;">
+          <li><%= link_to t('menu.facilities.submenus.suites.title'), '#' %></li>
+          <li><%= link_to t('menu.facilities.submenus.dorms.title'), '#' %></li>
         </ul>
       </li>
-      <li><%= link_to 'FOTOS', photos_path %></li>
-      <li><%= link_to 'LOCALIZAÇÃO', '' %></li>
-      <li><%= link_to 'RESERVAS', '' %></li>
-      <li><%= link_to 'CONTATO', '' %></li>
+      <li>
+        <%= link_to t('menu.photos.title'), photos_path, :class => 'menu' %>
+      </li>
+      <li>
+        <%= link_to t('menu.location.title'), '#', :class => 'menu', :"data-toggle-hover" => "true", :rel => 'sub-menu-location' %>
+        <ul id="sub-menu-location" style="display:none;">
+          <li><%= link_to t('menu.location.submenus.location.title'), '#' %></li>
+          <li><%= link_to t('menu.location.submenus.santa.title'), '#' %></li>
+        </ul>
+      </li>
+      <li>
+        <%= link_to t('menu.reservation.title'), '#', :class => 'menu' %>
+      </li>
+      <li>
+        <%= link_to t('menu.contact.title'), '#', :class => 'menu' %>
+      </li>
     </ul>
   </div>
 </div>
@@ -76,19 +82,19 @@
 <div id="footer">
   <div class="footerIn">
     <div class="blocoFooter">
-      <h6>Bossa in Rio Hostel</h6>
+      <h6><%= t('footer.title') %></h6>
       <div class="menuFooter">
         <p>
-          <a href="#">O Hostel</a><br />
-          <a href="#">Habitações</a><br />
-          <a href="#">Fotos</a>
+          <%= link_to t('menu.hostel.title'), root_path %><br />
+          <%= link_to t('menu.facilities.title'), root_path %><br />
+          <%= link_to t('menu.photos.title'), root_path %>
         </p>
       </div>
       <div class="menuFooter mfLast">
         <p>
-          <a href="#">Localização</a><br />
-          <a href="#">Reservas</a><br />
-          <a href="#">Contato</a>
+          <%= link_to t('menu.location.title'), root_path %><br />
+          <%= link_to t('menu.reservation.title'), root_path %><br />
+          <%= link_to t('menu.contact.title'), root_path %>
         </p>
       </div>
       <hr />
@@ -96,24 +102,37 @@
         +55 21 3363-1149<br />
         +55 21 7835-1328
       </h4>
-      <p><a href="mailto:contato@bossainrio.com.br">contato@bossainrio.com.br</a></p>
+      <p><a href="mailto:bossainrio@gmail.com">bossainrio@gmail.com</a></p>
     </div>
 
     <div class="blocoFooter">
-      <h6>Mantenha contato</h6>
+      <h6><%= t('footer.contacts.title') %></h6>
       <div class="redes">
-        <img src="/assets/ico_twitter.png" width="32" height="30" /><p><a href="" title="Siga no Twitter" target="_blank">Twitter</a></p>
+        <p>
+          <%= link_to '#', :target => "_blank", :title => t('footer.contacts.twitter') do %>
+            <img src="/assets/ico_twitter.png" width="32" height="30" alt="Twitter" />
+            Twitter
+          <% end %>
+        </p>
       </div><div class="clear"></div>
       <div class="redes">
-        <img src="/assets/ico_facebook.png" width="32" height="30" /><p><a href="" title="Adicione no Facebook" target="_blank">Facebook</a></p>
+        <p>
+          <%= link_to '#', :target => "_blank", :title => t('footer.contacts.facebook') do %>
+            <img src="/assets/ico_facebook.png" width="32" height="30" alt="Facebook" />
+            Facebook
+          <% end %>
+        </p>
       </div><div class="clear"></div>
       <div class="redes">
-        <img src="/assets/ico_skype.png" width="32" height="30" /><p>bossainrio</p>
+        <p>
+          <img src="/assets/ico_skype.png" width="32" height="30" alt="Skype" />
+          bossainrio
+        </p>
       </div><div class="clear"></div>
     </div>
 
     <div class="blocoFooter">
-      <h6>Bossa in Rio indica</h6>
+      <h6><%= t('footer.indications.title') %></h6>
       <a href="#" title="Ouça agora" class="musica" target="_blank">
         <h5>O Título da Música</h5>
         <p>Nome do Artista</p>
@@ -123,16 +142,16 @@
         <p>Nome do Artista</p>
       </a><div class="clear"></div>
       <hr />
-      <p>Desenvolvido por</p>
+      <p><%= t('footer.developed_by') %></p>
       <a href="http://dtmconsultoria.com" target="_blank" title="DTM - Desenvolvimento de sistemas web, imobilário, e-commerce, integração de aplicações e layouts inteligentes."><img src="/assets/logo_dtm_footer.png" width="62" height="26" /></a>
     </div>
 
     <div class="blocoFooter last">
-      <h6>Onde estamos</h6>
+      <h6><%= t('footer.where.title') %></h6>
       <img src="/assets/ico_mapa.png" width="62" height="42" />
-      <p>Rua Fulano de Tal, XXX<br />Santa Teresa<br />Rio de Janeiro - RJ. Brasil.</p>
+      <p>Rua Joaquim Murtinho, 531<br />Santa Teresa<br />Rio de Janeiro - RJ. Brasil.</p>
       <hr />
-      <p>A 10 minutos do Cristo Redentor.<br />A 20 minutos de Copacabana.</p>
+      <p><%=raw t('footer.where.references') %></p>
     </div>
   </div>
 </div>

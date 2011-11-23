@@ -5,19 +5,31 @@
 </div>
 
 <div class="freeBox">
-  <a href="" title="O tradicional café da manhã brasileiro, para começar bem o dia."><img src="/assets/ico_prato.png" width="62" height="52" alt="O tradicional café da manhã brasileiro, para começar bem o dia." /></a><h4>Café da manha</h4>
+  <%= link_to "#", :title => t('pages.home.breakfast.title') do %>
+    <%= image_tag "ico_prato.png", :width => 62, :height => 52, :alt => t('pages.home.breakfast.title') %>
+    <h4><%= t('pages.home.breakfast.body') %></h4>
+  <% end %>
 </div>
 
 <div class="freeBox">
-  <a href="" title="Computadores com acesso à internet e rede WiFi em todo o hostel."><img src="/assets/ico_wifi.png" width="62" height="52" alt="Computadores com acesso à internet e rede WiFi em todo o hostel." /></a><h4>Banda larga</h4>
+  <%= link_to "#", :title => t('pages.home.wifi.title') do %>
+    <%= image_tag "ico_wifi.png", :width => 62, :height => 52, :alt => t('pages.home.wifi.title') %>
+    <h4><%= t('pages.home.wifi.body') %></h4>
+  <% end %>
 </div>
 
 <div class="freeBox">
-  <a href="" title="Clima fresco e agradável em todos os quartos e suítes do hostel."><img src="/assets/ico_nuvem.png" width="62" height="52" alt="Clima fresco e agradável em todos os quartos e suítes do hostel." /></a><h4>Ar condicionado</h4>
+  <%= link_to "#", :title => t('pages.home.air.title') do %>
+    <%= image_tag "ico_nuvem.png", :width => 62, :height => 52, :alt => t('pages.home.air.title') %>
+    <h4><%= t('pages.home.air.body') %></h4>
+  <% end %>
 </div>
 
 <div class="freeBox">
-  <a href="" title="Armário individual, cofre e luggage storage, para sua tranquilidade."><img src="/assets/ico_cadeado.png" width="62" height="52" alt="Armário individual, cofre e luggage storage, para sua tranquilidade." /></a><h4>Segurança</h4>
+  <%= link_to "#", :title => t('pages.home.security.title') do %>
+    <%= image_tag "ico_cadeado.png", :width => 62, :height => 52, :alt => t('pages.home.security.title') %>
+    <h4><%= t('pages.home.security.body') %></h4>
+  <% end %>
 </div>
 
 <div class="clear"></div>

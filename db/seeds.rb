@@ -20,6 +20,15 @@ h1(destaque). Bem-vindo ao <br>Bossa in Rio Hostel
 h3. Rio de Janeiro | Brasil
 
 Desenhado para satisfazer todas as suas expectativas e proporcionar uma estada inesquecível, num ambiente requintado, com atmosfera propensa a amizade.)
+    },
+    {
+      :locale => 'en',
+      :body => %(
+h1(destaque). Welcome to <br>Bossa in Rio Hostel
+
+h3. Rio de Janeiro | Brazil
+
+Designed to meet all your expectations and provide an unforgettable stay in a refined setting with a friendly atmosphere)
     }]
   },
   {
@@ -32,6 +41,15 @@ h2(destaque). Estamos no bairro <br> mais charmoso do Rio
 h3. Rio de Janeiro | Brasil
 
 Repleto de arte, lojas, bares e restaurantes. Suas ruas recebem festivais de artes e gastronomia, blocos de carnaval, apresentações de samba e cultura.)
+    },
+    {
+      :locale => 'en',
+      :body => %(
+h1(destaque). We are in the most charming<br>neighboorhood in Rio
+
+h3. Rio de Janeiro | Brazil
+
+Steeped in art shops, bars and restaurants. Its streets are given food and arts festivals, carnival, samba and cultural presentations.)
     }]
   }
 ]

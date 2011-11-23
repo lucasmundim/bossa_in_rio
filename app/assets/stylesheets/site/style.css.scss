@@ -139,6 +139,10 @@ body#pgIn {
   font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
 }
 
+.menu li a.menu {
+  text-transform: uppercase;
+}
+
 .menu li a:hover {
   color: #209300;
   background: transparent url(/assets/bg_conteudo.png) repeat left top;
@@ -208,6 +212,8 @@ body#pgIn {
   float: left;
   margin: 20px 9px 20px 10px;
   background: transparent url(/assets/bg_freebox.png) no-repeat center bottom;
+
+  a { text-decoration: none; }
 }
 
 .destaques {

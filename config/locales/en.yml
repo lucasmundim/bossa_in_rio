@@ -2,4 +2,68 @@
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
-  hello: "Hello world"
+  path_names:
+    new: 'new'
+    edit: 'edit'
+  resources:
+    pages: 'pages'
+  meta:
+    keywords: 'hostel, Rio, Rio de Janeiro, bossa'
+    description: 'Bossa in Rio Hostel'
+  header:
+    logo:
+      title: 'Bossa in Rio Hostel'
+  footer:
+    title: 'Bossa in Rio Hostel'
+    contacts:
+      title: 'Contact Us'
+      twitter: 'Follow us on Twitter'
+      facebook: 'Add on Facebook'
+    indications:
+      title: 'Bossa in Rio recommends'
+    developed_by: 'Developed by'
+    where:
+      title: 'Where we are'
+      references: '10 minutes from the Christ, the Redeemer. <br>20 minutes from Copacabana.'
+  menu:
+    hostel:
+      title: 'Hostel'
+      submenus:
+        hostel:
+          title: 'The Hostel'
+        services:
+          title: 'Services'
+    facilities:
+      title: 'Facilities'
+      submenus:
+        suites:
+          title: 'Suites'
+        dorms:
+          title: 'Dorms'
+    photos:
+      title: 'Photos'
+    location:
+      title: 'Location'
+      submenus:
+        location:
+          title: 'Location'
+        santa:
+          title: 'Santa Teresa'
+    reservation:
+      title: 'Reservation'
+    contact:
+      title: 'Contact'
+  pages:
+    home:
+      breakfast:
+        title: 'The traditional Brazilian breakfast to start the day.'
+        body: 'Breakfast'
+      wifi:
+        title: 'Computers with internet access and WiFi throughout the hostel.'
+        body: 'Internet Access'
+      air:
+        title: 'Cool and pleasant weather in all rooms and suites in the hostel.'
+        body: 'Air conditioning'
+      security:
+        title: 'Individual locker, safe and luggage storage for your peace of mind.'
+        body: 'Safety'
