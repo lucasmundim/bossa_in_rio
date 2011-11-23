@@ -28,7 +28,7 @@ gem 'fancybox-rails'
 gem 'capistrano'
 
 # To use debugger
-gem 'ruby-debug19', :require => 'ruby-debug'
+gem 'ruby-debug19', :require => 'ruby-debug', :group => [:development, :test]
 
 # Javascript runtime
 gem "therubyracer", :require => 'v8'
