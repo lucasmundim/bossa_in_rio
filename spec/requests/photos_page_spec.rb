@@ -13,7 +13,7 @@ describe "Photos Page" do
 
   context "when I enter the photos page" do
     before do
-      visit photos_path
+      visit photos_path(:i18n_locale => 'pt-BR')
     end
 
     it "should display all thumbnails for all photos of this page, with their alt/title properly set to the caption" do

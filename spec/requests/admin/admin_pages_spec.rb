@@ -1,6 +1,10 @@
 require 'spec_helper'
 
 describe "Admin::Pages" do
+  before :each do
+    page.driver.browser.authorize('bossainrio', 'bossainriotest')
+  end
+
   let!(:home_page) do
     Page.create :slug => "home", :snippets_attributes => [
       {
