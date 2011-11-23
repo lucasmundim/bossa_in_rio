@@ -1,9 +1,6 @@
 pt-BR:
-  path_names:
-    new: 'nova'
-    edit: 'editar'
-  resources:
-    pages: 'paginas'
+  named_routes_path:
+    photos: 'fotos'
   meta:
     keywords: 'hostel, Rio, Rio de Janeiro, bossa'
     description: 'Bossa in Rio Hostel'

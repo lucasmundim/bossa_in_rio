@@ -30,8 +30,8 @@
 
   <div class="linguas">
     <ul>
-      <li><a href="" class="ptbr" title="português"></a></li>
-      <li><a href="" class="en" title="english"></a></li>
+      <li><%= link_to "", home_path(:i18n_locale => 'pt-BR'), :class => "ptbr", :title => 'português' %></li>
+      <li><%= link_to "", home_path(:i18n_locale => 'en'), :class => "en", :title => 'english' %></li>
       <li><a href="" class="fr" title="française"></a></li>
       <li><a href="" class="es" title="español"></a></li>
     </ul>
@@ -40,7 +40,7 @@
   <div class="menu">
     <ul>
       <li>
-        <%= link_to t('menu.hostel.title'), root_path, :class => 'menu', :"data-toggle-hover" => "true", :rel => 'sub-menu-hostel' %>
+        <%= link_to t('menu.hostel.title'), home_path, :class => 'menu', :"data-toggle-hover" => "true", :rel => 'sub-menu-hostel' %>
         <ul id="sub-menu-hostel" style="display:none;">
           <li><%= link_to t('menu.hostel.submenus.hostel.title'), '#' %></li>
           <li><%= link_to t('menu.hostel.submenus.services.title'), '#' %></li>

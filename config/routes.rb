@@ -5,13 +5,13 @@ BossaInRio::Application.routes.draw do
     end
   end
 
-  localized(I18n.available_locales, :verbose => true) do
-    scope "/:i18n_locale", :constraints => {:i18n_locale => /#{I18n.available_locales.join('|')}/} do
-      resources :pages
+  # FIX: localized routes are not working properly, not using them for now...
+  # localized(I18n.available_locales, :verbose => true) do
+    scope "/:i18n_locale", :constraints => {:i18n_locale => /#{I18n.available_locales.join('|')}/i} do
+      match '/' => 'pages#index', :as => :home
+      match '/photos' => 'pages#photos', :as => :photos
     end
-  end
+  # end
 
   root :to => 'pages#index'
-
-  match 'fotos' => 'pages#photos', :as => :photos
 end

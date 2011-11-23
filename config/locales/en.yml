@@ -2,11 +2,8 @@
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
-  path_names:
-    new: 'new'
-    edit: 'edit'
-  resources:
-    pages: 'pages'
+  named_routes_path:
+    photos: 'photos'
   meta:
     keywords: 'hostel, Rio, Rio de Janeiro, bossa'
     description: 'Bossa in Rio Hostel'
