@@ -1,13 +1,28 @@
-<%= form_for(@snippet, :url => admin_page_snippet_path(@page, @snippet)) do |f| %>
-  <% I18n.available_locales.each do |locale| %>
-    <% I18n.with_locale(locale) do %>
-      <div class="field">
-        <%= label_tag "translations[#{locale}][body]", "Body [#{locale.to_s}]" %><br />
-        <%= text_area_tag "translations[#{locale}][body]", @snippet.translation_for(locale).body %>
-      </div>
-    <% end %>
-  <% end %>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+<%= form_for(@snippet, :url => admin_page_snippet_path(@page, @snippet), :html => { :class => "faorm-stacked" }) do |f| %>
+  <fieldset>
+    <legend><%= @snippet.section %></legend>
+
+    <ul class="tabs" data-tabs="tabs">
+      <% I18n.available_locales.each_with_index do |locale, index| %>
+        <li class="<%= "active" if index == 0 %>"><a href="#<%= locale %>"><%= locale %></a></li>
+      <% end %>
+    </ul>
+
+    <div class="tab-content">
+      <% I18n.available_locales.each_with_index do |locale, index| %>
+        <% I18n.with_locale(locale) do %>
+          <div id="<%= locale %>" class="tab-pane <%= "active" if index == 0 %>">
+            <%= label_tag "translations[#{locale}][body]", "Body" %>
+            <div class="input">
+              <%= text_area_tag "translations[#{locale}][body]", @snippet.translation_for(locale).body, :class => "span9", :rows => 20 %>
+            </div>
+          </div>
+        <% end %>
+      <% end %>
+    </div>
+
+    <div class="actions">
+      <%= f.submit :class => "btn primary" %>
+    </div>
+  </fieldset>
 <% end %>
