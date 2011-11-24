@@ -2,6 +2,10 @@ class Admin::ApplicationController < ApplicationController
   layout "admin_application"
   before_filter :authenticate
   
+  def default_url_options(options={})
+    options
+  end
+  
   private
     def authenticate
       authenticate_or_request_with_http_basic do |user_name, password|
