@@ -10,16 +10,6 @@
   <%= stylesheet_link_tag    "application" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
-
-  <script type="text/javascript">
-    $(document).ready(function(){
-      $("[data-toggle-hover]").hover(function(){
-        id = $(this).attr('rel');
-        $("#"+id).slideToggle("fast");
-        $(this).toggleClass("botInfoHide");
-      });
-    });
-  </script>
 </head>
 <body>
 
