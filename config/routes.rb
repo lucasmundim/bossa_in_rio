@@ -1,6 +1,9 @@
 BossaInRio::Application.routes.draw do
   namespace :admin do
     resources :pages, :only => [:index, :show] do
+      collection do
+        get :by_slug
+      end
       resources :snippets, :only => [:edit, :update]
     end
   end

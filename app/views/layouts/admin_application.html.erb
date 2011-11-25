@@ -16,6 +16,15 @@
           <h3><%= link_to "Bossa in Rio", admin_pages_path %></h3>
           <ul class="nav">
             <li class="active"><%= link_to "Páginas", admin_pages_path %></li>
+            <li><%= link_to "Home", by_slug_admin_pages_path(:slug => "home") %></li>
+            <li class="dropdown">
+              <%= link_to "Hostel", by_slug_admin_pages_path(:slug => "hostel"), :class => "dropdown-toggle" %>
+              <ul class="dropdown-menu">
+                <li><%= link_to "Hostel", by_slug_admin_pages_path(:slug => "hostel") %></li>
+                <li><%= link_to "Serviços", by_slug_admin_pages_path(:slug => "services") %></li>
+              </ul>
+            </li>
+            <li><%= link_to "Fotos", by_slug_admin_pages_path(:slug => "photos") %></li>
           </div>
       </div><!-- /topbar-inner -->
     </div><!-- /topbar -->
