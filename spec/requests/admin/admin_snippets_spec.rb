@@ -41,10 +41,8 @@ describe "Admin::Snippets" do
   describe "when editing a snippet" do
     it "should display the snippet body data for each locale" do
       visit edit_admin_page_snippet_path(home_page, snippet)
-      I18n.available_locales.each do |locale|
-        field = page.find_field("Body [#{locale}]")
-        field.text.should eq(snippet.translation_for(locale.to_s).body)
-      end
+      field = page.find_field("Body")
+      field.text.should eq(snippet.translation_for("pt-BR").body)
     end
   end
 end
