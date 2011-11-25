@@ -9,6 +9,8 @@ BossaInRio::Application.routes.draw do
   # localized(I18n.available_locales, :verbose => true) do
     scope "/:i18n_locale", :constraints => {:i18n_locale => /#{I18n.available_locales.join('|')}/i} do
       match '/' => 'pages#index', :as => :home
+      match '/hostel' => 'pages#hostel', :as => :hostel
+      match '/services' => 'pages#services', :as => :services
       match '/photos' => 'pages#photos', :as => :photos
     end
   # end

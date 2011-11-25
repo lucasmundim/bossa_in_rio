@@ -353,6 +353,15 @@ body#pgIn {
   text-align: left;
   margin: 0 0 0 20px;
   width: 450px;
+
+  ul {
+    margin: 10px 0 20px 20px;
+
+    li {
+      list-style: disc inside none;
+      margin: 5px 0;
+    }
+  }
 }
 
 .conteudoSecundario {

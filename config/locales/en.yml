@@ -64,3 +64,7 @@ en:
       security:
         title: 'Individual locker, safe and luggage storage for your peace of mind.'
         body: 'Safety'
+    hostel:
+      title: 'The Hostel'
+    services:
+      title: 'Services'

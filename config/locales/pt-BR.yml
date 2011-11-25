@@ -61,3 +61,7 @@ pt-BR:
       security:
         title: 'Armário individual, cofre e luggage storage, para sua tranquilidade.'
         body: 'Segurança'
+    hostel:
+      title: 'O Hostel'
+    services:
+      title: 'Serviços'
