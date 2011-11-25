@@ -20,10 +20,10 @@
 
   <div class="linguas">
     <ul>
-      <li><%= link_to "", home_path(:i18n_locale => 'pt-BR'), :class => "ptbr", :title => 'português' %></li>
-      <li><%= link_to "", home_path(:i18n_locale => 'en'), :class => "en", :title => 'english' %></li>
-      <li><a href="" class="fr" title="française"></a></li>
-      <li><a href="" class="es" title="español"></a></li>
+      <li><%= link_to "", url_for(:i18n_locale => 'pt-BR'), :class => "ptbr", :title => 'português' %></li>
+      <li><%= link_to "", url_for(:i18n_locale => 'en'), :class => "en", :title => 'english' %></li>
+      <li><%= link_to "", url_for(:i18n_locale => 'fr'), :class => "fr", :title => 'française' %></li>
+      <li><%= link_to "", url_for(:i18n_locale => 'es'), :class => "es", :title => 'español' %></li>
     </ul>
   </div>
 
