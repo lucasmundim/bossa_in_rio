@@ -27,5 +27,7 @@ BossaInRio::Application.routes.draw do
     end
   # end
 
+  resources :messages, :only => [:create]
+
   root :to => 'pages#index'
 end

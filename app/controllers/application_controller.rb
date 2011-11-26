@@ -5,6 +5,7 @@ class ApplicationController < ActionController::Base
 
   def set_locale
     I18n.locale = params[:i18n_locale]
+    Carmen.default_locale = params[:i18n_locale].split("-").first.to_sym
   end
 
   def default_url_options(options={})

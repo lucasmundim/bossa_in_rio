@@ -42,6 +42,7 @@ gem "bson_ext", "~> 1.4"
 gem 'rails-i18n'
 gem 'mongoid_globalize', :git => 'http://github.com/vicentemundim/mongoid_globalize.git'
 gem 'i18n_routing'
+gem "carmen", :git => 'https://github.com/jim/carmen.git'
 
 gem 'RedCloth'
 
@@ -49,6 +50,7 @@ gem 'carrierwave'
 gem 'carrierwave-mongoid', :require => 'carrierwave/mongoid'
 
 gem 'rmagick'
+
 
 group :test do
   # Rspec

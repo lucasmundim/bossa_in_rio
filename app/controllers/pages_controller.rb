@@ -37,5 +37,6 @@ class PagesController < ApplicationController
 
   def contact
     @page = Page.from_slug(:contact)
+    @message = Message.new
   end
 end
