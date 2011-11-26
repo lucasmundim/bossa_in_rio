@@ -1,3 +1,5 @@
+# encoding: UTF-8
+
 class PagesController < ApplicationController
   def index
     @page = Page.from_slug(:home)
@@ -32,6 +34,17 @@ class PagesController < ApplicationController
   end
 
   def reservation
+    @reservation_types = [
+      'Quarto coletivo de 2',
+      'Quarto coletivo de 4',
+      'Quarto coletivo de 6',
+      'Quarto coletivo de 10',
+      'Quarto Double',
+      'Suíte Standard',
+      'Suíte Máster 1',
+      'Suíte Máster 2'
+    ]
+    @reservation = Reservation.new(:departure => Time.now.tomorrow)
     @page = Page.from_slug(:reservation)
   end
 

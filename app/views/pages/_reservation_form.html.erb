@@ -1,0 +1,150 @@
+<div class="mensagemSucesso">
+  <h3>Seu pedido de reserva foi enviado com sucesso</h3>
+</div>
+
+<div class="mensagemErro">
+  <h3 class="erroH3">Ocorreu um erro ao enviar o seu pedido de reserva</h3>
+  <p class="erroP">Verifique os campos abaixo</p>
+</div>
+
+<%= form_for(@reservation, :remote => true) do |f| %>
+
+  <h4>Por favor preencha o formulário e aguarde nosso email validando sua reserva.</h4>
+
+  <div class="field metade">
+    <%= f.label :arrival, "Data de chegada" %>
+    <%= f.datetime_select(:arrival, {}, :class => "data") %>
+    <div class="clear"></div>
+  </div>
+
+  <div class="field metade">
+    <%= f.label :departure, "Data de partida" %>
+    <%= f.datetime_select(:departure, {}, :class => "data") %>
+    <div class="clear"></div>
+  </div>
+  <div class="clear"></div>
+
+  <div class="field">
+    <%= f.label :room, "Escolha um quarto:" %>
+    <%= f.select(:room, options_for_select(@reservation_types), :include_blank => true) %>
+    <div class="clear"></div>
+  </div>
+  <div class="clear"></div>
+
+  <div class="field metade">
+    <%= f.label :quantity %>
+    <%= f.text_field :quantity, :class => "medio" %>
+    <div class="clear"></div>
+  </div>
+  <div class="clear"></div>
+
+  <div class="field metade">
+    <%= f.label :first_name %>
+    <%= f.text_field :first_name, :class => "medio" %>
+    <div class="clear"></div>
+  </div>
+
+  <div class="field metade">
+    <%= f.label :last_name %>
+    <%= f.text_field :last_name, :class => "medio" %>
+    <div class="clear"></div>
+  </div>
+  <div class="clear"></div>
+
+  <div class="field metade">
+    <%= f.label :identification %>
+    <%= f.text_field :identification, :class => "medio" %>
+    <div class="clear"></div>
+  </div>
+
+  <div class="field metade">
+    <%= f.label :genre %>
+    <%= f.select :genre, options_for_select(["Male", "Female"]), :include_blank => true %>
+    <div class="clear"></div>
+  </div>
+  <div class="clear"></div>
+
+  <div class="field metade">
+    <%= f.label :nationality %>
+    <%= f.country_select(:nationality, "BR") %>
+    <div class="clear"></div>
+  </div>
+
+  <div class="field metade">
+    <%= f.label :email %>
+    <%= f.text_field :email %>
+    <div class="clear"></div>
+  </div>
+  <div class="clear"></div>
+
+  <div class="field radio">
+    <%= f.label :wants_transfer_sim, "Deseja contratar transfer desde o aeroporto?" %>
+    <label>
+      <%= f.radio_button :wants_transfer, 'sim' %>
+      Sim
+    </label>
+
+    <label>
+      <%= f.radio_button :wants_transfer, 'não' %>
+      Não
+    </label>
+    <div class="clear"></div>
+  </div>
+  <div class="clear"></div>
+
+  <div class="field radio">
+    <%= f.label :transfer_details, "(Data, procedência, hora de chegada e número do vôo) (O hóspede é responsável por avisar o hostel se o vôo for atrasar) (Datas, Horários e preço do serviço de transfer)" %>
+    <%= f.text_area :transfer_details %>
+    <div class="clear"></div>
+  </div>
+  <div class="clear"></div>
+
+  <fieldset>
+    <legend>Se desejar agilizar seu check in, por favor preencha também os itens abaixo:</legend>
+
+    <div class="field metade">
+      <%= f.label :address %>
+      <%= f.text_field :address %>
+      <div class="clear"></div>
+    </div>
+
+    <div class="field metade">
+      <%= f.label :city %>
+      <%= f.text_field :city %>
+      <div class="clear"></div>
+    </div>
+    <div class="clear"></div>
+
+    <div class="field metade">
+      <%= f.label :phone %>
+      <%= f.text_field :phone %>
+      <div class="clear"></div>
+    </div>
+
+    <div class="field metade">
+      <%= f.label :mobile %>
+      <%= f.text_field :mobile %>
+      <div class="clear"></div>
+    </div>
+    <div class="clear"></div>
+
+    <div class="field">
+      <%= f.label :obs %>
+      <%= f.text_area :obs %>
+      <div class="clear"></div>
+    </div>
+    <div class="clear"></div>
+
+    <div class="field">
+      <%= f.label :reference %>
+      <%= f.text_field :reference %>
+      <div class="clear"></div>
+    </div>
+    <div class="clear"></div>
+  </fieldset>
+
+  <div class="field">
+    <%= f.submit "Enviar", :class => "botVerde" %>
+    <div class="clear"></div>
+  </div>
+<% end %>

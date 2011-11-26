@@ -421,6 +421,10 @@ body#pgIn {
 
 /* Formulario */
 
+fieldset {
+  border: none;
+}
+
 .field {
   margin-bottom:10px;
   font-size: 13px;
@@ -443,6 +447,10 @@ body#pgIn {
   margin-bottom: 4px;
   width:auto;
   display: block;
+}
+
+.field.radio label {
+  display: inline-block;
 }
 
 input[type="text"] {
@@ -498,7 +506,7 @@ select.data {
   height: 24px;
   padding: 2px;
   width: auto;
-  float: left;
+  display: inline-block;
   -moz-border-radius: 4px;
   -webkit-border-radius: 4px;
   border-radius: 4px;
