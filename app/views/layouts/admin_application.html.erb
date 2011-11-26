@@ -15,7 +15,6 @@
         <div class="container">
           <h3><%= link_to "Bossa in Rio", admin_pages_path %></h3>
           <ul class="nav">
-            <li class="active"><%= link_to "Páginas", admin_pages_path %></li>
             <li><%= link_to "Home", by_slug_admin_pages_path(:slug => "home") %></li>
             <li class="dropdown">
               <%= link_to "Hostel", by_slug_admin_pages_path(:slug => "hostel"), :class => "dropdown-toggle" %>
@@ -29,25 +28,25 @@
       </div><!-- /topbar-inner -->
     </div><!-- /topbar -->
   </div>
-  
+
   <% unless flash[:notice].blank? %>
     <div class="alert-message info">
       <%= content_tag :div, flash[:notice] %>
     </div>
   <% end %>
-  
+
   <% unless flash[:error].blank? %>
     <div class="alert-message error">
       <%= content_tag :div, flash[:error] %>
     </div>
   <% end %>
-  
+
   <% unless flash[:alert].blank? %>
     <div class="alert-message warning">
       <%= content_tag :div, flash[:alert] %>
     </div>
   <% end %>
-  
+
   <%= yield %>
 </div>
 
