@@ -7,7 +7,7 @@
   <p class="erroP">Verifique os campos abaixo</p>
 </div>
 
-<%= form_for(@reservation, :remote => true) do |f| %>
+<%= form_for(@reservation, :format => :js, :remote => true) do |f| %>
 
   <h4>Por favor preencha o formulário e aguarde nosso email validando sua reserva.</h4>
 
