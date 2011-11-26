@@ -1,5 +1,7 @@
 BossaInRio::Application.routes.draw do
   namespace :admin do
+    match '/' => redirect('/admin/pages')
+
     resources :pages, :only => [:index, :show] do
       collection do
         get :by_slug
