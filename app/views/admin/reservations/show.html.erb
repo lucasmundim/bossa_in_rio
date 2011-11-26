@@ -1,0 +1,77 @@
+<h1>Reserva</h1>
+
+<p>
+  Data de chegada: <%= l @reservation.arrival %>
+</p>
+
+<p>
+  Data de partida: <%= l @reservation.departure %>
+</p>
+
+<p>
+  Habitação: <%= @reservation.room %>
+</p>
+
+<p>
+  Número de pessoas: <%= @reservation.quantity %>
+</p>
+
+<p>
+  Nome: <%= @reservation.first_name %>
+</p>
+
+<p>
+  Sobrenome: <%= @reservation.last_name %>
+</p>
+
+<p>
+  Documento: <%= @reservation.identification %>
+</p>
+
+<p>
+  Sexo: <%= @reservation.genre %>
+</p>
+
+<p>
+  Nacionalidade: <%= Carmen::country_name(@reservation.nationality) %>
+</p>
+
+<p>
+  E-mail: <%= @reservation.email %>
+</p>
+
+<p>
+  Deseja transfer: <%= @reservation.wants_transfer %>
+</p>
+
+<p>
+  Detalhes para transfer: <%= @reservation.transfer_details %>
+</p>
+
+<p>
+  Endereço: <%= @reservation.address %>
+</p>
+
+<p>
+  Cidade: <%= @reservation.city %>
+</p>
+
+<p>
+  Telefone: <%= @reservation.phone %>
+</p>
+
+<p>
+  Celular: <%= @reservation.mobile %>
+</p>
+
+<p>
+  Observação: <%= @reservation.obs %>
+</p>
+
+<p>
+  Referência: <%= @reservation.reference %>
+</p>
+
+<p>
+  <%= link_to 'Voltar', admin_reservations_path %>
+</p>

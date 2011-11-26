@@ -4,6 +4,8 @@ BossaInRio::Application.routes.draw do
 
     resources :messages
 
+    resources :reservations
+
     resources :pages, :only => [:index, :show] do
       collection do
         get :by_slug

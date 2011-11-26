@@ -1,0 +1,24 @@
+<h1>Reservas</h1>
+
+<% unless @reservations.empty? %>
+  <table class="zebra-striped">
+    <tr>
+      <th>Nome</th>
+      <th>Sobrenome</th>
+      <th>País</th>
+      <th colspan="2"></th>
+    </tr>
+  
+    <% @reservations.each do |reservation| %>
+      <tr>
+        <td><%= reservation.first_name %></td>
+        <td><%= reservation.last_name %></td>
+        <td><%= Carmen::country_name(reservation.nationality) %></td>
+        <td><%= link_to "exibir", admin_reservation_path(reservation) %></td>
+        <td><%= link_to "remover", admin_reservation_path(reservation), :method => :delete, :confirm => "Você tem certeza?" %></td>
+      </tr>
+    <% end %>
+  </table>
+<% else %>
+  Nenhuma reserva
+<% end %>
