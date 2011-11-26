@@ -4,8 +4,13 @@ class ApplicationController < ActionController::Base
   before_filter :set_locale
 
   def set_locale
-    I18n.locale = params[:i18n_locale]
-    Carmen.default_locale = params[:i18n_locale].split("-").first.to_sym
+    if params[:i18n_locale].present?
+      I18n.locale = params[:i18n_locale] || "pt-BR"
+      Carmen.default_locale = params[:i18n_locale].split("-").first.to_sym
+    else
+      I18n.locale = :"pt-BR"
+      Carmen.default_locale = :"pt"
+    end
   end
 
   def default_url_options(options={})
