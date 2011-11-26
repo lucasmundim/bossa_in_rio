@@ -1,13 +1,44 @@
 <h1><%= @page.slug %></h1>
 
-<table class="zebra-striped">
-  <tr>
-    <th>Seção</th>
-  </tr>
+<% if @page.snippets.present? %>
+  <h3>Snippets</h3>
 
-<% @page.snippets.each do |snippet| %>
-  <tr>
-    <td><%= link_to snippet.section, edit_admin_page_snippet_path(@page, snippet) %></td>
-  </tr>
+  <table class="zebra-striped">
+    <tr>
+      <th>Seção</th>
+    </tr>
+
+  <% @page.snippets.each do |snippet| %>
+    <tr>
+      <td><%= link_to snippet.section, edit_admin_page_snippet_path(@page, snippet) %></td>
+    </tr>
+  <% end %>
+  </table>
 <% end %>
-</table>
+
+<% if @page.photos.present? %>
+  <h3>Fotos</h3>
+
+  <table class="zebra-striped">
+    <tr>
+      <th>Legenda</th>
+      <th>Foto</th>
+      <th></th>
+    </tr>
+
+  <% @page.photos.each do |photo| %>
+    <tr>
+      <td><%= link_to photo.caption, edit_admin_page_photo_path(@page, photo) %></td>
+      <td>
+        <%= link_to photo.image.url, :class => "fancybox" do %>
+          <%= image_tag photo.image.thumb.url %>
+        <% end if photo.image? %>
+      </td>
+      <td><%= link_to "remover", admin_page_photo_path(@page, photo), :method => :delete, :confirm => "Você tem certeza?" %></td>
+    </tr>
+  <% end %>
+  </table>
+
+<% end %>
+
+<%= link_to "Adicionar Foto", new_admin_page_photo_path(@page), :class => "btn primary" %>

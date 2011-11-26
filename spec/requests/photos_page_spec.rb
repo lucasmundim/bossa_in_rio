@@ -7,7 +7,9 @@ describe "Photos Page" do
 
   before do
     3.times do |i|
-      photos_page.photos.create :caption => "A sample image #{i}", :image => File.open(Rails.root.join('spec/fixtures/my_photo.png'))
+      photos_page.photos.create :image => File.open(Rails.root.join('spec/fixtures/my_photo.png')), :translations => [
+        {:locale => 'pt-BR', :caption => "A sample image #{i}"}
+      ]
     end
   end
 

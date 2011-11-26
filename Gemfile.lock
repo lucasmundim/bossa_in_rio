@@ -9,6 +9,14 @@ GIT
       less-rails (~> 2.1.0)
       railties
 
+GIT
+  remote: http://github.com/vicentemundim/mongoid_globalize.git
+  revision: dbbf5846b9d043f3e427340a00e8c45f9bfab77d
+  specs:
+    mongoid_globalize (0.1.3)
+      bson_ext (>= 1.3)
+      mongoid (>= 2.1)
+
 GEM
   remote: http://rubygems.org/
   specs:
@@ -114,16 +122,13 @@ GEM
     mime-types (1.17.2)
     mongo (1.4.0)
       bson (= 1.4.0)
-    mongoid (2.3.3)
+    mongoid (2.3.4)
       activemodel (~> 3.1)
       mongo (~> 1.3)
       tzinfo (~> 0.3.22)
     mongoid-rspec (1.4.4)
       mongoid (~> 2.0)
       rspec (~> 2)
-    mongoid_globalize (0.1.3)
-      bson_ext (>= 1.3)
-      mongoid (>= 2.1)
     multi_json (1.0.3)
     net-scp (1.0.4)
       net-ssh (>= 1.99.1)
@@ -215,7 +220,7 @@ GEM
     treetop (1.4.10)
       polyglot
       polyglot (>= 0.3.1)
-    tzinfo (0.3.30)
+    tzinfo (0.3.31)
     uglifier (1.0.4)
       execjs (>= 0.3.0)
       multi_json (>= 1.0.2)
@@ -240,7 +245,7 @@ DEPENDENCIES
   jquery-rails
   mongoid (~> 2.3)
   mongoid-rspec (>= 1.4.4)
-  mongoid_globalize
+  mongoid_globalize!
   rails (= 3.1.1)
   rails-i18n
   rmagick

@@ -40,7 +40,7 @@ gem "bson_ext", "~> 1.4"
 
 # I18n
 gem 'rails-i18n'
-gem 'mongoid_globalize'
+gem 'mongoid_globalize', :git => 'http://github.com/vicentemundim/mongoid_globalize.git'
 gem 'i18n_routing'
 
 gem 'RedCloth'

@@ -7,6 +7,7 @@ BossaInRio::Application.routes.draw do
         get :by_slug
       end
       resources :snippets, :only => [:edit, :update]
+      resources :photos, :only => [:new, :edit, :create, :update, :destroy]
     end
   end
 
