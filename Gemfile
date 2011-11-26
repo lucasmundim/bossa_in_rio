@@ -32,7 +32,13 @@ gem 'capistrano'
 gem 'ruby-debug19', :require => 'ruby-debug', :group => [:development, :test]
 
 # Javascript runtime
-gem "therubyracer", :require => 'v8'
+group :development do
+  gem "therubyracer", :require => 'v8'
+end
+
+group :production do
+  gem 'therubyracer-heroku', '0.8.1.pre3'
+end
 
 # Mongoid
 gem "mongoid", "~> 2.3"
