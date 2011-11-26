@@ -12,9 +12,10 @@ gem 'twitter-bootstrap-rails', :git => 'http://github.com/seyhunak/twitter-boots
 # in production environments by default.
 group :assets do
   gem 'sass-rails',   '~> 3.1.4'
-  gem 'coffee-rails', '~> 3.1.1'
   gem 'uglifier', '>= 1.0.3'
 end
+
+gem 'coffee-rails', '~> 3.1.1'
 
 gem 'jquery-rails'
 gem 'fancybox-rails'
