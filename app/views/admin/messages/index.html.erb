@@ -1,0 +1,24 @@
+<h1>Mensagens</h1>
+
+<% unless @messages.empty? %>
+  <table class="zebra-striped">
+    <tr>
+      <th>Nome</th>
+      <th>Sobrenome</th>
+      <th>País</th>
+      <th colspan="2"></th>
+    </tr>
+  
+    <% @messages.each do |message| %>
+      <tr>
+        <td><%= message.first_name %></td>
+        <td><%= message.last_name %></td>
+        <td><%= Carmen::country_name(message.country) %></td>
+        <td><%= link_to "exibir", admin_message_path(message) %></td>
+        <td><%= link_to "remover", admin_message_path(message), :method => :delete, :confirm => "Você tem certeza?" %></td>
+      </tr>
+    <% end %>
+  </table>
+<% else %>
+  Nenhuma mensagem
+<% end %>

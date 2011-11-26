@@ -1,0 +1,29 @@
+<h1>Mensagems</h1>
+
+<p>
+  Nome: <%= @message.first_name %>
+</p>
+
+<p>
+  Sobrenome: <%= @message.last_name %>
+</p>
+
+<p>
+  Telefone: <%= @message.phone %>
+</p>
+
+<p>
+  País: <%= Carmen::country_name(@message.country) %>
+</p>
+
+<p>
+  E-mail: <%= @message.email %>
+</p>
+
+<p>
+  Mensagem: <%= @message.message %>
+</p>
+
+<p>
+  <%= link_to 'Voltar', admin_messages_path %>
+</p>
