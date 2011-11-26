@@ -2,6 +2,11 @@ class Admin::ApplicationController < ApplicationController
   layout "admin_application"
   before_filter :authenticate
   
+  def set_locale
+    I18n.locale = :"pt-BR"
+    Carmen.default_locale = :"pt"
+  end
+
   def default_url_options(options={})
     options
   end
