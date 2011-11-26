@@ -23,7 +23,23 @@
                 <li><%= link_to "Serviços", by_slug_admin_pages_path(:slug => "services") %></li>
               </ul>
             </li>
+            <li class="dropdown">
+              <%= link_to "Habitações", by_slug_admin_pages_path(:slug => "rooms"), :class => "dropdown-toggle" %>
+              <ul class="dropdown-menu">
+                <li><%= link_to "Suítes", by_slug_admin_pages_path(:slug => "rooms") %></li>
+                <li><%= link_to "Quartos Coletivos", by_slug_admin_pages_path(:slug => "dorms") %></li>
+              </ul>
+            </li>
             <li><%= link_to "Fotos", by_slug_admin_pages_path(:slug => "photos") %></li>
+            <li class="dropdown">
+              <%= link_to "Localização", by_slug_admin_pages_path(:slug => "location"), :class => "dropdown-toggle" %>
+              <ul class="dropdown-menu">
+                <li><%= link_to "Localização", by_slug_admin_pages_path(:slug => "location") %></li>
+                <li><%= link_to "Santa Teresa", by_slug_admin_pages_path(:slug => "santa") %></li>
+              </ul>
+            </li>
+            <li><%= link_to "Reserva", by_slug_admin_pages_path(:slug => "reservation") %></li>
+            <li><%= link_to "Contato", by_slug_admin_pages_path(:slug => "contact") %></li>
           </div>
       </div><!-- /topbar-inner -->
     </div><!-- /topbar -->

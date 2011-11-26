@@ -36,11 +36,15 @@
 
 <div class="destaques">
   <div class="destaqueLeft">
-    <%=raw @page.snippets.section(:bottom_left).rendered_body %>
+    <%= link_to hostel_path do %>
+      <%=raw @page.snippets.section(:bottom_left).rendered_body %>
+    <% end %>
   </div>
 
   <div class="destaqueRight">
-    <%=raw @page.snippets.section(:bottom_right).rendered_body %>
+    <%= link_to santa_path do %>
+      <%=raw @page.snippets.section(:bottom_right).rendered_body %>
+    <% end %>
   </div>
 
   <div class="clear"></div>

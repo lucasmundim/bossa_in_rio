@@ -1,0 +1,15 @@
+<div class="tituloSecao">
+  <h2><%= t('pages.location.title') %></h2>
+</div>
+
+<div class="conteudoPrincipal">
+  <%=raw @page.snippets.section(:main).rendered_body %>
+  
+  <%=raw @page.snippets.section(:directions).rendered_body %>
+</div><!-- conteudoPrincipal -->
+
+<div class="conteudoSecundario">
+  <h3>Mapa de Localização</h3>
+  <img src="/assets/mapa.jpg" width="400" height="300" />
+  <p>Rua Joaquim Murtinho, 531<br>Santa Teresa - Rio</p>
+</div><!-- /conteudoSecundario -->

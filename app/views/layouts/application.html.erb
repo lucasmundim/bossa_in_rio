@@ -37,27 +37,27 @@
         </ul>
       </li>
       <li>
-        <%= link_to t('menu.facilities.title'), '#', :class => 'menu', :"data-toggle-hover" => "true", :rel => 'sub-menu-facilities' %>
+        <%= link_to t('menu.rooms.title'), rooms_path, :class => 'menu', :"data-toggle-hover" => "true", :rel => 'sub-menu-facilities' %>
         <ul id="sub-menu-facilities" style="display:none;">
-          <li><%= link_to t('menu.facilities.submenus.suites.title'), '#' %></li>
-          <li><%= link_to t('menu.facilities.submenus.dorms.title'), '#' %></li>
+          <li><%= link_to t('menu.rooms.submenus.suites.title'), rooms_path %></li>
+          <li><%= link_to t('menu.rooms.submenus.dorms.title'), dorms_path %></li>
         </ul>
       </li>
       <li>
         <%= link_to t('menu.photos.title'), photos_path, :class => 'menu' %>
       </li>
       <li>
-        <%= link_to t('menu.location.title'), '#', :class => 'menu', :"data-toggle-hover" => "true", :rel => 'sub-menu-location' %>
+        <%= link_to t('menu.location.title'), location_path, :class => 'menu', :"data-toggle-hover" => "true", :rel => 'sub-menu-location' %>
         <ul id="sub-menu-location" style="display:none;">
-          <li><%= link_to t('menu.location.submenus.location.title'), '#' %></li>
-          <li><%= link_to t('menu.location.submenus.santa.title'), '#' %></li>
+          <li><%= link_to t('menu.location.submenus.location.title'), location_path %></li>
+          <li><%= link_to t('menu.location.submenus.santa.title'), santa_path %></li>
         </ul>
       </li>
       <li>
-        <%= link_to t('menu.reservation.title'), '#', :class => 'menu' %>
+        <%= link_to t('menu.reservation.title'), reservation_path, :class => 'menu' %>
       </li>
       <li>
-        <%= link_to t('menu.contact.title'), '#', :class => 'menu' %>
+        <%= link_to t('menu.contact.title'), contact_path, :class => 'menu' %>
       </li>
     </ul>
   </div>
@@ -82,9 +82,9 @@
       </div>
       <div class="menuFooter mfLast">
         <p>
-          <%= link_to t('menu.location.title'), root_path %><br />
-          <%= link_to t('menu.reservation.title'), root_path %><br />
-          <%= link_to t('menu.contact.title'), root_path %>
+          <%= link_to t('menu.location.title'), location_path %><br />
+          <%= link_to t('menu.reservation.title'), reservation_path %><br />
+          <%= link_to t('menu.contact.title'), contact_path %>
         </p>
       </div>
       <hr />

@@ -1,11 +1,10 @@
 <div class="tituloSecao">
-  <h2><%= t('pages.hostel.title') %></h2>
+  <h2><%= t('pages.dorms.title') %></h2>
 </div>
 
 <div class="conteudoPrincipal">
-  <%=raw @page.snippets.section(:welcome).rendered_body %>
-</div>
-
+  <%=raw @page.snippets.section(:main).rendered_body %>
+</div><!-- conteudoPrincipal -->
 
 <div class="conteudoSecundario">
   <h3>Fotos</h3>
@@ -21,5 +20,8 @@
 <div class="clear"></div>
 
 <div class="conteudoPrincipalTotal">
-  <%=raw @page.snippets.section(:facilities).rendered_body %>
+  <%=raw @page.snippets.section(:dorms_2).rendered_body %>
+  <%=raw @page.snippets.section(:dorms_4).rendered_body %>
+  <%=raw @page.snippets.section(:dorms_6).rendered_body %>
+  <%=raw @page.snippets.section(:collective).rendered_body %>
 </div><!-- /conteudoPrincipalTotal -->

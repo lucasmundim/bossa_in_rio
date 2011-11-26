@@ -30,8 +30,8 @@ en:
           title: 'The Hostel'
         services:
           title: 'Services'
-    facilities:
-      title: 'Facilities'
+    rooms:
+      title: 'Rooms'
       submenus:
         suites:
           title: 'Suites'
@@ -68,3 +68,17 @@ en:
       title: 'The Hostel'
     services:
       title: 'Services'
+    rooms:
+      title: 'Rooms'
+    dorms:
+      title: 'Dorms'
+    photos:
+      title: 'Photos'
+    location:
+      title: 'Location'
+    santa:
+      title: 'Santa Teresa'
+    reservation:
+      title: 'Rates and Reservation'
+    contact:
+      title: 'Contact'

@@ -9,6 +9,11 @@
   vertical-align: baseline;
 }
 
+ol > li {
+  list-style: decimal;
+  margin-left: 22px;
+}
+
 img, img a {
   border: none;
   margin: 0;
@@ -241,6 +246,15 @@ body#pgIn {
   background-color:#09F;
   text-align: left;
   background: transparent url(/assets/balao_bonde.png) no-repeat left top;
+}
+
+.destaqueLeft a, .destaqueRight a {
+  color: #333;
+  text-decoration: none;
+}
+
+.destaqueLeft a:hover, .destaqueRight a:hover {
+  text-decoration: underline;
 }
 
 .footerIn {
@@ -540,7 +554,7 @@ table {
   border-spacing: 3px;
 }
 
-thead th {
+th {
   color:#fff;
   padding: 5px 5px 5px 6px;
   font-size: 15px;
@@ -675,6 +689,23 @@ h6 {
 
 p {
   margin: 12px 0 16px 0; padding: 0; font-size: 14px; line-height: 18px;
+}
+
+ol, ul {
+  font-size: 14px; line-height: 18px;
+}
+
+ol > li > ul {
+  margin: 0;
+}
+
+.conteudoPrincipal ul > li, .conteudoPrincipalTotal ul > li {
+  list-style: disc;
+  margin-left: 22px;
+}
+
+.conteudoPrincipal ul, .conteudoPrincipalTotal ul {
+  margin: 0;
 }
 
 .conteudoSecundario p { font-size: 12px; line-height: 16px; margin: 8px 0 12px 0; }

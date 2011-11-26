@@ -27,8 +27,8 @@ pt-BR:
           title: 'O Hostel'
         services:
           title: 'Serviços'
-    facilities:
-      title: 'Instalações'
+    rooms:
+      title: 'Habitações'
       submenus:
         suites:
           title: 'Suítes'
@@ -65,3 +65,17 @@ pt-BR:
       title: 'O Hostel'
     services:
       title: 'Serviços'
+    rooms:
+      title: 'Suítes'
+    dorms:
+      title: 'Quartos Coletivos'
+    photos:
+      title: 'Fotos'
+    location:
+      title: 'Localização'
+    santa:
+      title: 'Santa Teresa'
+    reservation:
+      title: 'Tarifas e Reserva'
+    contact:
+      title: 'Contato'

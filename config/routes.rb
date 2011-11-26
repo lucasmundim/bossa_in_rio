@@ -16,8 +16,14 @@ BossaInRio::Application.routes.draw do
     scope "/:i18n_locale", :constraints => {:i18n_locale => /#{I18n.available_locales.join('|')}/i} do
       match '/' => 'pages#index', :as => :home
       match '/hostel' => 'pages#hostel', :as => :hostel
-      match '/services' => 'pages#services', :as => :services
+      match '/hostel/services' => 'pages#services', :as => :services
+      match '/rooms' => 'pages#rooms', :as => :rooms
+      match '/rooms/dorms' => 'pages#dorms', :as => :dorms
       match '/photos' => 'pages#photos', :as => :photos
+      match '/location' => 'pages#location', :as => :location
+      match '/location/santa' => 'pages#santa', :as => :santa
+      match '/reservation' => 'pages#reservation', :as => :reservation
+      match '/contact' => 'pages#contact', :as => :contact
     end
   # end
 
