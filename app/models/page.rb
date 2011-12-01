@@ -5,8 +5,6 @@ class Page
 
   embeds_many :snippets
 
-  has_and_belongs_to_many :photos
-
   accepts_nested_attributes_for :snippets
 
   validates_presence_of :slug

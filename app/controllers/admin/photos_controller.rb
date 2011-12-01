@@ -1,14 +1,16 @@
 class Admin::PhotosController < Admin::ApplicationController
-  before_filter :load_page
+  def index
+    @photos = Photo.grouped_by_tags(Page.all.map(&:slug))
+  end
 
   def new
-    @photo = @page.photos.build
+    @photo = Photo.new
   end
 
   def create
-    @photo = @page.photos.build params[:photo]
-    if @photo.set_translations(params[:translations]) && @page.save
-      redirect_to admin_page_path(@page), :notice => 'Photo adicionada com sucesso.'
+    @photo = Photo.new params[:photo]
+    if @photo.set_translations(params[:translations])
+      redirect_to admin_photos_path, :notice => 'Photo adicionada com sucesso.'
     else
       render :action => "new"
     end
@@ -20,8 +22,8 @@ class Admin::PhotosController < Admin::ApplicationController
 
   def update
     @photo = Photo.find params[:id]
-    if @photo.update_attributes(params[:photo]) && @photo.set_translations(params[:translations]) && @page.save
-      redirect_to admin_page_path(@page), :notice => 'Photo adicionada com sucesso.'
+    if @photo.update_attributes(params[:photo]) && @photo.set_translations(params[:translations])
+      redirect_to admin_photos_path, :notice => 'Photo adicionada com sucesso.'
     else
       render :action => "new"
     end
@@ -31,11 +33,6 @@ class Admin::PhotosController < Admin::ApplicationController
     @photo = Photo.find params[:id]
     @photo.destroy
 
-    redirect_to admin_page_path(@page)
+    redirect_to admin_photos_path
   end
-
-  private
-    def load_page
-      @page = Page.find(params[:page_id])
-    end
 end

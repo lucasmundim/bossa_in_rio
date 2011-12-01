@@ -6,12 +6,13 @@ BossaInRio::Application.routes.draw do
 
     resources :reservations
 
+    resources :photos
+
     resources :pages, :only => [:index, :show] do
       collection do
         get :by_slug
       end
       resources :snippets, :only => [:edit, :update]
-      resources :photos, :only => [:new, :edit, :create, :update, :destroy]
     end
   end
 

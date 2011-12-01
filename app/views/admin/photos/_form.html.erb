@@ -13,6 +13,14 @@
     <% end if @photo.image? %>
   </div>
 
+  <div class="clearfix image-field">
+    <%= f.label :tags_data, "Tags" %>
+    <div class="input">
+      <%= f.text_area :tags_data, :class => 'span9', :rows => 6 %>
+      <span class="help-block"><strong>Nota:</strong> coloque uma tag por linha</span>
+    </div>
+  </div>
+
   <ul class="tabs" data-tabs="tabs">
     <% I18n.available_locales.each_with_index do |locale, index| %>
       <li class="<%= "active" if index == 0 %>"><a href="#<%= locale %>"><%= locale %></a></li>
@@ -37,6 +45,6 @@
   <div class="actions">
     <%= f.submit :class => "btn primary" %>
 
-    <%= link_to "Cancelar", admin_page_path(@page) %>
+    <%= link_to "Cancelar", admin_photos_path %>
   </div>
 </fieldset>

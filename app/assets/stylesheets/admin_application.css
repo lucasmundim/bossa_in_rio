@@ -15,3 +15,11 @@ body {
 .form-stacked .image-field {
   margin: 20px 0px 50px;
 }
+
+.btn.top {
+  margin-bottom: 30px;
+}
+
+.btn.right {
+  float: right;
+}

@@ -15,30 +15,3 @@
   <% end %>
   </table>
 <% end %>
-
-<% if @page.photos.present? %>
-  <h3>Fotos</h3>
-
-  <table class="zebra-striped">
-    <tr>
-      <th>Legenda</th>
-      <th>Foto</th>
-      <th></th>
-    </tr>
-
-  <% @page.photos.each do |photo| %>
-    <tr>
-      <td><%= link_to photo.caption, edit_admin_page_photo_path(@page, photo) %></td>
-      <td>
-        <%= link_to photo.image.url, :class => "fancybox" do %>
-          <%= image_tag photo.image.thumb.url %>
-        <% end if photo.image? %>
-      </td>
-      <td><%= link_to "remover", admin_page_photo_path(@page, photo), :method => :delete, :confirm => "Você tem certeza?" %></td>
-    </tr>
-  <% end %>
-  </table>
-
-<% end %>
-
-<%= link_to "Adicionar Foto", new_admin_page_photo_path(@page), :class => "btn primary" %>

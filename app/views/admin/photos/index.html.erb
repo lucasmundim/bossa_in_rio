@@ -1,0 +1,30 @@
+<h1>Photos</h1>
+
+<%= link_to "Adicionar Foto", new_admin_photo_path, :class => "btn primary top right" %>
+
+<% @photos.each do |tag, photos| %>
+  <h3><%= tag %></h3>
+
+  <table class="zebra-striped">
+    <tr>
+      <th width="50%">Legenda</th>
+      <th width="25%">Tags</th>
+      <th width="20%">Foto</th>
+      <th width="5%"></th>
+    </tr>
+
+  <% photos.each do |photo| %>
+    <tr>
+      <td><%= link_to photo.caption, edit_admin_photo_path(photo) %></td>
+      <td><%= photo.tags.join(', ') %></td>
+      <td>
+        <%= link_to photo.image.url, :class => "fancybox" do %>
+          <%= image_tag photo.image.thumb.url %>
+        <% end if photo.image? %>
+      </td>
+      <td><%= link_to "remover", admin_photo_path(photo), :method => :delete, :confirm => "Você tem certeza?" %></td>
+    </tr>
+  <% end %>
+  </table>
+
+<% end %>

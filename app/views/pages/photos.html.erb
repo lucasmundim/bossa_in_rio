@@ -19,7 +19,7 @@
 
 <div class="conteudoSecundario">
   <h3>Fotos</h3>
-  <% @page.photos.each do |photo| %>
+  <% Photo.by_tags(@page.slug).each do |photo| %>
     <div class="fotoGaleria">
       <%= link_to photo.image.url, :class => "fancybox", :title => photo.caption, :rel => 'photos' do %>
         <%= image_tag photo.image.thumb.url, :alt => photo.caption, :title => photo.caption %>
