@@ -92,14 +92,14 @@
         +55 21 3363-1149<br />
         +55 21 7835-1328
       </h4>
-      <p><a href="mailto:bossainrio@gmail.com">bossainrio@gmail.com</a></p>
+      <p><%= mail_to "bossainrio@gmail.com", nil, :encode => "hex" %></p>
     </div>
 
     <div class="blocoFooter">
       <h6><%= t('footer.contacts.title') %></h6>
       <div class="redes">
         <p>
-          <%= link_to '#', :target => "_blank", :title => t('footer.contacts.twitter') do %>
+          <%= link_to 'http://twitter.com/#!/bossainrio', :target => "_blank", :title => t('footer.contacts.twitter') do %>
             <img src="/assets/ico_twitter.png" width="32" height="30" alt="Twitter" />
             Twitter
           <% end %>
@@ -107,7 +107,7 @@
       </div><div class="clear"></div>
       <div class="redes">
         <p>
-          <%= link_to '#', :target => "_blank", :title => t('footer.contacts.facebook') do %>
+          <%= link_to 'https://www.facebook.com/pages/Bossa-in-Rio-Hostel/256042857754765', :target => "_blank", :title => t('footer.contacts.facebook') do %>
             <img src="/assets/ico_facebook.png" width="32" height="30" alt="Facebook" />
             Facebook
           <% end %>
@@ -115,8 +115,10 @@
       </div><div class="clear"></div>
       <div class="redes">
         <p>
-          <img src="/assets/ico_skype.png" width="32" height="30" alt="Skype" />
-          bossainrio
+          <%= link_to 'skype:bossainrio?call', :target => "_blank", :title => t('footer.contacts.skype') do %>
+            <img src="/assets/ico_skype.png" width="32" height="30" alt="Skype" />
+            bossainrio
+          <% end %>
         </p>
       </div><div class="clear"></div>
     </div>
