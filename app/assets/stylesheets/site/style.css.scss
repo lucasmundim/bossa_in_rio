@@ -565,16 +565,17 @@ table {
   border: none;
   border-collapse: separate;
   color:#444;
-  font-size: 14px;
-  text-align:left;
+  font-size: 13px;
+  text-align:center;
   margin-bottom: 10px;
   border-spacing: 3px;
+  width: 400px;
 }
 
 th {
   color:#fff;
   padding: 5px 5px 5px 6px;
-  font-size: 15px;
+  font-size: 14px;
   vertical-align: top;
   text-shadow: 0 1px 3px #000 !important;
   background: #a6987c;
@@ -590,6 +591,7 @@ table.verde thead th { background: #6d8963; }
 td {
   padding: 3px 3px 3px 6px;
   vertical-align: top;
+  text-align: center;
 }
 
 tr {
