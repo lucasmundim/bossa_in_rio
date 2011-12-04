@@ -1,7 +1,7 @@
 <div id="painel">
-  <div class="fotoPainel"><img src="/assets/foto01.jpg" width="312" height="260" /></div>
-  <div class="fotoPainel"><img src="/assets/foto02.jpg" width="312" height="260" /></div>
-  <div class="fotoPainel"><img src="/assets/foto03.jpg" width="312" height="260" /></div>
+  <% @page.photos.in_groups(3, false).each do |photos| %>
+    <%= content_tag :div, nil, :class => "fotoPainel", :data => { :photos => photos.map { |p| { :src => p.image.panel.url } } } %>
+  <% end %>
 </div>
 
 <div class="freeBox">

@@ -1,0 +1,438 @@
+// /!\ This is NOT CSS but LESS - a dynamic stylesheet language
+// http://lesscss.org/
+// This source code is used to generate the final slider.css
+
+/*! Slider.js by @greweb - http://greweb.fr/slider */
+
+//////////////   MIXINS   ////////////////
+
+.transform(@transform) {
+    transform: @transform;
+    -moz-transform: @transform;
+    -webkit-transform: @transform;
+    -o-transform: @transform;
+}
+.border-radius(@radius: 5px) {
+  border-radius: @radius;
+  -webkit-border-radius: @radius;
+  -moz-border-radius: @radius;
+}
+.transition-duration(@duration: 1s) {
+    transition-duration: @duration;
+    -moz-transition-duration: @duration;
+    -webkit-transition-duration: @duration;
+    -o-transition-duration: @duration;
+}
+.transform-origin(@origin) {
+    transform-origin: @origin;
+    -moz-transform-origin: @origin;
+    -webkit-transform-origin: @origin;
+    -o-transform-origin: @origin;
+}
+
+.opacity(@val) {
+    opacity: @val;
+    @filter: @val*100;
+    filter: ~"alpha(opacity=@{filter})";
+}
+
+/////////////////////////////////////////////
+
+.transition-clear, .transition-clear * {
+    -moz-transition-duration: 0s !important;
+    -webkit-transition-duration: 0s !important;
+    -o-transition-duration: 0s !important;
+    transition-duration: 0s !important;
+}
+
+/** Slider Transitions **/
+.slider {
+    position: relative;
+
+    // all transition takes 1.5s
+    .slide-image, .slide-image img, .slide-image .caption {
+        .transition-duration(1.5s);
+    }
+
+    // general properties for all transitions
+    .slide-image {
+        .opacity(0);
+        .transform-origin(50% 50%);
+    }
+    .slide-image.current {
+        .opacity(1);
+    }
+
+    // a rotate and zoom out transition
+    &.transition-rotatezoomout .slide-image {
+        .transform(scale(0) rotate(40deg));
+    }
+    &.transition-rotatezoomout .slide-image.current {
+        .transform(scale(1) rotate(0deg));
+    }
+
+    // a rotate and zoom in transition
+    &.transition-rotatezoomin .slide-image {
+        .transform(scale(2) rotate(30deg));
+    }
+    &.transition-rotatezoomin .slide-image.current {
+        .transform(scale(1) rotate(0deg));
+    }
+
+    // left transition
+    &.transition-left .slide-image {
+        .opacity(1);
+        left: -100%;
+    }
+    &.transition-left .slide-image.current {
+        left: 0;
+    }
+    // warning: this ~ selector may fail on some browsers
+    &.transition-left .slide-image.current ~ .slide-image {
+        left: 100%;
+    }
+
+    // top transition
+    &.transition-top .slide-image {
+        .opacity(1);
+        top: -100%;
+    }
+    &.transition-top .slide-image.current {
+        top: 0;
+    }
+    // warning: this ~ selector may fail on some browsers
+    &.transition-top .slide-image.current ~ .slide-image {
+        top: 100%;
+    }
+
+    // oblique transition
+    &.transition-oblique .slide-image {
+        .transform(matrix(1,1,0,1,-100%,0));
+    }
+    &.transition-oblique .slide-image.current {
+        .transform(matrix(1,0,0,1,0,0));
+    }
+    &.transition-oblique .slide-image.current ~ .slide-image {
+        .transform(matrix(1,1,0,1,100%,0));
+    }
+
+    // top fade transition
+    &.transition-topfade .slide-image {
+        top: -50%;
+    }
+    &.transition-topfade .slide-image.current {
+        top: 0;
+    }
+
+    // just opacity and container width (moving caption)
+    &.transition-simple1 .slide-image .caption {
+        right: 100%;
+    }
+    &.transition-simple1 .slide-image.current .caption {
+        right: 0%;
+    }
+
+    // zoom in
+    &.transition-zoomin .slide-image {
+        .transform(scale(2));
+    }
+    &.transition-zoomin .slide-image.current {
+        .transform(scale(1));
+    }
+
+    // zoom out
+    &.transition-zoomout .slide-image {
+        .transform(scale(0));
+    }
+    &.transition-zoomout .slide-image.current {
+        .transform(scale(1));
+    }
+
+    // flip
+    &.transition-flip .slide-image {
+        .transform(scale(-1, 1));
+    }
+    &.transition-flip .slide-image.current {
+        .transform(scale(1, 1));
+    }
+
+    // flip
+    &.transition-cardflip .slide-image {
+        .transform(scale(-1, 0.2));
+    }
+    &.transition-cardflip .slide-image.current {
+        .transform(scale(1, 1));
+    }
+
+    // Skew flip
+    &.transition-skewflip .slide-image {
+        .transform(skew(90deg, 90deg));
+    }
+    &.transition-skewflip .slide-image.current {
+        .transform(skew(0deg, 0deg));
+    }
+}
+
+/*** Slider themes ***/
+.slider {
+    // dark theme
+    &.theme-dark {
+        background: black;
+        color: white;
+        a {
+            color: white;
+        }
+        .caption {
+            background: rgba(0,0,0,0.5);
+        }
+        .options a {
+            color: #91BECC;
+            &:hover {
+                color: #D3E5EB;
+            }
+        }
+        .slide-image {
+            background: black;
+        }
+        .slide-pager a.current {
+            background-color: #91BECC;
+            color: black;
+        }
+        .loader .spinner {
+            background: url(load_dark.gif) no-repeat;
+        }
+    }
+
+    // light theme
+    &.theme-light {
+        background: white;
+        color: black;
+        a {
+          color: #555;
+        }
+        .caption {
+            background: rgba(255,255,255,0.7);
+            color: #555;
+        }
+        .options a {
+            color: #AAA;
+            &:hover {
+                color: #888;
+            }
+        }
+        .slide-image {
+            background: white;
+        }
+        .slide-pager a.current {
+            background-color: #AAA;
+            color: white;
+        }
+        .loader .spinner {
+            background: url(load_light.gif) no-repeat;
+        }
+    }
+
+    // Embed theme
+    &.theme-embed {
+        background: black;
+        color: white;
+        a {
+            color: white;
+        }
+        .caption {
+            background: rgba(0,0,0,0.5);
+        }
+        .options {
+          * {
+            z-index: 20;
+          }
+          padding: 0;
+          a {
+            color: #91BECC;
+            &:hover {
+                color: #D3E5EB;
+            }
+          }
+          .slide-pager {
+            padding: 3px 10px;
+            position: absolute;
+            text-align: center;
+            bottom: 0;
+            left: 8%;
+            width: 80%;
+            overflow: hidden;
+            a {
+              padding: 0 4px;
+              background: black;
+            }
+          }
+          a.prevSlide, a.nextSlide {
+            position: absolute;
+            bottom: 0;
+            background: black;
+            margin: 0;
+            padding: 5px 10px;
+          }
+          a.prevSlide {
+            left: 0;
+          }
+          a.nextSlide {
+            right: 0;
+          }
+        }
+        .slide-image {
+            background: black;
+        }
+        .slide-pager a.current {
+            background-color: #91BECC;
+            color: black;
+        }
+        .loader .spinner {
+            background: url(load_dark.gif) no-repeat;
+        }
+    }
+
+    // Bottom theme
+    &.theme-bottom {
+        background: black;
+        color: white;
+        a {
+            color: white;
+        }
+        .caption {
+            background: rgba(0,0,0,0.5);
+        }
+        .options {
+          position: absolute;
+          bottom: 0px;
+          left: 25%;
+          width: 50%;
+          background: black;
+          z-index: 20;
+          overflow: hidden;
+          a {
+            color: #91BECC;
+            &:hover {
+                color: #D3E5EB;
+            }
+          }
+        }
+        .slide-image {
+            background: black;
+        }
+        .slide-pager {
+          a.current {
+            background-color: #91BECC;
+            color: black;
+          }
+        }
+        .loader .spinner {
+            background: url(load_dark.gif) no-repeat;
+        }
+    }
+
+
+    // no control theme
+    &.no-control {
+        background: black;
+        color: white;
+        .caption {
+          background: rgba(0,0,0,0.5);
+        }
+        .options {
+          display: none;
+        }
+        .loader .spinner {
+            background: url(load_dark.gif) no-repeat;
+        }
+    }
+
+
+}
+
+/** Slider core styles **/
+.slider {
+    .options {
+        padding: 3px 10px;
+        text-align: center;
+    }
+    .options a {
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 12px;
+        font-family: Georgia,Serif;
+        margin: 0 2px;
+    }
+
+    .slide-pager a {
+        .transition-duration(0.5s);
+        .border-radius(5px);
+    }
+    .slide-pager a.current {
+        padding: 0 4px;
+            }
+    .options .prevSlide {
+        float: left;
+    }
+    .options .nextSlide {
+        float: right;
+    }
+    &.loading > * {
+        display: none;
+    }
+    .loader {
+        display: none;
+    }
+    .loader .spinner {
+        display: inline-block;
+        width: 20px;
+        height: 16px;
+    }
+    &.loading .loader {
+        display: block;
+        text-align: center;
+        margin: 10px;
+        padding: 10px;
+        font-size: 1.8em;
+    }
+    .slide-images {
+        position: relative;
+        padding: 0;
+        overflow: hidden;
+    }
+    .slide-image {
+        position: absolute;
+        padding: 0;
+        margin: 0;
+        z-index: 0;
+    }
+    .slide-image.current {
+        z-index: 10;
+    }
+    .slide-image.current img {
+        z-index: 12;
+    }
+    .slide-image.current .caption {
+        z-index: 13;
+    }
+    .slide-image a {
+        text-decoration: none;
+    }
+    .slide-image img {
+        z-index: 2;
+        width: 100%;
+        border: none;
+    }
+    .slide-image .caption {
+        .opacity(0.8);
+        z-index: 3;
+        position: absolute;
+        right: 0;
+        top: 4px;
+        padding: 5px 10px;
+        font-weight: bold;
+        font-size: 14px;
+        .border-radius(5px 0 0 5px);
+    }
+}
+

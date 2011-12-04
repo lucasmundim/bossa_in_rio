@@ -7,6 +7,8 @@
 //= require jquery
 //= require jquery_ujs
 //= require fancybox
+//= require slider
+//= require photo_panel
 //= require_tree ./site
 
 $(document).ready(function () {
