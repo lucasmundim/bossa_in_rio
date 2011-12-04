@@ -17,3 +17,19 @@ production:
     transaction_threshold: apdex_f
   capture_params: false
   log_level: info
+  disable_active_messaging: true
+  disable_cassandra_instrumentation: true
+  disable_crack: true
+  disable_curb: true
+  disable_elastic_search_instrumentation: true
+  disable_kyototycoon: true
+  disable_paperclip: true
+  disable_resque: true
+  disable_redis: true
+  disable_riak_client: true
+  disable_ripple: true
+  disable_sinatra_template: true
+  disable_thinking_sphinx: true
+  disable_typhoeus: true
+  disable_ultrasphinx: true
+  disable_workling: true
