@@ -1,3 +1,3 @@
-<%= form_for @photo, :url => admin_page_photo_path(@page, @photo), :html => {:multipart => true, :class => "form-stacked"} do |f| %>
+<%= form_for @photo, :url => imageable_photo_path(@imageable, @photo), :html => {:multipart => true, :class => "form-stacked"} do |f| %>
   <%= render :partial => 'form', :locals => { :f => f } %>
 <% end %>

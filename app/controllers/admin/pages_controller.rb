@@ -4,11 +4,11 @@ class Admin::PagesController < Admin::ApplicationController
   end
 
   def show
-    @page = Page.find(params[:id])
+    @imageable = @page = Page.find(params[:id])
   end
 
   def by_slug
-    @page = Page.where(:slug => params[:slug]).first
+    @imageable = @page = Page.where(:slug => params[:slug]).first
     render :action => :show
   end
 end

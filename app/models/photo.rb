@@ -8,5 +8,5 @@ class Photo
     field :caption
   end
 
-  has_and_belongs_to_many :pages
+  belongs_to :imageable, :polymorphic => true
 end

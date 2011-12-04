@@ -3,13 +3,17 @@ class Snippet
   include Mongoid::Globalize
 
   field :section
-  
+
   translates do
     field :body
   end
-  
+
+  has_many :photos, :as => :imageable
+
+  embedded_in :page
+
   accepts_nested_attributes_for :translations
-  
+
   validates_presence_of :section
   validates_uniqueness_of :section
 

@@ -5,7 +5,7 @@ class Page
 
   embeds_many :snippets
 
-  has_and_belongs_to_many :photos
+  has_many :photos, :as => :imageable
 
   accepts_nested_attributes_for :snippets
 

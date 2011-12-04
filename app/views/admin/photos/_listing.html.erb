@@ -1,0 +1,26 @@
+<% if @imageable.photos.present? %>
+  <h3>Fotos</h3>
+
+  <table class="zebra-striped">
+    <tr>
+      <th>Legenda</th>
+      <th>Foto</th>
+      <th></th>
+    </tr>
+
+  <% @imageable.photos.each do |photo| %>
+    <tr>
+      <td><%= link_to photo.caption, edit_imageable_photo_path(@imageable, photo) %></td>
+      <td>
+        <%= link_to photo.image.url, :class => "fancybox" do %>
+          <%= image_tag photo.image.thumb.url %>
+        <% end if photo.image? %>
+      </td>
+      <td><%= link_to "remover", imageable_photo_path(@imageable, photo), :method => :delete, :confirm => "Você tem certeza?" %></td>
+    </tr>
+  <% end %>
+  </table>
+
+<% end %>
+
+<%= link_to "Adicionar Foto", new_imageable_photo_path(@imageable), :class => "btn primary" %>
