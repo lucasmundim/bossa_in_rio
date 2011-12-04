@@ -55,10 +55,7 @@ create_page_with(:rooms, [:standard, :master1, :master2])
 create_page_with(:dorms, [:main, :dorms_2, :dorms_4, :dorms_6, :collective])
 
 #### Photos Page
-page = Page.create :slug => :photos
-page.photos.create :caption => "A sample image", :image => File.open(Rails.root.join('spec/fixtures/my_photo.png'))
-page.photos.create :caption => "Another sample image", :image => File.open(Rails.root.join('spec/fixtures/my_photo.png'))
-page.photos.create :caption => "Yet another sample image", :image => File.open(Rails.root.join('spec/fixtures/my_photo.png'))
+create_page_with(:photos, [:suites, :dorms, :common_areas, :courtyards_and_gardens])
 
 #### Location Page
 create_page_with(:location, [:main, :directions])

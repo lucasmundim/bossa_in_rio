@@ -10,7 +10,7 @@
 
   <% @imageable.photos.each do |photo| %>
     <tr>
-      <td><%= link_to photo.caption, edit_imageable_photo_path(@imageable, photo) %></td>
+      <td><%= link_to photo.caption.presence || "[sem legenda]", edit_imageable_photo_path(@imageable, photo) %></td>
       <td>
         <%= link_to photo.image.url, :class => "fancybox" do %>
           <%= image_tag photo.image.thumb.url %>
