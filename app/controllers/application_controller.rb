@@ -3,7 +3,7 @@ class ApplicationController < ActionController::Base
 
   before_filter :set_locale
   before_filter :ensure_domain
-  
+
   APP_DOMAIN = 'www.bossainrio.com'
 
   def set_locale
@@ -22,7 +22,7 @@ class ApplicationController < ActionController::Base
   end
 
   def ensure_domain
-    if request.env['HTTP_HOST'] != APP_DOMAIN
+    if Rails.env.production? && request.env['HTTP_HOST'] != APP_DOMAIN
       # HTTP 301 is a "permanent" redirect
       redirect_to "http://#{APP_DOMAIN}", :status => 301
     end
