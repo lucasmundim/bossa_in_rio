@@ -10,10 +10,11 @@
   <%= stylesheet_link_tag    "application" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
+  <%= render :partial => 'google_analytics' %>
 </head>
 <body>
 
-<%= render :partial => 'pages/facebook' %>
+<%= render :partial => 'facebook' %>
 
 <div id="header">
   <%= link_to root_path, :class => "logoHome", :title => t('header.logo.title') do %>
