@@ -1,14 +1,14 @@
 suites:
-  pt-BR: Suítes
-  en: Suites
+  pt-BR: h3. Suítes
+  en: h3. Suites
 dorms:
-  pt-BR: Quartos Coletivos
-  en: Dorms
+  pt-BR: h3. Quartos Coletivos
+  en: h3. Dorms
 common_areas:
-  pt-BR: Áreas Comuns
-  en: Common Areas
+  pt-BR: h3. Áreas Comuns
+  en: h3. Common Areas
 courtyards_and_gardens:
-  pt-BR: Pátios e Jardins
-  en: Courtyards and Gardens
+  pt-BR: h3. Pátios e Jardins
+  en: h3. Courtyards and Gardens
 
 

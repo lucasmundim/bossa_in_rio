@@ -2,7 +2,7 @@ require "spec_helper"
 
 describe "Home Page" do
   let!(:home_page) do
-    Page.create :slug => :home, :snippets_attributes => [
+    page = Page.create :slug => :home, :snippets_attributes => [
       {
         :section => :bottom_left,
         :translations => [
@@ -16,11 +16,15 @@ describe "Home Page" do
         ]
       }
     ]
+
+    # XXX: Mongoid::Globalize is keeping body in the document outside translations hash, need to reload here
+    page.reload
+    page
   end
 
   context "when I enter the home page" do
     before do
-      visit root_path
+      visit root_path(:i18n_locale => 'pt-BR')
     end
 
     it "should display the logo in the header with a link to the home page" do
@@ -33,7 +37,7 @@ describe "Home Page" do
     it "should display the home page body sections within the contents" do
       within('#content') do
         home_page.snippets.each do |section|
-          page.should have_content(section.body)
+          page.html.should include(section.rendered_body)
         end
       end
     end

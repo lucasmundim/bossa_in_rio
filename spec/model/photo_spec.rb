@@ -3,6 +3,14 @@ require "spec_helper"
 describe Photo do
   include CarrierWave::Test::Matchers
 
+  before do
+    PhotoUploader.enable_processing = true
+  end
+
+  after do
+    PhotoUploader.enable_processing = false
+  end
+
   describe "upload" do
     subject do
       Photo.create :image => File.open(Rails.root.join('spec/fixtures/my_photo.png'))

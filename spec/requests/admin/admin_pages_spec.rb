@@ -63,5 +63,10 @@ describe "Admin::Pages" do
         page.should have_link(snippet.section)
       end
     end
+
+    it "should display a link to add a photo for the page" do
+      visit admin_page_path(home_page)
+      page.should have_link("Adicionar Foto")
+    end
   end
 end

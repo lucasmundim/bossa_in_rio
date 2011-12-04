@@ -32,7 +32,7 @@ describe Snippet do
     end
 
     it "should return the first section matching the given value" do
-      Snippet.section(section).should == Snippet.where(:section => section).first
+      page.snippets.section(section).should == page.snippets.where(:section => section).first
     end
   end
 end
