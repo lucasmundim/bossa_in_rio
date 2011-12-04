@@ -13,6 +13,8 @@
 </head>
 <body>
 
+<%= render :partial => 'pages/facebook' %>
+
 <div id="header">
   <%= link_to root_path, :class => "logoHome", :title => t('header.logo.title') do %>
     <%= image_tag "logo_bossainrio.png", :alt => t('header.logo.title') %>
@@ -34,6 +36,7 @@
         <ul id="sub-menu-hostel" style="display:none;">
           <li><%= link_to t('menu.hostel.submenus.hostel.title'), hostel_path %></li>
           <li><%= link_to t('menu.hostel.submenus.services.title'), services_path %></li>
+          <li><%= link_to t('menu.hostel.submenus.facilities.title'), facilities_path %></li>
         </ul>
       </li>
       <li>
@@ -106,12 +109,13 @@
         </p>
       </div><div class="clear"></div>
       <div class="redes">
-        <p>
+        <p class="facebook">
           <%= link_to 'https://www.facebook.com/pages/Bossa-in-Rio-Hostel/256042857754765', :target => "_blank", :title => t('footer.contacts.facebook') do %>
             <img src="/assets/ico_facebook.png" width="32" height="30" alt="Facebook" />
             Facebook
           <% end %>
         </p>
+        <div class="fb-like" data-href="http://www.facebook.com/pages/Bossa-in-Rio-Hostel/256042857754765" data-send="false" data-layout="button_count" data-width="50" data-show-faces="true"></div>
       </div><div class="clear"></div>
       <div class="redes">
         <p>
@@ -140,7 +144,9 @@
 
     <div class="blocoFooter last">
       <h6><%= t('footer.where.title') %></h6>
-      <img src="/assets/ico_mapa.png" width="62" height="42" />
+      <%= link_to location_path do %>
+        <img src="/assets/ico_mapa.png" width="62" height="42" />
+      <% end %>
       <p>Rua Joaquim Murtinho, 531<br />Santa Teresa<br />Rio de Janeiro - RJ. Brasil.</p>
       <hr />
       <p><%=raw t('footer.where.references') %></p>

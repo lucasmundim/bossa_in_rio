@@ -31,6 +31,8 @@ en:
           title: 'The Hostel'
         services:
           title: 'Services'
+        facilities:
+          title: 'Facilities'
     rooms:
       title: 'Rooms'
       submenus:
@@ -69,6 +71,8 @@ en:
       title: 'The Hostel'
     services:
       title: 'Services'
+    facilities:
+      title: 'Facilities'
     rooms:
       title: 'Rooms'
     dorms:

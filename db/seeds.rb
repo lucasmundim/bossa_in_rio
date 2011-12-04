@@ -40,10 +40,13 @@ Page.delete_all
 create_page_with(:home, [:bottom_left, :bottom_right])
 
 #### Hostel Page
-create_page_with(:hostel, [:welcome, :facilities])
+create_page_with(:hostel, [:main])
 
 #### Services Page
 create_page_with(:services, [:main])
+
+#### Facilities Page
+create_page_with(:facilities, [:main])
 
 #### Rooms Page
 create_page_with(:rooms, [:standard, :master1, :master2])

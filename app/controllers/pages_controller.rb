@@ -13,6 +13,10 @@ class PagesController < ApplicationController
     @page = Page.from_slug(:services)
   end
 
+  def facilities
+    @page = Page.from_slug(:facilities)
+  end
+
   def rooms
     @page = Page.from_slug(:rooms)
   end
