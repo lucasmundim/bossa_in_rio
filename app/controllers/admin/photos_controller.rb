@@ -34,6 +34,15 @@ class Admin::PhotosController < Admin::ApplicationController
     redirect_to redirect_to_imageable, :notice => 'Foto removida com sucesso.'
   end
 
+  def reorder
+    params[:photo].map { |id| Photo.find(id) }.each_with_index do |photo, index|
+      photo.order = index
+      photo.save
+    end
+
+    flash.now[:notice] = "Fotos reordenadas com sucesso."
+  end
+
   private
     def load_page
       @page = Page.find(params[:page_id])

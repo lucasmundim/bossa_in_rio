@@ -3,7 +3,7 @@
     <%=raw snippet.rendered_body %>
 
     <div class="galeria">
-      <% snippet.photos.each do |photo| %>
+      <% snippet.photos.ordered.each do |photo| %>
         <div class="fotoGaleria">
           <%= link_to photo.image.url, :class => "fancybox", :title => photo.caption, :rel => 'photos' do %>
             <%= image_tag photo.image.thumb.url, :alt => photo.caption, :title => photo.caption %>

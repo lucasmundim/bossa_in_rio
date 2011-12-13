@@ -6,10 +6,25 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery-ui
 //= require fancybox
 //= require twitter/bootstrap
 //= require_tree ./admin
 
 $(document).ready(function() {
   $("a.fancybox").fancybox();
+
+  $(".sortable tbody").sortable({
+    handle: 'a.move',
+    items: 'tr',
+    axis: 'y',
+    revert: true,
+    scroll: true,
+    update: function (event, ui) {
+      var serialized = $(this).sortable('serialize');
+      $.post($(this).attr('data-update-url'), serialized, function (data) {
+        window.console.log('data updated');
+      });
+    }
+  });
 });

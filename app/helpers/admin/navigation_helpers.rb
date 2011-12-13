@@ -30,4 +30,12 @@ module Admin::NavigationHelpers
       admin_page_photo_path(imageable, photo)
     end
   end
+
+  def imageable_reorder_photos_path(imageable)
+    if imageable.is_a?(Snippet)
+      reorder_admin_page_snippet_photos_path(imageable.page, imageable)
+    else
+      reorder_admin_page_photos_path(imageable)
+    end
+  end
 end

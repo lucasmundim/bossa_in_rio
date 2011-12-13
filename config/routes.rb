@@ -12,10 +12,14 @@ BossaInRio::Application.routes.draw do
       end
 
       resources :snippets, :only => [:edit, :update] do
-        resources :photos, :only => [:new, :edit, :create, :update, :destroy]
+        resources :photos, :only => [:new, :edit, :create, :update, :destroy] do
+          post :reorder, :on => :collection
+        end
       end
 
-      resources :photos, :only => [:new, :edit, :create, :update, :destroy]
+      resources :photos, :only => [:new, :edit, :create, :update, :destroy] do
+        post :reorder, :on => :collection
+      end
     end
   end
 

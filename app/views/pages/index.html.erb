@@ -1,5 +1,5 @@
 <div id="painel">
-  <% @page.photos.in_groups(3, false).each do |photos| %>
+  <% @page.photos.ordered.in_groups(3, false).each do |photos| %>
     <%= content_tag :div, nil, :class => "fotoPainel", :data => { :photos => photos.map { |p| { :src => p.image.panel.url } } } %>
   <% end %>
 </div>
