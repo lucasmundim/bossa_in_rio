@@ -5,6 +5,7 @@
 // the compiled file.
 //
 //= require jquery
+//= require jquery-ui
 //= require jquery_ujs
 //= require fancybox
 //= require slider
@@ -13,6 +14,16 @@
 
 $(document).ready(function () {
   $("a.fancybox").fancybox();
+  
+  $(".datepicker").datepicker({
+    dateFormat : "dd MM yy",
+    buttonImageOnly : true,
+    buttonImage : "<%= asset_path('iconDatePicker.gif') %>",
+    showOn : "both",
+    changeMonth : true,
+    changeYear : true,
+    yearRange : "c-20:c+5"
+  });
 });
 
 jQuery.fn.reset = function () {

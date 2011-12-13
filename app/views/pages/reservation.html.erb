@@ -2,9 +2,15 @@
   <h2><%= t('pages.reservation.title') %></h2>
 </div>
 
-<div class="conteudoPrincipalTotal">
+<div class="conteudoPrincipal">
   <%=raw @page.snippets.section(:new_year_package).rendered_body %>
+</div><!-- conteudoPrincipal -->
 
+<div class="conteudoSecundario">
+  <%= render :partial => "reservation_form" %>
+</div><!-- /conteudoSecundario -->
+
+<div class="conteudoPrincipalTotal">
   <%=raw @page.snippets.section(:carnival_package).rendered_body %>
 
   <%=raw @page.snippets.section(:high_season_package).rendered_body %>
@@ -12,8 +18,6 @@
   <%=raw @page.snippets.section(:low_season_package).rendered_body %>
 
   <%=raw @page.snippets.section(:promotions).rendered_body %>
-
-  <%= render :partial => "reservation_form" %>
 
   <%=raw @page.snippets.section(:terms_conditions).rendered_body %>
 </div><!-- /conteudoPrincipalTotal -->

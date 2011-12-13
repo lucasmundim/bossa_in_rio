@@ -13,13 +13,14 @@
 
   <div class="field metade">
     <%= f.label :arrival, "Data de chegada" %>
-    <%= f.datetime_select(:arrival, {}, :class => "data") %>
+    <%= f.hidden_field :arrival, :class => "datepicker" %>
+    <%= f.text_field :departure %>
     <div class="clear"></div>
   </div>
 
   <div class="field metade">
     <%= f.label :departure, "Data de partida" %>
-    <%= f.datetime_select(:departure, {}, :class => "data") %>
+    <%= f.hidden_field :departure, :class => "datepicker" %>
     <div class="clear"></div>
   </div>
   <div class="clear"></div>
