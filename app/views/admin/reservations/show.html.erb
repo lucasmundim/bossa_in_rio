@@ -1,11 +1,15 @@
 <h1>Reserva</h1>
 
 <p>
-  Data de chegada: <%= l @reservation.arrival %>
+  Enviada em: <%= l @reservation.created_at, :format => :custom %>
 </p>
 
 <p>
-  Data de partida: <%= l @reservation.departure %>
+  Data de chegada: <%= l @reservation.arrival, :format => :custom %>
+</p>
+
+<p>
+  Data de partida: <%= l @reservation.departure, :format => :custom %>
 </p>
 
 <p>

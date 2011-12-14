@@ -1,6 +1,10 @@
 <h1>Mensagems</h1>
 
 <p>
+  Enviada em: <%= l @message.created_at, :format => :custom %>
+</p>
+
+<p>
   Nome: <%= @message.first_name %>
 </p>
 

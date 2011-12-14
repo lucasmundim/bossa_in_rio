@@ -1,5 +1,6 @@
 class Message
   include Mongoid::Document
+  include Mongoid::Timestamps::Created
 
   field :first_name, :type => String
   field :last_name, :type => String

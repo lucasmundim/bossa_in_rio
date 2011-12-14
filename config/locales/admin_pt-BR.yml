@@ -1,4 +1,7 @@
 pt-BR:
+  time:
+    formats:
+      custom: "%d/%m/%Y"
   sections:
     main: "Principal"
     directions: "Detalhes de localização"
