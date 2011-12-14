@@ -26,7 +26,7 @@ describe "Admin::Photos" do
           end
         end
 
-        click_button I18n.t('helpers.submit.create', :model => Photo.model_name)
+        click_button I18n.t('helpers.submit.create', :model => I18n.t("mongoid.models.#{Photo.model_name.downcase}"))
 
         page.should have_link("caption in #{I18n.locale}")
       end
@@ -45,7 +45,7 @@ describe "Admin::Photos" do
           end
         end
 
-        click_button I18n.t('helpers.submit.create', :model => Photo.model_name)
+        click_button I18n.t('helpers.submit.create', :model => I18n.t("mongoid.models.#{Photo.model_name.downcase}"))
 
         page.should have_link("caption in #{I18n.locale}")
       end

@@ -34,14 +34,14 @@ describe "Admin::Snippets" do
 
   it "should go the the snippet details page after clicking on a snippet in the listing" do
     visit admin_page_path(home_page)
-    click_link snippet.section
+    click_link I18n.t("sections.#{snippet.section}")
     current_path.should eq(edit_admin_page_snippet_path(home_page, snippet))
   end
 
   describe "when editing a snippet" do
     it "should display the snippet body data for each locale" do
       visit edit_admin_page_snippet_path(home_page, snippet)
-      field = page.find_field("Body")
+      field = page.find_field("Texto")
       field.text.should eq(snippet.translation_for("pt-BR").body)
     end
   end

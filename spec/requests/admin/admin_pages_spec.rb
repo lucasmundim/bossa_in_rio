@@ -31,14 +31,14 @@ describe "Admin::Pages" do
     it "should list the existing pages" do
       visit admin_pages_path
       Page.all.each do |page_data|
-        page.should have_content(page_data.slug)
+        page.should have_content(I18n.t("admin_pages.#{page_data.slug}"))
       end
     end
 
     it "should display a link to the details of each of the existing pages" do
       visit admin_pages_path
       Page.all.each do |page_data|
-        page.should have_link(page_data.slug)
+        page.should have_link(I18n.t("admin_pages.#{page_data.slug}"))
       end
     end
   end
@@ -46,21 +46,23 @@ describe "Admin::Pages" do
   describe "when displaying page details" do
     it "should go the the page details page after clicking on a page in the listing" do
       visit admin_pages_path
-      click_link home_page.slug
+      within("table") do
+        click_link I18n.t("admin_pages.#{home_page.slug}")
+      end
       current_path.should eq(admin_page_path(home_page))
     end
 
     it "should list the snippets within that page" do
       visit admin_page_path(home_page)
       home_page.snippets.each do |snippet|
-        page.should have_content(snippet.section)
+        page.should have_content(I18n.t("sections.#{snippet.section}"))
       end
     end
 
     it "should display a link to the details of each existing snippets" do
       visit admin_page_path(home_page)
       home_page.snippets.each do |snippet|
-        page.should have_link(snippet.section)
+        page.should have_link(I18n.t("sections.#{snippet.section}"))
       end
     end
 
