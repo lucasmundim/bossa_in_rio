@@ -32,7 +32,7 @@ pt-BR:
     photos: "Fotos"
     santa: "Santa Teresa"
     reservation: "Reservas"
-    contact: "Mensagens"
+    contact: "Contato"
   mongoid:
     models:
       message: "Mensagem"
