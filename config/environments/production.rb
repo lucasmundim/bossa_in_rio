@@ -64,8 +64,8 @@ BossaInRio::Application.configure do
     config.root = Rails.root.join('tmp')
     config.cache_dir = 'carrierwave'
 
-    config.s3_access_key_id = ENV['s3_access_key_id']
-    config.s3_secret_access_key = ENV['s3_secret_access_key']
-    config.s3_bucket = ENV['s3_bucket']
+    config.s3_access_key_id = ENV['AWS_ACCESS_KEY_ID']
+    config.s3_secret_access_key = ENV['AWS_SECRET_ACCESS_KEY']
+    config.s3_bucket = ENV['S3_BUCKET']
   end
 end
