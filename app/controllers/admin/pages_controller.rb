@@ -1,6 +1,6 @@
 class Admin::PagesController < Admin::ApplicationController
   def index
-    @pages = Page.all
+    @pages = Page.all.asc(:_id)
   end
 
   def show
