@@ -1,6 +1,6 @@
 <%= form_for(@snippet, :url => admin_page_snippet_path(@page, @snippet), :html => { :class => "form-stacked" }) do |f| %>
   <fieldset>
-    <legend><%= @snippet.section %></legend>
+    <legend><%= t "sections.#{@snippet.section}" %></legend>
 
     <ul class="tabs" data-tabs="tabs">
       <% I18n.available_locales.each_with_index do |locale, index| %>
@@ -13,7 +13,7 @@
         <% I18n.with_locale(locale) do %>
           <div id="<%= locale %>" class="tab-pane <%= "active" if index == 0 %>">
             <div class="clearfix">
-              <%= label_tag "translations[#{locale}][body]", "Body" %>
+              <%= label_tag "translations[#{locale}][body]", "Texto" %>
               <div class="input">
                 <%= text_area_tag "translations[#{locale}][body]", @snippet.translation_for(locale).body, :class => "span9", :rows => 20 %>
               </div>

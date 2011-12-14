@@ -1,6 +1,6 @@
-<% if @imageable.photos.present? %>
-  <h3>Fotos</h3>
+<h3>Fotos</h3>
 
+<% if @imageable.photos.present? %>
   <table class="zebra-striped sortable">
     <thead>
       <tr>
@@ -26,7 +26,8 @@
     <% end %>
     </tbody>
   </table>
-
+<% else %>
+  <p>Nenhuma foto cadastrada</p>
 <% end %>
 
 <%= link_to "Adicionar Foto", new_imageable_photo_path(@imageable), :class => "btn primary" %>

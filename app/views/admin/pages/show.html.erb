@@ -1,7 +1,7 @@
-<h1><%= @page.slug %></h1>
+<h1><%= t "admin_pages.#{@page.slug}" %></h1>
 
 <% if @page.snippets.present? %>
-  <h3>Snippets</h3>
+  <h3>Textos</h3>
 
   <table class="zebra-striped">
     <tr>
@@ -10,7 +10,7 @@
 
   <% @page.snippets.each do |snippet| %>
     <tr>
-      <td><%= link_to snippet.section, edit_admin_page_snippet_path(@page, snippet) %></td>
+      <td><%= link_to t("sections.#{snippet.section}"), edit_admin_page_snippet_path(@page, snippet) %></td>
     </tr>
   <% end %>
   </table>
