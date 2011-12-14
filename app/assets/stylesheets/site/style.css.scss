@@ -107,7 +107,7 @@ body#pgIn {
   margin: 8px auto 0 auto;
   padding-top: 5px;
   position: relative;
-  z-index: 120;
+  z-index: 101;
 }
 
 /* Navegacao do menu */
@@ -756,3 +756,21 @@ ol > li > ul {
 .redes p.facebook { display: inline-block; }
 
 p.erroP { font-size: 12px; color:#ee0000; line-height: 14px; margin: 1px 0 8px 0; font-style: italic; }
+
+#ui-datepicker-div { font-size: 12px; }
+
+#reservation_arrival_text, #reservation_departure_text {
+  width: 75px;
+}
+
+.ui-datepicker-trigger {
+  float: right;
+  margin-right: 10px;
+  margin-top: 5px;
+}
+
+.ui-datepicker-append {
+  float: right;
+  margin-right: 5px;
+  margin-top: 5px;
+}

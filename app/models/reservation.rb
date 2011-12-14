@@ -2,6 +2,8 @@ class Reservation
   include Mongoid::Document
   include Mongoid::MultiParameterAttributes
   include Mongoid::Timestamps::Created
+
+  attr_accessor :arrival_text, :departure_text
   
   field :arrival, :type => DateTime
   field :departure, :type => DateTime
