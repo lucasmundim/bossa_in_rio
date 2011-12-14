@@ -7,7 +7,7 @@
 
 <% @pages.each do |page| %>
   <tr>
-    <td><%= link_to page.slug, admin_page_path(page) %></td>
+    <td><%= link_to t("admin_pages.#{page.slug}"), admin_page_path(page) %></td>
   </tr>
 <% end %>
 </table>
