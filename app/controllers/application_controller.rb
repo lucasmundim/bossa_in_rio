@@ -4,7 +4,7 @@ class ApplicationController < ActionController::Base
   before_filter :set_locale
   before_filter :ensure_domain
 
-  APP_DOMAIN = 'www.bossainrio.com'
+  APP_DOMAIN = 'www.bossainriohostel.com'
 
   def set_locale
     if params[:i18n_locale].present?
