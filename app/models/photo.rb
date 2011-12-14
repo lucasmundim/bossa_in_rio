@@ -13,4 +13,6 @@ class Photo
   scope :ordered, order_by(:order.asc)
 
   belongs_to :imageable, :polymorphic => true
+
+  validates_presence_of :image
 end
