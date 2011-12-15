@@ -2,6 +2,19 @@
   <h2><%= t('pages.santa.title') %></h2>
 </div>
 
-<div class="conteudoPrincipalTotal">
+<div class="conteudoPrincipal">
   <%=raw @page.snippets.section(:main).rendered_body %>
 </div><!-- conteudoPrincipal -->
+
+<div class="conteudoSecundario">
+  <h3>Fotos</h3>
+  <% @page.photos.ordered.each do |photo| %>
+    <div class="fotoGaleria">
+      <%= link_to photo.image.url, :class => "fancybox", :title => photo.caption, :rel => 'photos' do %>
+        <%= image_tag photo.image.thumb.url, :alt => photo.caption, :title => photo.caption %>
+      <% end %>
+    </div>
+  <% end %>
+  <div class="clear"></div>
+</div><!-- /conteudoSecundario -->
+<div class="clear"></div>
