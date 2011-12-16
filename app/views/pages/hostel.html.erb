@@ -12,7 +12,7 @@
   <% @page.photos.ordered.each do |photo| %>
     <div class="fotoGaleria">
       <%= link_to photo.image.url, :class => "fancybox", :title => photo.caption, :rel => 'photos' do %>
-        <%= image_tag photo.image.thumb.url, :alt => photo.caption, :title => photo.caption %>
+        <%= image_tag photo.image_thumb_version.url, :alt => photo.caption, :title => photo.caption %>
       <% end %>
     </div>
   <% end %>

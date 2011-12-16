@@ -5,6 +5,7 @@ class Photo
   mount_uploader :image, PhotoUploader
 
   field :order, :default => 0
+  field :thumb_version, :default => "thumb"
 
   translates do
     field :caption
@@ -15,4 +16,8 @@ class Photo
   belongs_to :imageable, :polymorphic => true
 
   validates_presence_of :image
+
+  def image_thumb_version
+    image.send(thumb_version || 'thumb')
+  end
 end

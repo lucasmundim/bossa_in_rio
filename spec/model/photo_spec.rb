@@ -23,8 +23,8 @@ describe Photo do
     end
 
     context "thumb version" do
-      it "should scale down the image to be exactly 74 by 74 pixels, croping it if necessary" do
-        subject.image.thumb.should have_dimensions(74, 74)
+      it "should scale down the image to be exactly 90 by 90 pixels, croping it if necessary" do
+        subject.image.thumb.should have_dimensions(90, 90)
       end
     end
   end

@@ -28,8 +28,29 @@ class PhotoUploader < CarrierWave::Uploader::Base
     process :resize_to_fill => [312, 260]
   end
 
+  version :thumb_408x230 do
+    process :resize_to_fill => [408, 230]
+    process :quality => 75
+  end
+
+  version :thumb_330x230 do
+    process :resize_to_fill => [306, 230]
+    process :quality => 75
+  end
+
+  version :thumb_266x150 do
+    process :resize_to_fill => [266, 150]
+    process :quality => 75
+  end
+
+  version :thumb_200x150 do
+    process :resize_to_fill => [200, 150]
+    process :quality => 75
+  end
+
   version :thumb do
-    process :resize_to_fill => [74, 74]
+    process :resize_to_fill => [90, 90]
+    process :quality => 75
   end
 
   # Process files as they are uploaded:

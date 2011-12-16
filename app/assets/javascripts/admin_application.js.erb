@@ -17,6 +17,9 @@ $(document).ready(function() {
   $(".sortable").sortable({
     revert: true,
     scroll: true,
+    cancel: '.edit-thumb',
+    placeholder: 'placeholder',
+    forcePlaceholderSize: true,
     update: function (event, ui) {
       var serialized = $(this).sortable('serialize');
       $.post($(this).attr('data-update-url'), serialized);
@@ -24,4 +27,28 @@ $(document).ready(function() {
   });
 
   $(".photos-listing.tab-content").height($(".photos-listing.tab-content").height());
+
+  $(".modal").modal({
+    backdrop: true,
+    keyboard: true
+  })
+
+  $(".photos-listing").delegate("li > a", "mouseenter", function () {
+    $(this).find(".edit-thumb").show();
+  }).delegate("li > a", "mouseleave", function () {
+    $(this).find(".edit-thumb").hide();
+  }).delegate("li a", "click", function (e) {
+    e.preventDefault();
+    return false;
+  }).delegate(".edit-thumb", "click", function () {
+    $($(this).attr('data-modal')).modal('show');
+  });
+
+  $(".modal.photos-modal li a").live("click", function (e) {
+    $(this).parents("ul").find("a").removeClass("active");
+    $(this).addClass("active");
+    $(this).parents("li").find('input[type=radio]').attr('checked', 'checked');
+    e.preventDefault();
+    return false;
+  });
 });

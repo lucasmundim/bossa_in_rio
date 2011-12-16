@@ -20,8 +20,19 @@ class Admin::PhotosController < Admin::ApplicationController
 
   def update
     @photo = Photo.find params[:id]
-    if @photo.update_attributes(params[:photo]) && @photo.set_translations(params[:translations]) && @imageable.save
-      redirect_to redirect_to_imageable, :notice => 'Foto alterada com sucesso.'
+
+    if params[:translations]
+      @photo.set_translations(params[:translations])
+      @imageable.save
+    end
+
+    if @photo.update_attributes(params[:photo])
+      respond_to do |format|
+        format.html { redirect_to redirect_to_imageable, :notice => 'Foto alterada com sucesso.' }
+        format.js do
+          flash.now[:notice] = 'Tamanho da foto alterado com sucesso'
+        end
+      end
     else
       render :action => "new"
     end

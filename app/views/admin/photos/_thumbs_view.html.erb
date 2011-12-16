@@ -2,8 +2,37 @@
   <% @imageable.photos.ordered.each do |photo| %>
     <li id="<%= dom_id(photo) %>">
       <a href="#">
-        <%= image_tag photo.image.thumb.url %>
+        <%= image_tag photo.image_thumb_version.url %>
+        <span class="edit-thumb" style="display: none;" data-modal="#<%= dom_id(photo, :modal) %>">tamanho</span>
       </a>
     </li>
   <% end %>
 </ul>
+
+<% @imageable.photos.ordered.each do |photo| %>
+  <div id="<%= dom_id(photo, :modal) %>" class="modal fade out photos-modal" style="display: none;">
+    <%= form_for photo, :url => imageable_photo_path(@imageable, photo), :remote => true, :html => {:class => "form-stacked"} do |f| %>
+    <div class="modal-header">
+      <a class="close" href="#">x</a>
+      <h3>Escolha o tamanho da foto</h3>
+    </div>
+    <div class="modal-body">
+      <ul class="media-grid">
+        <% photo.image.versions.except(:thumb, :panel).each do |version, url| %>
+          <li>
+            <label>
+              <%= f.radio_button :thumb_version, version, :id => dom_id(photo, "thumb_version_#{version}") %>
+              <a href="#" class="<%= 'active' if photo.thumb_version == version.to_s %>">
+                <%= image_tag(photo.image.send(version).url) %>
+              </a>
+            </label>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+    <div class="modal-footer">
+      <%= f.submit "Alterar", :class => "btn primary" %>
+    </div>
+    <% end %>
+  </div>
+<% end %>
