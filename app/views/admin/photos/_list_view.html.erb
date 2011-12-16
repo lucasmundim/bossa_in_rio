@@ -1,0 +1,23 @@
+<table class="zebra-striped">
+  <thead>
+    <tr>
+      <th>Legenda</th>
+      <th>Foto</th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+  <% @imageable.photos.ordered.each do |photo| %>
+    <tr>
+      <td class="photo-caption"><%= link_to photo.caption.presence || "[sem legenda]", edit_imageable_photo_path(@imageable, photo) %></td>
+      <td class="photo-image">
+        <%= link_to photo.image.url, :class => "fancybox" do %>
+          <%= image_tag photo.image.thumb.url %>
+        <% end %>
+      </td>
+      <td class="photo-delete"><%= link_to "remover", imageable_photo_path(@imageable, photo), :method => :delete, :confirm => "Você tem certeza?" %></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>

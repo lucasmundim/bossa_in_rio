@@ -16,18 +16,21 @@ body {
   margin: 20px 0px 50px;
 }
 
-.sortable {
+#list-view {
   tr {
-    width: 940px;
-
-    td.photo-move { width: 100px }
-    td.photo-caption { width: 600px }
-    td.photo-image { width: 160px }
-    td.photo-delete { width: 80px }
+    td.photo-caption { width: 70% }
+    td.photo-image { width: 15% }
+    td.photo-delete { width: 15% }
   }
+}
 
-  .move {
-    cursor: move;
+#thumbs-view {
+  ul {
+    li {
+      float: left;
+
+      a { cursor: move; }
+    }
   }
 }
 

@@ -1,31 +1,20 @@
 <h3>Fotos</h3>
 
 <% if @imageable.photos.present? %>
-  <table class="zebra-striped sortable">
-    <thead>
-      <tr>
-        <th></th>
-        <th>Legenda</th>
-        <th>Foto</th>
-        <th></th>
-      </tr>
-    </thead>
+  <ul class="tabs" data-tabs="tabs">
+    <li class="active"><a href="#list-view">Listagem</a></li>
+    <li><a href="#thumbs-view">Thumbnails</a></li>
+  </ul>
 
-    <tbody data-update-url="<%= imageable_reorder_photos_path(@imageable) %>">
-    <% @imageable.photos.ordered.each do |photo| %>
-      <tr id="<%= dom_id(photo) %>">
-        <td class="photo-move"><a class="btn move">mover</a></td>
-        <td class="photo-caption"><%= link_to photo.caption.presence || "[sem legenda]", edit_imageable_photo_path(@imageable, photo) %></td>
-        <td class="photo-image">
-          <%= link_to photo.image.url, :class => "fancybox" do %>
-            <%= image_tag photo.image.thumb.url %>
-          <% end if photo.image? %>
-        </td>
-        <td class="photo-delete"><%= link_to "remover", imageable_photo_path(@imageable, photo), :method => :delete, :confirm => "Você tem certeza?" %></td>
-      </tr>
-    <% end %>
-    </tbody>
-  </table>
+  <div class="tab-content">
+    <div id="list-view" class="tab-pane active">
+      <%= render :partial => 'admin/photos/list_view' %>
+    </div>
+
+    <div id="thumbs-view" class="tab-pane">
+      <%= render :partial => 'admin/photos/thumbs_view' %>
+    </div>
+  </div>
 <% else %>
   <p>Nenhuma foto cadastrada</p>
 <% end %>

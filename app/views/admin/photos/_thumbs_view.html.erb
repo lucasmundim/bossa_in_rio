@@ -1,0 +1,9 @@
+<ul class="sortable media-grid" data-update-url="<%= imageable_reorder_photos_path(@imageable) %>">
+  <% @imageable.photos.ordered.each do |photo| %>
+    <li id="<%= dom_id(photo) %>">
+      <a href="#">
+        <%= image_tag photo.image.thumb.url %>
+      </a>
+    </li>
+  <% end %>
+</ul>
