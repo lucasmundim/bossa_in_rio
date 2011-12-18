@@ -52,3 +52,16 @@ jQuery.fn.reset = function () {
     }
   });
 }
+
+$('#reservation_wants_transfer_sim').live('click', function() {
+  $('#transfer_details').show();
+});
+
+$('#reservation_wants_transfer_no').live('click', function() {
+  $('#transfer_details').hide();
+});
+
+$('#contact_details_toggle a').live('click', function() {
+  $('#contact_details').show();
+  $('#contact_details_toggle').hide();
+});

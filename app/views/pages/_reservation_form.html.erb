@@ -94,15 +94,19 @@
   </div>
   <div class="clear"></div>
 
-  <div class="field radio">
+  <div id="transfer_details" class="field radio">
     <%= f.label :transfer_details, "(Data, procedência, hora de chegada e número do vôo) (O hóspede é responsável por avisar o hostel se o vôo for atrasar) (Datas, Horários e preço do serviço de transfer)" %>
     <%= f.text_area :transfer_details %>
     <div class="clear"></div>
   </div>
   <div class="clear"></div>
 
-  <fieldset>
-    <legend>Se desejar agilizar seu check in, por favor preencha também os itens abaixo:</legend>
+  <div id="contact_details_toggle">
+    <span>Se desejar agilizar seu check in <a>clique aqui</a>
+  </div>
+
+  <fieldset id="contact_details">
+    <legend>Por favor preencha também os itens abaixo:</legend>
 
     <div class="field metade">
       <%= f.label :address %>
