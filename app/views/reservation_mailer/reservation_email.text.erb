@@ -1,0 +1,38 @@
+Solicitação de reserva recebida em <%= l @reservation.created_at, :format => :custom_with_time %>
+===============================================
+
+Data de chegada: <%= l @reservation.arrival, :format => :custom %>
+
+Data de partida: <%= l @reservation.departure, :format => :custom %>
+
+Habitação: <%= @reservation.room %>
+
+Número de pessoas: <%= @reservation.quantity %>
+
+Nome: <%= @reservation.first_name %>
+
+Sobrenome: <%= @reservation.last_name %>
+
+Documento: <%= @reservation.identification %>
+
+Sexo: <%= @reservation.genre %>
+
+Nacionalidade: <%= Carmen::country_name(@reservation.nationality) %>
+
+E-mail: <%= @reservation.email %>
+
+Deseja transfer: <%= @reservation.wants_transfer %>
+
+Detalhes para transfer: <%= @reservation.transfer_details %>
+
+Endereço: <%= @reservation.address %>
+
+Cidade: <%= @reservation.city %>
+
+Telefone: <%= @reservation.phone %>
+
+Celular: <%= @reservation.mobile %>
+
+Observação: <%= @reservation.obs %>
+
+Referência: <%= @reservation.reference %>

@@ -25,4 +25,11 @@ class Reservation
   field :reference, :type => String
 
   validates_presence_of :first_name, :last_name, :email
+
+  after_create :mail
+
+  private
+    def mail
+      ReservationMailer.reservation_email(self).deliver
+    end
 end
