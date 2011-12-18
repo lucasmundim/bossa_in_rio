@@ -1,0 +1,15 @@
+Contato recebido em <%= l @message.created_at, :format => :custom_with_time %>
+===============================================
+ 
+Nome: <%= @message.first_name %>
+
+Sobrenome: <%= @message.last_name %>
+
+Telefone: <%= @message.phone %>
+
+País: <%= Carmen::country_name(@message.country) %>
+
+E-mail: <%= @message.email %>
+
+Mensagem:
+<%= @message.message %>

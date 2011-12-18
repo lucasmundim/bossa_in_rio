@@ -2,6 +2,7 @@ pt-BR:
   time:
     formats:
       custom: "%d/%m/%Y"
+      custom_with_time: "%d/%m/%Y às %H:%M"
   sections:
     main: "Principal"
     directions: "Detalhes de localização"

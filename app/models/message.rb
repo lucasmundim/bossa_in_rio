@@ -10,4 +10,11 @@ class Message
   field :message, :type => String
 
   validates_presence_of :first_name, :last_name, :message, :email
+
+  after_create :mail
+
+  private
+    def mail
+      ContactMailer.contact_email(self).deliver
+    end
 end
