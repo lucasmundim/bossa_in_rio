@@ -1,6 +1,6 @@
 class ReservationMailer < ActionMailer::Base
   default :from => "no-reply@bossainrio.com",
-          :to => "lucas.mundim@gmail.com"
+          :to => "reservas@bossainrio.com"
   
   def reservation_email(reservation)
     @reservation = reservation

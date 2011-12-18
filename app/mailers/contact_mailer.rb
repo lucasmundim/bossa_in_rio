@@ -1,6 +1,6 @@
 class ContactMailer < ActionMailer::Base
   default :from => "no-reply@bossainrio.com",
-          :to => "lucas.mundim@gmail.com"
+          :to => "contato@bossainrio.com"
   
   def contact_email(message)
     @message = message
