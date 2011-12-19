@@ -67,6 +67,7 @@ BossaInRio::Application.configure do
     config.s3_access_key_id = ENV['AWS_ACCESS_KEY_ID']
     config.s3_secret_access_key = ENV['AWS_SECRET_ACCESS_KEY']
     config.s3_bucket = ENV['S3_BUCKET']
+    config.s3_region = ENV['S3_REGION']
   end
 
   config.action_mailer.delivery_method = :smtp
