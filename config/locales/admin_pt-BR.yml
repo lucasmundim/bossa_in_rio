@@ -3,6 +3,7 @@ pt-BR:
     formats:
       custom: "%d/%m/%Y"
       custom_with_time: "%d/%m/%Y às %H:%M"
+      custom_time: "%H:%M"
   sections:
     main: "Principal"
     directions: "Detalhes de localização"
@@ -61,6 +62,7 @@ pt-BR:
         image: "Imagem"
       reservation:
         arrival: "Chegada"
+        arrival_time: "Horário de Chegada"
         departure: "Partida"
         room: "Quarto"
         quantity: "Número de pessoas"

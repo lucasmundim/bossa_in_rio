@@ -23,9 +23,8 @@ $(document).ready(function () {
     changeMonth : true,
     changeYear : true,
     yearRange : "c-20:c+5",
-    regional : 'pt-BR',
+    <%= "regional : '#{I18n.locale.to_s}'," if I18n.locale.to_s != 'en' %>
     altFormat : 'dd/mm/yy',
-    appendText: '(dd/mm/yyyy)',
     autoSize: false,
     showButtonPanel: true,
     showOtherMonths: true,

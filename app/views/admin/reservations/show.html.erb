@@ -9,6 +9,10 @@
 </p>
 
 <p>
+  Horário de chegada: <%= l(@reservation.arrival_time, :format => :custom_time) if @reservation.arrival_time %>
+</p>
+
+<p>
   Data de partida: <%= l @reservation.departure, :format => :custom %>
 </p>
 

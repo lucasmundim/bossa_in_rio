@@ -6,6 +6,7 @@ class Reservation
   attr_accessor :arrival_text, :departure_text
   
   field :arrival, :type => DateTime
+  field :arrival_time, :type => Time
   field :departure, :type => DateTime
   field :room, :type => String
   field :quantity, :type => String

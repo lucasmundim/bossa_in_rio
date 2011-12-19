@@ -437,6 +437,11 @@ fieldset {
   width: 49%;
 }
 
+#content .time select {
+  width: 65px;
+  display: inline-block;
+}
+
 .fieldData {
   float: left;
   width: 192px;
@@ -757,25 +762,24 @@ p.erroP { font-size: 12px; color:#ee0000; line-height: 14px; margin: 1px 0 8px 0
 
 #reservation_arrival_text, #reservation_departure_text {
   width: 75px;
+  float: left;
 }
 
 .ui-datepicker-trigger {
-  float: right;
-  margin-right: 10px;
+  margin-left: 5px;
   margin-top: 5px;
 }
 
-.ui-datepicker-append {
-  float: right;
-  margin-right: 5px;
-  margin-top: 5px;
+.date_format {
+  clear: both;
+  display: block;
 }
 
 #transfer_details {
   display: none;
 }
 
-#contact_details_toggle {
+#contact_details_toggle a {
   cursor: pointer;
   text-decoration: underline;
 }

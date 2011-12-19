@@ -39,14 +39,14 @@ class PagesController < ApplicationController
 
   def reservation
     @reservation_types = [
-      'Quarto coletivo de 2',
-      'Quarto coletivo de 4',
-      'Quarto coletivo de 6',
-      'Quarto coletivo de 10',
-      'Quarto Double',
-      'Suíte Standard',
-      'Suíte Máster 1',
-      'Suíte Máster 2'
+      I18n.t('pages.reservation.collective_room_2'),
+      I18n.t('pages.reservation.collective_room_4'),
+      I18n.t('pages.reservation.collective_room_6'),
+      I18n.t('pages.reservation.collective_room_10'),
+      I18n.t('pages.reservation.double_room'),
+      I18n.t('pages.reservation.suite_standard'),
+      I18n.t('pages.reservation.suite_master_1'),
+      I18n.t('pages.reservation.suite_master_2')
     ]
     @reservation = Reservation.new(:departure => Time.now.tomorrow)
     @page = Page.from_slug(:reservation)
