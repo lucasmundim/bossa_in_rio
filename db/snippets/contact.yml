@@ -1,6 +1,6 @@
 main:
   pt-BR:
-    'h3. Fale Conosco
+    'h3. Endereço
 
     
     Bossa in Rio Hostel
@@ -13,15 +13,25 @@ main:
     
     Brasil
     
-    Telefones: +55 21 xxx
+    
+    Telefones:
+    
+    +55 21 8101-1109
+    
+    +55 21 8801-3630
+    
     
     Email: "contato@bossainrio.com":mailto:contato@bossainrio.com
     
     
-    "Skype":skype:bossainrio?call				"Facebook":https://www.facebook.com/pages/Bossa-in-Rio-Hostel/256042857754765			"Twitter":http://twitter.com/#!/bossainrio
+    "(icon-skype)Skype":skype:bossainrio?call
+    
+    "(icon-facebook)Facebook":https://www.facebook.com/pages/Bossa-in-Rio-Hostel/256042857754765
+    
+    "(icon-twitter)Twitter":http://twitter.com/#!/bossainrio 
     '
   en:
-    'h3. Contact Us
+    'h3. Address
 
     
     Bossa in Rio Hostel
@@ -34,10 +44,20 @@ main:
     
     Brazil
     
-    Phone: +55 21 xxx
+    
+    Phone:
+    
+    +55 21 8101-1109
+    
+    +55 21 8801-3630
+    
     
     Email: "contato@bossainrio.com":mailto:contato@bossainrio.com
     
     
-    "Skype":skype:bossainrio?call				"Facebook":https://www.facebook.com/pages/Bossa-in-Rio-Hostel/256042857754765			"Twitter":http://twitter.com/#!/bossainrio
+    "(icon-skype)Skype":skype:bossainrio?call
+    
+    "(icon-facebook)Facebook":https://www.facebook.com/pages/Bossa-in-Rio-Hostel/256042857754765
+    
+    "(icon-twitter)Twitter":http://twitter.com/#!/bossainrio 
     '
