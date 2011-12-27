@@ -3,6 +3,8 @@ Solicitação de reserva recebida em <%= l @reservation.created_at, :format => :
 
 Data de chegada: <%= l @reservation.arrival, :format => :custom %>
 
+Horário: <%= @reservation.arrival_time %>
+
 Data de partida: <%= l @reservation.departure, :format => :custom %>
 
 Habitação: <%= @reservation.room %>

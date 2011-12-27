@@ -14,19 +14,19 @@
   <h4><%= I18n.t("pages.reservation.form_subtitle")%></h4>
 
   <div class="field metade">
-    <%= f.label :arrival %>
-    <%= f.hidden_field :arrival, :class => "datepicker" %>
-    <%= f.text_field :arrival_text %>
-    <span class="date_format">(dd/mm/yyyy)</span>
-    <div class="clear"></div>
-  </div>
+    <div class="arrival">
+      <%= f.label :arrival %>
+      <%= f.hidden_field :arrival, :class => "datepicker" %>
+      <%= f.text_field :arrival_text %>
+      <span class="date_format">(dd/mm/yyyy)</span>
+    </div>
 
-  <div class="field metade time">
-    <%= f.label :arrival_time %>
-    <%= f.time_select :arrival_time, :prompt => true %>
+    <div class="arrival">
+      <%= f.label :arrival_time %>
+      <%= f.select :arrival_time, options_for_select(options_for_simple_time_select) %>
+    </div>
     <div class="clear"></div>
   </div>
-  <div class="clear"></div>
 
   <div class="field metade">
     <%= f.label :departure %>
@@ -37,12 +37,11 @@
   </div>
   <div class="clear"></div>
 
-  <div class="field">
+  <div class="field metade">
     <%= f.label :room, I18n.t("pages.reservation.room_choose") %>
     <%= f.select(:room, options_for_select(@reservation_types), :include_blank => true) %>
     <div class="clear"></div>
   </div>
-  <div class="clear"></div>
 
   <div class="field metade time">
     <%= f.label :quantity %>

@@ -481,9 +481,28 @@ fieldset {
   width: 49%;
 }
 
+.arrival {
+  float: left;
+  margin-right: 16px;
+}
+
+#content #reservation_arrival_time {
+  width: 60px;
+}
+
 #content .time select {
   width: 65px;
   display: inline-block;
+}
+
+#contact_details_toggle span {
+  color: #555555;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+#content #contact_details_toggle span a {
+  margin-left: 0px;
 }
 
 .fieldData {
@@ -576,7 +595,7 @@ input.botVerde {
   font-family: Arial, Helvetica, sans-serif;
   margin: 10px 15px 5px 0;
   font-weight: bold;
-  padding: 3px 8px;
+  padding: 6px 16px;
 }
 
 input.botVerde:hover {
@@ -805,12 +824,12 @@ p.erroP { font-size: 12px; color:#ee0000; line-height: 14px; margin: 1px 0 8px 0
 #ui-datepicker-div { font-size: 12px; }
 
 #reservation_arrival_text, #reservation_departure_text {
-  width: 75px;
+  width: 90px;
   float: left;
 }
 
 .ui-datepicker-trigger {
-  margin-left: 5px;
+  margin-left: -22px;
   margin-top: 5px;
 }
 
