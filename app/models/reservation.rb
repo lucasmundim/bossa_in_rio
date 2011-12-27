@@ -13,7 +13,7 @@ class Reservation
   field :first_name, :type => String
   field :last_name, :type => String
   field :identification, :type => String
-  field :genre, :type => String
+  field :gender, :type => String
   field :nationality, :type => String
   field :email, :type => String
   field :wants_transfer, :type => String
