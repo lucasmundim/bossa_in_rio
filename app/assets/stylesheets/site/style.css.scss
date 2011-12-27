@@ -14,6 +14,14 @@ ol > li {
   margin-left: 22px;
 }
 
+#content a {
+  color: #006699;
+}
+
+#content .destaques a {
+  color: #333333;
+}
+
 .icon-skype {
   margin-top: 40px;
   background: url("/assets/ico_skype.png") no-repeat scroll 0 0 transparent;
@@ -94,6 +102,16 @@ body#pgIn {
           box-shadow:0 0px 24px -11px #000;
   position: relative;
   z-index: 100;
+}
+
+#content hr {
+  margin-top: 30px;
+  margin-bottom: 5px;
+}
+
+#content span a {
+  margin-left: 5px;
+  color: #006699;
 }
 
 #footer {
@@ -281,8 +299,8 @@ body#pgIn {
   text-decoration: none;
 }
 
-.destaqueLeft a:hover, .destaqueRight a:hover {
-  text-decoration: underline;
+.destaqueLeft a:hover p, .destaqueRight a:hover p {
+  color: #006699;
 }
 
 .footerIn {
@@ -749,6 +767,10 @@ h4 {
   margin: 0;
   padding: 0;
   color: #335a28;
+}
+
+.freeBox a:hover {
+  cursor: default;
 }
 
 .footerIn h4 {
