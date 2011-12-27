@@ -4,7 +4,6 @@ class Message
 
   field :first_name, :type => String
   field :last_name, :type => String
-  field :phone, :type => String
   field :country, :type => String
   field :email, :type => String
   field :message, :type => String
