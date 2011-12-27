@@ -2,6 +2,18 @@
   <h2><%= t('pages.services.title') %></h2>
 </div>
 
-<div class="conteudoPrincipalTotal">
+<div class="conteudoPrincipal largeBox">
   <%=raw @page.snippets.section(:main).rendered_body %>
 </div>
+
+<div class="conteudoSecundario smallBox">
+  <% @page.photos.ordered.each do |photo| %>
+    <div class="fotoGaleria">
+      <%= link_to photo.image.url, :class => "fancybox", :title => photo.caption, :rel => 'photos' do %>
+        <%= image_tag photo.image_thumb_version.url, :alt => photo.caption, :title => photo.caption %>
+      <% end %>
+    </div>
+  <% end %>
+  <div class="clear"></div>
+</div><!-- /conteudoSecundario -->
+<div class="clear"></div>

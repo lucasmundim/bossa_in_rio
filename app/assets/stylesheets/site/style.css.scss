@@ -406,6 +406,14 @@ body#pgIn {
   }
 }
 
+.conteudoPrincipal.smallBox {
+  width: 350px;
+}
+
+.conteudoPrincipal.largeBox {
+  width: 580px;
+}
+
 .conteudoSecundario {
   float: right;
   text-align: left;
@@ -419,6 +427,14 @@ body#pgIn {
   -webkit-box-shadow:0 0px 40px -20px #000;
      -moz-box-shadow:0 0px 40px -20px #000;
           box-shadow:0 0px 40px -20px #000;
+}
+
+.conteudoSecundario.largeBox {
+  width: 500px;
+}
+
+.conteudoSecundario.smallBox {
+  width: 270px;
 }
 
 .conteudoPrincipalTotal {
