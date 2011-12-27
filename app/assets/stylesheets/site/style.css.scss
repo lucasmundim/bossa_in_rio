@@ -676,7 +676,10 @@ div.mensagemSucesso {
 
 table.azul thead th { background: #7b96b7; }
 
-table.verde thead th { background: #6d8963; }
+table.verde thead th,
+#content th {
+  background: #6d8963;
+}
 
 #content td {
   padding: 3px 3px 3px 6px;
@@ -690,8 +693,10 @@ table.verde thead th { background: #6d8963; }
 
 table.azul td { background:#d2dce5; }
 
-table.verde td { background:#c3d3c0; }
-
+table.verde td,
+table td {
+  background:#c3d3c0;
+}
 
 /* Fontes */
 
