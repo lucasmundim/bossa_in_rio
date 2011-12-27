@@ -2,10 +2,11 @@
   <h2><%= t('pages.contact.title') %></h2>
 </div>
 
-<div class="conteudoPrincipal">
+<div class="conteudoPrincipal smallBox">
   <%=raw @page.snippets.section(:main).rendered_body %>
 </div><!-- /conteudoPrincipalTotal -->
 
-<div class="conteudoSecundario">
+<div class="conteudoSecundario largeBox topAligned">
+  <h3><%= t('pages.contact.form_title') %></h3>
   <%= render :partial => 'contact_form' %>
 </div>

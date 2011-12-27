@@ -734,8 +734,14 @@ h4 {
   font-weight: normal;
 }
 
+.conteudoSecundario.topAligned {
+  margin-top: -18px;
+}
 
-.conteudoSecundario h4 { font-size: 16px; margin: 0 0 3px 0; }
+.conteudoSecundario h4 {
+  font-size: 13px;
+  margin: 0 0 8px 0;
+}
 
 .freeBox h4 {
   font-size: 16px;

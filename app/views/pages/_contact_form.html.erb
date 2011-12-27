@@ -9,7 +9,7 @@
 
 <%= form_for(@message, :format => :js, :remote => true) do |f| %>
 
-  <h4>Para contatar diretamente, favor preencher seus dados:</h4>
+  <h4><%= t('pages.contact.form_sub_title') %></h4>
 
   <div class="field metade">
     <%= f.label :first_name %>
