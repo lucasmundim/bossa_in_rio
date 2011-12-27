@@ -6,22 +6,9 @@
   <%=raw @page.snippets.section(:main).rendered_body %>
 </div><!-- conteudoPrincipal -->
 
-<div class="conteudoSecundario">
-  <h3>Fotos</h3>
-  <% @page.photos.ordered.each do |photo| %>
-    <div class="fotoGaleria">
-      <%= link_to photo.image.url, :class => "fancybox", :title => photo.caption, :rel => 'photos' do %>
-        <%= image_tag photo.image_thumb_version.url, :alt => photo.caption, :title => photo.caption %>
-      <% end %>
-    </div>
-  <% end %>
-  <div class="clear"></div>
-</div><!-- /conteudoSecundario -->
-<div class="clear"></div>
-
 <div class="conteudoPrincipalTotal">
-  <%=raw @page.snippets.section(:dorms_2).rendered_body %>
-  <%=raw @page.snippets.section(:dorms_4).rendered_body %>
-  <%=raw @page.snippets.section(:dorms_6).rendered_body %>
-  <%=raw @page.snippets.section(:collective).rendered_body %>
+  <%= render :partial => 'room', :collection => [:dorms_2, :dorms_4, :dorms_6, :collective] %>
+
+  <hr />
+  <span><%= t('pages.dorms.rooms_link') %><%= link_to t('pages.all.click_here'), rooms_path %></span>
 </div><!-- /conteudoPrincipalTotal -->

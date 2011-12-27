@@ -1,0 +1,16 @@
+<div class="rooms">
+  <div class="rooms-text">
+    <%=raw @page.snippets.section(room).rendered_body %>
+  </div>
+  <div class="rooms-photos">
+  <% @page.snippets.section(room).photos.ordered.each do |photo| %>
+      <div class="fotoGaleria">
+      <%= link_to photo.image.url, :class => "fancybox", :title => photo.caption, :rel => 'photos' do %>
+          <%= image_tag photo.image_thumb_version.url, :alt => photo.caption, :title => photo.caption %>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+  <div class="clear"></div>
+</div>
+<div class="clear"></div>

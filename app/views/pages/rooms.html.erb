@@ -2,21 +2,9 @@
   <h2><%= t('pages.rooms.title') %></h2>
 </div>
 
-<div class="conteudoSecundario">
-  <h3>Fotos</h3>
-  <% @page.photos.ordered.each do |photo| %>
-    <div class="fotoGaleria">
-      <%= link_to photo.image.url, :class => "fancybox", :title => photo.caption, :rel => 'photos' do %>
-        <%= image_tag photo.image_thumb_version.url, :alt => photo.caption, :title => photo.caption %>
-      <% end %>
-    </div>
-  <% end %>
-  <div class="clear"></div>
-</div><!-- /conteudoSecundario -->
-<div class="clear"></div>
-
 <div class="conteudoPrincipalTotal">
-  <%=raw @page.snippets.section(:standard).rendered_body %>
-  <%=raw @page.snippets.section(:master1).rendered_body %>
-  <%=raw @page.snippets.section(:master2).rendered_body %>
+  <%= render :partial => 'room', :collection => [:standard, :master1, :master2] %>
+
+  <hr />
+  <span><%= t('pages.rooms.dorms_link') %><%= link_to t('pages.all.click_here'), dorms_path %></span>
 </div><!-- /conteudoPrincipalTotal -->
