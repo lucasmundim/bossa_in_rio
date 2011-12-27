@@ -1,9 +1,4 @@
 pt-BR:
-  time:
-    formats:
-      custom: "%d/%m/%Y"
-      custom_with_time: "%d/%m/%Y às %H:%M"
-      custom_time: "%H:%M"
   sections:
     main: "Principal"
     directions: "Detalhes de localização"
@@ -40,19 +35,10 @@ pt-BR:
     contact: "Contato"
   mongoid:
     models:
-      message: "Mensagem"
       page: "Página"
       photo: "Foto"
-      reservation: "Reserva"
       snippet: "Texto"
     attributes:
-      message:
-        first_name: "Primeiro nome"
-        last_name: "Último nome"
-        phone: "Telefone"
-        country: "País"
-        email: "E-mail"
-        message: "Mensagem"
       page:
         slug: "Identificador"
         snippets: "Textos"
@@ -60,26 +46,6 @@ pt-BR:
         order: "Ordenação"
         caption: "Legenda"
         image: "Imagem"
-      reservation:
-        arrival: "Chegada"
-        arrival_time: "Horário de Chegada"
-        departure: "Partida"
-        room: "Quarto"
-        quantity: "Número de pessoas"
-        first_name: "Primeiro nome"
-        last_name: "Último nome"
-        identification: "Documento"
-        genre: "Sexo"
-        nationality: "Nacionalidade"
-        email: "E-mail"
-        wants_transfer: "Deseja transfer"
-        transfer_details: "Detalhes para transfer"
-        address: "Endereço"
-        city: "Cidade"
-        phone: "Telefone"
-        mobile: "Celular"
-        obs: "Observação"
-        reference: "Referência"
       snippet:
         section: "Seção"
         body: "Texto"

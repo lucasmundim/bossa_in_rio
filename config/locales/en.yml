@@ -2,6 +2,42 @@
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
+  time:
+    formats:
+      custom: "%d/%m/%Y"
+      custom_with_time: "%d/%m/%Y às %H:%M"
+      custom_time: "%H:%M"
+  mongoid:
+    models:
+      message: "Message"
+      reservation: "Reservation"
+    attributes:
+      message:
+        first_name: "First Name"
+        last_name: "Last Name"
+        country: "Country"
+        email: "E-mail"
+        message: "Message"
+      reservation:
+        arrival: "Arrival"
+        arrival_time: "Time"
+        departure: "Departure"
+        room: "Room"
+        quantity: "Guests"
+        first_name: "Firt Name"
+        last_name: "Last Name"
+        identification: "Passport Number"
+        gender: "Gender"
+        nationality: "Country"
+        email: "E-mail"
+        wants_transfer: "Wants transfer"
+        transfer_details: "Transfer details"
+        address: "Address"
+        city: "City"
+        phone: "Phone"
+        mobile: "Mobile"
+        obs: "Notes"
+        reference: "Reference"
   named_routes_path:
     photos: 'photos'
   meta:
@@ -22,7 +58,7 @@ en:
     developed_by: 'Developed by'
     where:
       title: 'Where we are'
-      references: '10 minutes from the Christ, the Redeemer. <br>20 minutes from Copacabana.'
+      references: '5 minute walk from Lapa <br>10 minute walk from Old Town<br> 20 minutes from Christ Statue'
   menu:
     hostel:
       title: 'Hostel'
@@ -75,8 +111,10 @@ en:
       title: 'Facilities'
     rooms:
       title: 'Rooms'
+      dorms_link: 'Looking for dorms?'
     dorms:
       title: 'Dorms'
+      rooms_link: 'Looking for private rooms?'
     photos:
       title: 'Photos'
     location:
@@ -109,3 +147,7 @@ en:
       suite_master_2: 'Master Suite 2'
     contact:
       title: 'Contact'
+      form_title: 'Contact us'
+      form_sub_title: 'Please fill in the form below to contact us:'
+    all:
+      click_here: 'Click here'

@@ -1,4 +1,40 @@
 pt-BR:
+  time:
+    formats:
+      custom: "%d/%m/%Y"
+      custom_with_time: "%d/%m/%Y às %H:%M"
+      custom_time: "%H:%M"
+  mongoid:
+    models:
+      message: "Mensagem"
+      reservation: "Reserva"
+    attributes:
+      message:
+        first_name: "Primeiro nome"
+        last_name: "Último nome"
+        country: "País"
+        email: "E-mail"
+        message: "Mensagem"
+      reservation:
+        arrival: "Chegada"
+        arrival_time: "Horário"
+        departure: "Partida"
+        room: "Quarto"
+        quantity: "Número de pessoas"
+        first_name: "Primeiro nome"
+        last_name: "Último nome"
+        identification: "Documento"
+        gender: "Sexo"
+        nationality: "Nacionalidade"
+        email: "E-mail"
+        wants_transfer: "Deseja transfer"
+        transfer_details: "Detalhes para transfer"
+        address: "Endereço"
+        city: "Cidade"
+        phone: "Telefone"
+        mobile: "Celular"
+        obs: "Observação"
+        reference: "Referência"
   named_routes_path:
     photos: 'fotos'
   meta:
@@ -19,7 +55,7 @@ pt-BR:
     developed_by: 'Desenvolvido por'
     where:
       title: 'Onde estamos'
-      references: 'A 10 minutos do Cristo Redentor. <br>A 20 minutos de Copacabana.'
+      references: 'A 5 minutos a pé a Lapa <br>A 10 minutos a pé do Centro Histórico<br> A 20 minutos do Cristo'
   menu:
     hostel:
       title: 'Hostel'
@@ -72,8 +108,10 @@ pt-BR:
       title: 'Instalações'
     rooms:
       title: 'Suítes'
+      dorms_link: 'Procurando por dormitórios?'
     dorms:
       title: 'Quartos Coletivos'
+      rooms_link: 'Procurando por suítes?'
     photos:
       title: 'Fotos'
     location:
@@ -106,3 +144,7 @@ pt-BR:
       suite_master_2: 'Suíte Máster 2'
     contact:
       title: 'Contato'
+      form_title: 'Entre em contato'
+      form_sub_title: 'Para contatar diretamente, favor preencher seus dados:'
+    all:
+      click_here: 'Clique aqui'
