@@ -3,6 +3,7 @@ class Snippet
   include Mongoid::Globalize
 
   field :section
+  field :status, :type => Boolean, :default => true
 
   translates do
     field :body

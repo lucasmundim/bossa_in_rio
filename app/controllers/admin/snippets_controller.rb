@@ -14,4 +14,12 @@ class Admin::SnippetsController < Admin::ApplicationController
       render :action => "edit"
     end
   end
+
+  def update_status
+    @page = Page.find(params[:page_id])
+    @snippet = @page.snippets.find(params[:snippet_id])
+    @snippet.status = !@snippet.status
+    @page.save
+    redirect_to admin_page_path(@page), :notice => 'Status do snippet atualizado com sucesso.'
+  end
 end
