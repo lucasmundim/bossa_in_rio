@@ -4,6 +4,7 @@ class Snippet
 
   field :section
   field :status, :type => Boolean, :default => true
+  field :order, :default => 0
 
   translates do
     field :body
@@ -17,6 +18,8 @@ class Snippet
 
   validates_presence_of :section
   validates_uniqueness_of :section
+
+  scope :ordered, order_by(:order.asc)
 
   def rendered_body
     RedCloth.new(body).to_html

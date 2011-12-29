@@ -3,14 +3,14 @@
 <% if @page.snippets.present? %>
   <h3>Textos</h3>
 
-  <table class="zebra-striped">
+  <table class="zebra-striped table-sortable" data-update-url="<%= reorder_admin_page_snippets_path(@page) %>">
     <tr>
       <th>Seção</th>
       <th>Status</th>
     </tr>
 
-  <% @page.snippets.each do |snippet| %>
-    <tr>
+  <% @page.snippets.ordered.each do |snippet| %>
+    <tr id="<%= dom_id(snippet) %>">
       <td><%= link_to t("sections.#{snippet.section}"), edit_admin_page_snippet_path(@page, snippet) %></td>
       <td><%= snippet.status ? 'ativo' : 'inativo' %> (<%= link_to 'alterar status', admin_page_snippet_update_status_path(@page, snippet), :method => :put %>)</td>
     </tr>

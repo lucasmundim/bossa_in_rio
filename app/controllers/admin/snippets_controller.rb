@@ -22,4 +22,14 @@ class Admin::SnippetsController < Admin::ApplicationController
     @page.save
     redirect_to admin_page_path(@page), :notice => 'Status do snippet atualizado com sucesso.'
   end
+
+  def reorder
+    @page = Page.find(params[:page_id])
+    params[:snippet].map { |id| @page.snippets.find(id) }.each_with_index do |snippet, index|
+      snippet.order = index
+      snippet.save
+    end
+
+    flash.now[:notice] = "Snippets reordenados com sucesso."
+  end
 end

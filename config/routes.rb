@@ -16,6 +16,7 @@ BossaInRio::Application.routes.draw do
           post :reorder, :on => :collection
         end
         put :update_status
+        post :reorder, :on => :collection
       end
 
       resources :photos, :only => [:new, :edit, :create, :update, :destroy] do

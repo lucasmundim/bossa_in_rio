@@ -2,20 +2,15 @@
   <h2><%= t('pages.reservation.title') %></h2>
 </div>
 
-<div class="conteudoPrincipalTotal">
+<div class="conteudoPrincipalTotal reservation">
   <div class="conteudoSecundario">
     <%= render :partial => "reservation_form" %>
   </div><!-- /conteudoSecundario -->
 
-  <% [
-      :new_year_package,
-      :carnival_package,
-      :high_season_package,
-      :low_season_package,
-      :promotions,
-      :terms_conditions
-      ].each do |section|
-  %>
-    <%=raw @page.snippets.section(section).rendered_body if @page.snippets.section(section).status %>
+
+  <% @page.snippets.ordered.each do |snippet| %>
+    <% unless snippet.section == :terms_and_conditions %>
+      <%=raw snippet.rendered_body if snippet.status %>
+    <% end %>
   <% end %>
 </div><!-- /conteudoPrincipalTotal -->
