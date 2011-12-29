@@ -145,8 +145,15 @@ en:
       suite_standard: 'Standard Suite '
       suite_master_1: 'Master Suite 1'
       suite_master_2: 'Master Suite 2'
+      option_yes: "Yes"
+      option_no: "No"
+      terms_and_conditions: "Terms and Conditions"
+      terms_and_conditions_label: "I agree with the "
     contact:
       title: 'Contact'
+      success: 'Message sent successfully'
+      error_title: 'An error occured while sending your message'
+      error_sub_title: 'Check the fields below'
       form_title: 'Contact us'
       form_sub_title: 'Please fill in the form below to contact us:'
     all:

@@ -33,6 +33,28 @@ $(document).ready(function () {
 
   $("#reservation_arrival").datepicker("option", "altField", '#reservation_arrival_text');
   $("#reservation_departure").datepicker("option", "altField", '#reservation_departure_text');
+
+  /*
+  Textile footnote generated html
+
+  <sup id="fnr1" class="footnote"><a href="#fn1">1</a></sup>
+
+  <p id="fn1" class="footnote"><a href="#fnr1"><sup>1</sup></a> Down here, in fact.<br>
+  fn2. Down here, in fact2.</p>
+  */
+
+  $('sup.footnote a').map(function() {
+    footnote_id = $(this).attr('href');
+    $(footnote_id + ' a').remove();
+    $(this).qtip({
+      content: {
+        text: $(footnote_id).text()
+      },
+      style: {
+        classes: 'ui-tooltip-tipped',
+      }
+    });
+  });
 });
 
 jQuery.fn.reset = function () {
@@ -63,4 +85,12 @@ $('#reservation_wants_transfer_no').live('click', function() {
 $('#contact_details_toggle a').live('click', function() {
   $('#contact_details').show();
   $('#contact_details_toggle').hide();
+});
+
+$("#terms-and-conditions a").live('click', function() {
+  $.fancybox($('#terms-and-conditions div').html(), {padding: 20, width: 500, height: 400, autoScale: false, autoDimensions: false});
+});
+
+$('sup.footnote a').live('click', function(event) {
+  event.preventDefault();
 });

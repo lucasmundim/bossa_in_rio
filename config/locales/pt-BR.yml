@@ -142,8 +142,15 @@ pt-BR:
       suite_standard: 'Suíte Standard'
       suite_master_1: 'Suíte Máster 1'
       suite_master_2: 'Suíte Máster 2'
+      option_yes: "Sim"
+      option_no: "Não"
+      terms_and_conditions: 'Termos e Condições'
+      terms_and_conditions_label: "Eu li e aceito os "
     contact:
       title: 'Contato'
+      success: 'Sua mensagem foi enviada com sucesso'
+      error_title: 'Ocorreu um erro ao enviar a mensagem'
+      error_sub_title: 'Verifique os campos abaixo'
       form_title: 'Entre em contato'
       form_sub_title: 'Para contatar diretamente, favor preencher seus dados:'
     all:

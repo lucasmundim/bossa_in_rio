@@ -93,12 +93,12 @@
     <%= f.label :wants_transfer_sim, I18n.t("pages.reservation.wants_transfer") %>
     <label>
       <%= f.radio_button :wants_transfer, 'sim' %>
-      Sim
+      <%= I18n.t("pages.reservation.option_yes") %>
     </label>
 
     <label>
       <%= f.radio_button :wants_transfer, 'não' %>
-      Não
+      <%= I18n.t("pages.reservation.option_no") %>
     </label>
     <div class="clear"></div>
   </div>
@@ -158,6 +158,14 @@
     </div>
     <div class="clear"></div>
   </fieldset>
+
+  <div id="terms-and-conditions">
+    <%= f.check_box(:terms_and_conditions, {}, "yes", "no") %>
+    <span> <%= I18n.t('pages.reservation.terms_and_conditions_label') %> <a id="terms-and-conditions"><%= I18n.t('pages.reservation.terms_and_conditions') %></a>
+    <div>
+      <%=raw @page.snippets.section(:terms_conditions).rendered_body %>
+    </div>
+  </div>
 
   <div class="field">
     <%= f.submit I18n.t('pages.reservation.send'), :class => "botVerde" %>

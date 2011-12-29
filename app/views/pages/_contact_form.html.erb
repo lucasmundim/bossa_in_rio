@@ -1,10 +1,10 @@
 <div class="mensagemSucesso">
-  <h3>Sua mensagem foi enviada com sucesso</h3>
+  <h3><%= t('pages.contact.success') %></h3>
 </div>
 
 <div class="mensagemErro">
-  <h3 class="erroH3">Ocorreu um erro ao enviar a mensagem</h3>
-  <p class="erroP">Verifique os campos abaixo</p>
+  <h3 class="erroH3"><%= t('pages.contact.error_title') %></h3>
+  <p class="erroP"><%= t('pages.contact.error_sub_title') %></p>
 </div>
 
 <%= form_for(@message, :format => :js, :remote => true) do |f| %>

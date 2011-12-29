@@ -3,7 +3,7 @@ class Reservation
   include Mongoid::MultiParameterAttributes
   include Mongoid::Timestamps::Created
 
-  attr_accessor :arrival_text, :departure_text
+  attr_accessor :arrival_text, :departure_text, :terms_and_conditions
   
   field :arrival, :type => DateTime
   field :arrival_time, :type => String
@@ -26,6 +26,7 @@ class Reservation
   field :reference, :type => String
 
   validates_presence_of :first_name, :last_name, :email
+  validates_acceptance_of :terms_and_conditions, :accept => 'yes'
 
   after_create :mail
 

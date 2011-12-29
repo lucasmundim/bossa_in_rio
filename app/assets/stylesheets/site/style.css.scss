@@ -424,6 +424,17 @@ body#pgIn {
   }
 }
 
+#fancybox-content {
+  ul {
+    margin: 10px 0 20px 20px;
+
+    li {
+      list-style: disc inside none;
+      margin: 5px 0;
+    }
+  }
+}
+
 .conteudoPrincipal.smallBox {
   width: 350px;
 }
@@ -515,13 +526,17 @@ fieldset {
   display: inline-block;
 }
 
-#contact_details_toggle span {
+#terms-and-conditions {
+  margin-top: 16px;
+}
+
+#terms-and-conditions span, #contact_details_toggle span {
   color: #555555;
   font-size: 13px;
   font-weight: bold;
 }
 
-#content #contact_details_toggle span a {
+#content #contact_details_toggle span a, #terms-and-conditions span a {
   margin-left: 0px;
 }
 
@@ -642,13 +657,21 @@ div.mensagemErro {
 }
 
 div.mensagemSucesso {
-  width:88%;
-  margin: 5px 0 12px 0;
-  padding:6px 5px 0px 40px;
-  text-align:left;
+  background-color: #008340;
+  border: 1px solid green;
+  border-radius: 6px 6px 6px 6px;
   display: none;
+  font-size: 12px;
+  margin: 12px auto;
+  padding: 5px 5px 0;
+  text-align: center;
+  width: 294px;
 }
 
+div.mensagemSucesso h3 {
+  color: #fff;
+  font-size: 16px;
+}
 /* ---------- tabelas ---------- */
 
 #content table {
@@ -877,9 +900,18 @@ p.erroP { font-size: 12px; color:#ee0000; line-height: 14px; margin: 1px 0 8px 0
   display: none;
 }
 
-#contact_details_toggle a {
+#terms-and-conditions a, #contact_details_toggle a {
   cursor: pointer;
   text-decoration: underline;
+}
+
+#fancybox-content ul {
+  margin-right: 20px;
+  text-align: left;
+}
+
+#terms-and-conditions div {
+  display: none;
 }
 
 #contact_details {
@@ -898,4 +930,24 @@ p.erroP { font-size: 12px; color:#ee0000; line-height: 14px; margin: 1px 0 8px 0
 .rooms-photos {
   width: 29%;
   float: right;
+}
+
+p.footnote {
+  display: none;
+}
+
+sup.footnote a {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  text-decoration: none;
+  vertical-align: top;
+  margin: 0 1px 0 -4px;
+}
+
+.ui-tooltip, .qtip {
+  font-size: 16px;
+  line-height: 30px;
+  max-width: 480px;
+  min-width: 50px;
 }
