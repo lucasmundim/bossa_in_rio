@@ -640,10 +640,14 @@ input.botVerde:hover {
 }
 
 select:focus, textarea:focus, input[type="text"]:focus, input[type="password"]:focus { border-color: #8b7a63; background-color: #fff; }
-
-input.erro[type="text"] { background-color:#fff; border-color: #cc0000; }
-
-input.erro[type="text"]:focus { background-color:#fff; border-color: #990000; }
+input[type="checkbox"] {
+  margin-right: 5px;
+}
+input.erro[type="text"], input.erro[type="checkbox"], textarea.erro { background-color:#fff; border-color: #cc0000; }
+input.erro[type="checkbox"] {
+  outline: 2px solid #cc0000;
+}
+input.erro[type="text"]:focus, , input.erro[type="checkbox"]:focus, textarea.erro:focus { background-color:#fff; border-color: #990000; }
 
 label span { color: #cc0000; font-weight: normal; font-size: 12px; font-style: italic; }
 
