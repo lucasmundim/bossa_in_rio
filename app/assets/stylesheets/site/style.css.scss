@@ -756,6 +756,10 @@ h2 {
   font-weight: normal;
 }
 
+.conteudoPrincipalTotal.reservation h2 em {
+  font-weight: normal;
+}
+
 /* H3 */
 
 h3 {
@@ -763,6 +767,11 @@ h3 {
   font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
   color: #335A28;
   font-weight: normal;
+}
+
+#content .conteudoSecundario.transparent {
+  background-color: inherit;
+  box-shadow: none;
 }
 
 .conteudoSecundario h3 { font-size: 20px; margin: 0 0 5px 0; }
