@@ -24,7 +24,7 @@ en:
         departure: "Departure"
         room: "Room"
         quantity: "Guests"
-        first_name: "Firt Name"
+        first_name: "First Name"
         last_name: "Last Name"
         identification: "Passport Number"
         gender: "Gender"
