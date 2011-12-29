@@ -126,7 +126,7 @@ pt-BR:
       form_error_title: 'Ocorreu um erro ao enviar o seu pedido de reserva'
       form_error_subtitle: 'Verifique os campos abaixo'
       room_choose: 'Escolha um quarto:'
-      wants_transfer: 'Deseja contratar transfer desde o aeroporto?'
+      wants_transfer: 'Deseja serviço de transfer?'
       transfer_details: '(Data, procedência, hora de chegada e número do vôo) (O hóspede é responsável por avisar o hostel se o vôo for atrasar) (Datas, Horários e preço do serviço de transfer)'
       fast_check_in: 'Se desejar agilizar seu check in'
       click_here: 'clique aqui'

@@ -129,7 +129,7 @@ en:
       form_error_title: 'There was an error submitting your reservation request'
       form_error_subtitle: 'Check the fields below'
       room_choose: 'Choose a room:'
-      wants_transfer: 'Would you like airport transfer service?'
+      wants_transfer: 'Would you like transfer service?'
       transfer_details: '(Date, origin, arrival time, and flight number) (The guest is responsible for advising the hostel if your flight is delayed) (Dates, times and price of the transfer service)'
       fast_check_in: 'If you want to speed up your check in'
       click_here: 'click here'
