@@ -8,7 +8,6 @@
 
 
 <div class="conteudoSecundario">
-  <h3>Fotos</h3>
   <% @page.photos.ordered.each do |photo| %>
     <div class="fotoGaleria">
       <%= link_to photo.image.url, :class => "fancybox", :title => photo.caption, :rel => 'photos' do %>
