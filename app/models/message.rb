@@ -8,7 +8,7 @@ class Message
   field :email, :type => String
   field :message, :type => String
 
-  validates_presence_of :first_name, :last_name, :message, :email
+  validates_presence_of :first_name, :message, :email
   validates :email, :email => true
 
   after_create :mail
