@@ -228,6 +228,9 @@ GEM
       ffi (= 1.0.9)
       json_pure
       rubyzip
+    spectator-validates_email (0.0.8)
+      actionpack (>= 3.0.0)
+      activemodel (>= 3.0.0)
     sprockets (2.0.3)
       hike (~> 1.2)
       rack (~> 1.0)
@@ -279,6 +282,7 @@ DEPENDENCIES
   rspec-rails (>= 2.7.0)
   ruby-debug19
   sass-rails (~> 3.1.4)
+  spectator-validates_email
   therubyracer
   thin
   twitter-bootstrap-rails!

@@ -9,7 +9,7 @@ gem 'fog'
 
 gem 'rpm_contrib'
 gem 'newrelic_rpm'
-
+gem 'spectator-validates_email', :require => 'validates_email'
 gem 'thin'
 gem 'twitter-bootstrap-rails', :git => 'http://github.com/seyhunak/twitter-bootstrap-rails.git'
 
