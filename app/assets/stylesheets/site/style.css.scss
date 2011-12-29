@@ -514,11 +514,10 @@ fieldset {
 
 .arrival {
   float: left;
-  margin-right: 16px;
 }
 
 #content #reservation_arrival_time {
-  width: 60px;
+  width: 65px;
 }
 
 #content .time select {
@@ -896,17 +895,21 @@ p.erroP { font-size: 12px; color:#ee0000; line-height: 14px; margin: 1px 0 8px 0
 
 #reservation_arrival_text, #reservation_departure_text {
   width: 90px;
-  float: left;
+}
+
+#reservation_arrival_text {
+  margin-right: 5px;
 }
 
 .ui-datepicker-trigger {
-  margin-left: -22px;
-  margin-top: 5px;
+  margin-left: 0px;
+  margin-top: 0px;
 }
 
 .date_format {
   clear: both;
   display: block;
+  text-indent: 25px;
 }
 
 #transfer_details {
