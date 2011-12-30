@@ -18,6 +18,10 @@ class Photo
   validates_presence_of :image
 
   def image_thumb_version
-    image.send(thumb_version || 'thumb')
+    if thumb_version and image.versions.keys.include? thumb_version.to_sym
+      image.send(thumb_version)
+    else
+      image.thumb
+    end
   end
 end
