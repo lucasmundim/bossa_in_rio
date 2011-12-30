@@ -1,5 +1,5 @@
 <div class="conteudoPrincipalTotal fotos">
-  <% @page.snippets.each do |snippet| %>
+  <% @page.snippets.ordered.each do |snippet| %>
     <%=raw snippet.rendered_body %>
 
     <div class="galeria">
