@@ -38,13 +38,38 @@ class PhotoUploader < CarrierWave::Uploader::Base
     process :quality => 75
   end
 
+  version :thumb_205x116 do
+    process :resize_to_fill => [205, 116]
+    process :quality => 75
+  end
+
   version :thumb_266x150 do
     process :resize_to_fill => [266, 150]
     process :quality => 75
   end
 
-  version :thumb_200x150 do
-    process :resize_to_fill => [200, 150]
+  version :thumb_120x120 do
+    process :resize_to_fill => [120, 120]
+    process :quality => 75
+  end
+
+  version :thumb_260x120 do
+    process :resize_to_fill => [260, 120]
+    process :quality => 75
+  end
+
+  version :thumb_266x150 do
+    process :resize_to_fill => [266, 150]
+    process :quality => 75
+  end
+
+  version :thumb_117x227 do
+    process :resize_to_fill => [175, 227]
+    process :quality => 75
+  end
+
+  version :thumb_97x97 do
+    process :resize_to_fill => [97, 97]
     process :quality => 75
   end
 
