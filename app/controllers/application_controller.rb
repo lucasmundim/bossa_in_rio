@@ -3,6 +3,7 @@ class ApplicationController < ActionController::Base
 
   before_filter :set_locale
   before_filter :ensure_domain
+  before_filter :load_sound_cloud
 
   APP_DOMAIN = 'www.bossainriohostel.com'
 
@@ -21,10 +22,18 @@ class ApplicationController < ActionController::Base
     { :i18n_locale => I18n.locale }
   end
 
-  def ensure_domain
-    if Rails.env.production? && request.env['HTTP_HOST'] != APP_DOMAIN
-      # HTTP 301 is a "permanent" redirect
-      redirect_to "http://#{APP_DOMAIN}", :status => 301
+  private
+    def ensure_domain
+      if Rails.env.production? && request.env['HTTP_HOST'] != APP_DOMAIN
+        # HTTP 301 is a "permanent" redirect
+        redirect_to "http://#{APP_DOMAIN}", :status => 301
+      end
     end
-  end
+
+    def load_sound_cloud
+      response = RestClient.get "https://api.soundcloud.com/users/bossainriohostel/favorites.json?client_id=#{ENV['SOUND_CLOUD_CLIENT_ID']}"
+      @tracks = JSON.parse(response)
+    rescue
+      @tracks = []
+    end
 end

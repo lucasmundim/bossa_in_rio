@@ -129,14 +129,12 @@
 
     <div class="blocoFooter">
       <h6><%= t('footer.indications.title') %></h6>
-      <a href="#" title="Ouça agora" class="musica" target="_blank">
-        <h5>O Título da Música</h5>
-        <p>Nome do Artista</p>
-      </a>
-      <a href="#" title="Ouça agora" class="musica" target="_blank">
-        <h5>O Título da Música</h5>
-        <p>Nome do Artista</p>
-      </a><div class="clear"></div>
+      <% @tracks.each do |track| %>
+        <a href="<%= track['permalink_url'] %>" title="Ouça agora" class="musica" target="_blank">
+          <h5><%= track['title'] %></h5>
+        </a>
+        <div class="clear"></div>
+      <% end %>
       <hr />
       <p><%= t('footer.developed_by') %></p>
       <a href="http://dtmconsultoria.com" target="_blank" title="DTM - Desenvolvimento de sistemas web, imobilário, e-commerce, integração de aplicações e layouts inteligentes."><img src="/assets/logo_dtm_footer.png" width="62" height="26" /></a>

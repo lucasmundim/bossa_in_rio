@@ -7,6 +7,8 @@ gem 'rails', '3.1.1'
 
 gem 'fog'
 
+gem 'rest-client', :require => 'rest_client'
+
 gem 'rpm_contrib'
 gem 'newrelic_rpm'
 gem 'spectator-validates_email', :require => 'validates_email'
