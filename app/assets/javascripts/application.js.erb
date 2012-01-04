@@ -94,3 +94,7 @@ $("#terms-and-conditions a").live('click', function() {
 $('sup.footnote a').live('click', function(event) {
   event.preventDefault();
 });
+
+$('.toggle-list').live('click', function () {
+  $(this).next('ul').fadeToggle();
+});

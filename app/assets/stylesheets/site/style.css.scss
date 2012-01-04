@@ -798,6 +798,14 @@ h4 {
   font-weight: normal;
 }
 
+h4.toggle-list { cursor: pointer }
+
+h4.toggle-list + ul {
+  display: none;
+
+  &> li { list-style: disc; }
+}
+
 .conteudoSecundario.topAligned {
   margin-top: -18px;
 }
