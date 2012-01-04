@@ -4,7 +4,7 @@ class Reservation
   include Mongoid::Timestamps::Created
 
   attr_accessor :arrival_text, :departure_text, :terms_and_conditions
-  
+
   field :arrival, :type => DateTime
   field :arrival_time, :type => String
   field :departure, :type => DateTime
@@ -23,7 +23,6 @@ class Reservation
   field :phone, :type => String
   field :mobile, :type => String
   field :obs, :type => String
-  field :reference, :type => String
 
   validates_presence_of :first_name, :last_name, :email
   validates_acceptance_of :terms_and_conditions, :accept => 'yes'
