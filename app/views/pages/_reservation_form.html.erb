@@ -154,8 +154,10 @@
 
   <div id="terms-and-conditions">
     <%= f.check_box(:terms_and_conditions, {}, "yes", "no") %>
-    <span> <%= I18n.t('pages.reservation.terms_and_conditions_label') %> <a id="terms-and-conditions"><%= I18n.t('pages.reservation.terms_and_conditions') %></a>
-    <div>
+    <span>
+      <%= I18n.t('pages.reservation.terms_and_conditions_label') %> <a rel="#terms-and-conditions-modal" class="fancy-modal"><%= I18n.t('pages.reservation.terms_and_conditions') %></a>
+    </span>
+    <div id="terms-and-conditions-modal">
       <%=raw @page.snippets.section(:terms_conditions).rendered_body %>
     </div>
   </div>

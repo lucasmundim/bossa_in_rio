@@ -929,18 +929,16 @@ p.erroP { font-size: 12px; color:#ee0000; line-height: 14px; margin: 1px 0 8px 0
   display: none;
 }
 
-#terms-and-conditions a, #contact_details_toggle a {
+a.fancy-modal { cursor: pointer; text-decoration: underline; }
+
+#contact_details_toggle a {
   cursor: pointer;
   text-decoration: underline;
 }
 
-#fancybox-content ul {
+#fancybox-content ul, #fancybox-content ol {
   margin-right: 20px;
   text-align: left;
-}
-
-#terms-and-conditions div {
-  display: none;
 }
 
 #contact_details {
