@@ -743,7 +743,11 @@ h1.destaque, h2.destaque  {
 /* H2 */
 
 h2 {
-  margin: 6px 0; padding: 0; font-size: 23px; line-height: 25px;
+  margin: 26px 0 6px; padding: 0; font-size: 23px; line-height: 25px;
+}
+
+h2:first-of-type {
+  margin-top: 6px;
 }
 
 .tituloSecao h2 {
