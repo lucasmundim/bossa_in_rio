@@ -25,7 +25,13 @@ E-mail: <%= @reservation.email %>
 
 Deseja transfer: <%= @reservation.wants_transfer %>
 
-Detalhes para transfer: <%= @reservation.transfer_details %>
+Chegada transfer: <%= l @reservation.transfer_arrival, :format => :custom %>
+
+Horário de chegada transfer: <%= @reservation.transfer_arrival_time %>
+
+Origem transfer: <%= @reservation.transfer_origin %>
+
+Número do vôo transfer: <%= @reservation.transfer_flight_number %>
 
 Endereço: <%= @reservation.address %>
 

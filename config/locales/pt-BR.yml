@@ -28,7 +28,10 @@ pt-BR:
         nationality: "Nacionalidade"
         email: "E-mail"
         wants_transfer: "Deseja transfer"
-        transfer_details: "Detalhes para transfer"
+        transfer_arrival: "Data"
+        transfer_arrival_time: "Hora"
+        transfer_origin: "Origem"
+        transfer_flight_number: "Número do Vôo"
         address: "Endereço"
         city: "Cidade"
         phone: "Telefone"
@@ -127,7 +130,6 @@ pt-BR:
       form_error_subtitle: 'Verifique os campos abaixo'
       room_choose: 'Escolha um quarto:'
       wants_transfer: 'Deseja serviço de transfer?'
-      transfer_details: '(Data, procedência, hora de chegada e número do vôo) <br>O hóspede é responsável por avisar o hostel se o vôo for atrasar'
       fast_check_in: 'Se desejar agilizar seu check in'
       click_here: 'clique aqui'
       fast_check_in_subtitle: 'Por favor preencha também os itens abaixo:'

@@ -53,7 +53,19 @@
 </p>
 
 <p>
-  Detalhes para transfer: <%= @reservation.transfer_details %>
+  Chegada transfer: <%= l @reservation.transfer_arrival, :format => :custom %>
+</p>
+
+<p>
+  Horário da chegada transfer: <%= @reservation.transfer_arrival_time %>
+</p>
+
+<p>
+  Origem transfer: <%= @reservation.transfer_origin %>
+</p>
+
+<p>
+  Número do Vôo transfer: <%= @reservation.transfer_flight_number %>
 </p>
 
 <p>
@@ -74,10 +86,6 @@
 
 <p>
   Observação: <%= @reservation.obs %>
-</p>
-
-<p>
-  Referência: <%= @reservation.reference %>
 </p>
 
 <p>

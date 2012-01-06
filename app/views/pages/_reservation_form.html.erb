@@ -17,13 +17,13 @@
     <div class="arrival">
       <%= f.label :arrival %>
       <%= f.hidden_field :arrival, :class => "datepicker" %>
-      <%= f.text_field :arrival_text %>
+      <%= f.text_field :arrival_text, :class => "for-date" %>
       <span class="date_format">(dd/mm/yyyy)</span>
     </div>
 
     <div class="arrival">
       <%= f.label :arrival_time %>
-      <%= f.select :arrival_time, options_for_select(options_for_simple_time_select) %>
+      <%= f.select :arrival_time, options_for_select(options_for_simple_time_select), {}, :class => "for-time" %>
     </div>
     <div class="clear"></div>
   </div>
@@ -31,7 +31,7 @@
   <div class="field metade">
     <%= f.label :departure %>
     <%= f.hidden_field :departure, :class => "datepicker" %>
-    <%= f.text_field :departure_text %>
+    <%= f.text_field :departure_text, :class => "for-date" %>
     <span class="date_format">(dd/mm/yyyy)</span>
     <div class="clear"></div>
   </div>
@@ -104,11 +104,36 @@
   </div>
   <div class="clear"></div>
 
-  <div id="transfer_details" class="field radio">
-    <%= f.label :transfer_details, raw(I18n.t("pages.reservation.transfer_details")) %>
-    <%= f.text_area :transfer_details %>
-    <div id="transfer-service"><%=raw @page.snippets.section(:transfer_service).rendered_body %></div>
+  <div id="transfer_details">
+    <div class="field metade">
+      <div class="arrival">
+        <%= f.label :transfer_arrival %>
+        <%= f.hidden_field :transfer_arrival, :class => "datepicker" %>
+        <%= f.text_field :transfer_arrival_text, :class => "for-date" %>
+        <span class="date_format">(dd/mm/yyyy)</span>
+      </div>
+
+      <div class="arrival">
+        <%= f.label :transfer_arrival_time %>
+        <%= f.select :transfer_arrival_time, options_for_select(options_for_simple_time_select), {}, :class => "for-time" %>
+      </div>
+      <div class="clear"></div>
+    </div>
     <div class="clear"></div>
+
+    <div class="field metade">
+      <%= f.label :transfer_origin %>
+      <%= f.text_field :transfer_origin, :class => "medio" %>
+      <div class="clear"></div>
+    </div>
+
+    <div class="field metade">
+      <%= f.label :transfer_flight_number %>
+      <%= f.text_field :transfer_flight_number, :class => "medio" %>
+      <div class="clear"></div>
+    </div>
+
+    <div id="transfer-service"><%=raw @page.snippets.section(:transfer_service).rendered_body %></div>
   </div>
   <div class="clear"></div>
 

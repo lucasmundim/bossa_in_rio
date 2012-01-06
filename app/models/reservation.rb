@@ -3,7 +3,7 @@ class Reservation
   include Mongoid::MultiParameterAttributes
   include Mongoid::Timestamps::Created
 
-  attr_accessor :arrival_text, :departure_text, :terms_and_conditions
+  attr_accessor :arrival_text, :transfer_arrival_text, :departure_text, :terms_and_conditions
 
   field :arrival, :type => DateTime
   field :arrival_time, :type => String
@@ -17,7 +17,10 @@ class Reservation
   field :nationality, :type => String
   field :email, :type => String
   field :wants_transfer, :type => String
-  field :transfer_details, :type => String
+  field :transfer_arrival, :type => DateTime
+  field :transfer_arrival_time, :type => String
+  field :transfer_origin, :type => String
+  field :transfer_flight_number, :type => String
   field :address, :type => String
   field :city, :type => String
   field :phone, :type => String

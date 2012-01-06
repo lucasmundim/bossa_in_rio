@@ -516,7 +516,7 @@ fieldset {
   float: left;
 }
 
-#content #reservation_arrival_time {
+#content select.for-time {
   width: 65px;
 }
 
@@ -910,11 +910,8 @@ p.erroP { font-size: 12px; color:#ee0000; line-height: 14px; margin: 1px 0 8px 0
 
 #ui-datepicker-div { font-size: 12px; }
 
-#reservation_arrival_text, #reservation_departure_text {
+input.for-date {
   width: 90px;
-}
-
-#reservation_arrival_text {
   margin-right: 5px;
 }
 

@@ -31,7 +31,10 @@ en:
         nationality: "Country"
         email: "E-mail"
         wants_transfer: "Wants transfer"
-        transfer_details: "Transfer details"
+        transfer_arrival: "Date"
+        transfer_arrival_time: "Time"
+        transfer_origin: "Origin"
+        transfer_flight_number: "Flight Number"
         address: "Address"
         city: "City"
         phone: "Phone"
@@ -130,7 +133,6 @@ en:
       form_error_subtitle: 'Check the fields below'
       room_choose: 'Choose a room:'
       wants_transfer: 'Would you like transfer service?'
-      transfer_details: '(Date, origin, arrival time, and flight number) <br>The guest is responsible for advising the hostel if your flight is delayed'
       fast_check_in: 'If you want to speed up your check in'
       click_here: 'click here'
       fast_check_in_subtitle: 'Please also complete the items below:'
