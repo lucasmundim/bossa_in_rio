@@ -9,7 +9,7 @@
 
 
   <% @page.snippets.ordered.each do |snippet| %>
-    <% unless snippet.section == :terms_and_conditions %>
+    <% unless snippet.section.in?([:terms_and_conditions, :transfer_service]) %>
       <%=raw snippet.rendered_body if snippet.status %>
     <% end %>
   <% end %>

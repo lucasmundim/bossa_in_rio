@@ -105,8 +105,9 @@
   <div class="clear"></div>
 
   <div id="transfer_details" class="field radio">
-    <%= f.label :transfer_details, I18n.t("pages.reservation.transfer_details") %>
+    <%= f.label :transfer_details, raw(I18n.t("pages.reservation.transfer_details")) %>
     <%= f.text_area :transfer_details %>
+    <div id="transfer-service"><%=raw @page.snippets.section(:transfer_service).rendered_body %></div>
     <div class="clear"></div>
   </div>
   <div class="clear"></div>

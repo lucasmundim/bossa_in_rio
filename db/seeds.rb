@@ -64,7 +64,7 @@ create_page_with(:location, [:main, :directions])
 create_page_with(:santa, [:main])
 
 #### Reservation Page
-create_page_with(:reservation, [:new_year_package, :carnival_package, :high_season_package, :low_season_package, :promotions, :terms_conditions])
+create_page_with(:reservation, [:new_year_package, :carnival_package, :high_season_package, :low_season_package, :promotions, :terms_conditions, :transfer_service])
 
 #### Contact Page
 create_page_with(:contact, [:main])
