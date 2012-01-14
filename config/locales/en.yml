@@ -76,7 +76,7 @@ en:
       title: 'Rooms'
       submenus:
         suites:
-          title: 'Suites'
+          title: 'Private Rooms'
         dorms:
           title: 'Dorms'
     photos:
@@ -89,7 +89,7 @@ en:
         santa:
           title: 'Santa Teresa'
     reservation:
-      title: 'Reservation'
+      title: 'Prices and Reservation'
     contact:
       title: 'Contact'
   pages:

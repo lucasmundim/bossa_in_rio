@@ -178,7 +178,7 @@ body#pgIn {
 
 .menu li a {
   display: inline-block;
-  width: 148px;
+  width: 142px;
   height: 30px;
   line-height: 30px;
   padding: 0;
@@ -189,6 +189,8 @@ body#pgIn {
   margin: 0 0 0 10px;
   font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
 }
+
+.menu li a.reservation { width: 180px; }
 
 .menu li a.menu {
   text-transform: uppercase;

@@ -86,7 +86,7 @@ pt-BR:
         santa:
           title: 'Santa Teresa'
     reservation:
-      title: 'Reserva'
+      title: 'Preços e Reservas'
     contact:
       title: 'Contato'
   pages:
@@ -122,7 +122,7 @@ pt-BR:
     santa:
       title: 'Santa Teresa'
     reservation:
-      title: 'Tarifas e Reserva'
+      title: 'Preços e Reservas'
       form_title: 'Formulário de reserva'
       form_subtitle: 'Por favor preencha o formulário e aguarde nosso email validando sua reserva.'
       form_success: 'Seu pedido de reserva foi enviado com sucesso'
