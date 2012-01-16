@@ -125,7 +125,7 @@ en:
     santa:
       title: 'Santa Teresa'
     reservation:
-      title: 'Rates and Reservation'
+      title: 'Prices and Booking'
       form_title: 'Reservation form'
       form_subtitle: 'Please fill the form and wait for a confirmation e-mail.'
       form_success: 'Your reservation request was sent successfully'
