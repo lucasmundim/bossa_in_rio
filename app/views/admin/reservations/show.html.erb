@@ -53,7 +53,7 @@
 </p>
 
 <p>
-  Chegada transfer: <%= l @reservation.transfer_arrival, :format => :custom %>
+  Chegada transfer: <%= l @reservation.transfer_arrival, :format => :custom if @reservation.transfer_arrival.present? %>
 </p>
 
 <p>

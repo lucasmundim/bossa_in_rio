@@ -25,7 +25,7 @@ E-mail: <%= @reservation.email %>
 
 Deseja transfer: <%= @reservation.wants_transfer %>
 
-Chegada transfer: <%= l @reservation.transfer_arrival, :format => :custom %>
+Chegada transfer: <%= l @reservation.transfer_arrival, :format => :custom if @reservation.transfer_arrival.present? %>
 
 Horário de chegada transfer: <%= @reservation.transfer_arrival_time %>
 
