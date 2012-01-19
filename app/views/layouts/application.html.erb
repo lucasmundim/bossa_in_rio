@@ -31,14 +31,14 @@
   <div class="menu">
     <ul>
       <li>
-        <%= link_to t('menu.hostel.title'), hostel_path, :class => 'menu', :"data-toggle-hover" => "true", :rel => 'sub-menu-hostel' %>
+        <%= link_to t('menu.hostel.title'), hostel_path, :class => 'menu', :"data-toggle-hover" => "true", :"data-rel" => 'sub-menu-hostel' %>
         <ul id="sub-menu-hostel" style="display:none;">
           <li><%= link_to t('menu.hostel.submenus.hostel.title'), hostel_path %></li>
           <li><%= link_to t('menu.hostel.submenus.services.title'), services_path %></li>
         </ul>
       </li>
       <li>
-        <%= link_to t('menu.rooms.title'), rooms_path, :class => 'menu', :"data-toggle-hover" => "true", :rel => 'sub-menu-facilities' %>
+        <%= link_to t('menu.rooms.title'), rooms_path, :class => 'menu', :"data-toggle-hover" => "true", :"data-rel" => 'sub-menu-facilities' %>
         <ul id="sub-menu-facilities" style="display:none;">
           <li><%= link_to t('menu.rooms.submenus.suites.title'), rooms_path %></li>
           <li><%= link_to t('menu.rooms.submenus.dorms.title'), dorms_path %></li>
@@ -48,7 +48,7 @@
         <%= link_to t('menu.photos.title'), photos_path, :class => 'menu' %>
       </li>
       <li>
-        <%= link_to t('menu.location.title'), location_path, :class => 'menu', :"data-toggle-hover" => "true", :rel => 'sub-menu-location' %>
+        <%= link_to t('menu.location.title'), location_path, :class => 'menu', :"data-toggle-hover" => "true", :"data-rel" => 'sub-menu-location' %>
         <ul id="sub-menu-location" style="display:none;">
           <li><%= link_to t('menu.location.submenus.location.title'), location_path %></li>
           <li><%= link_to t('menu.location.submenus.santa.title'), santa_path %></li>
@@ -135,13 +135,13 @@
       <% end %>
       <hr />
       <p><%= t('footer.developed_by') %></p>
-      <a href="http://dtmconsultoria.com" target="_blank" title="DTM - Desenvolvimento de sistemas web, imobilário, e-commerce, integração de aplicações e layouts inteligentes."><img src="/assets/logo_dtm_footer.png" width="62" height="26" /></a>
+      <a href="http://dtmconsultoria.com" target="_blank" title="DTM - Desenvolvimento de sistemas web, imobilário, e-commerce, integração de aplicações e layouts inteligentes."><img src="/assets/logo_dtm_footer.png" width="62" height="26" alt="DTM" /></a>
     </div>
 
     <div class="blocoFooter last">
       <h6><%= t('footer.where.title') %></h6>
       <%= link_to location_path do %>
-        <img src="/assets/ico_mapa.png" width="62" height="42" />
+        <img src="/assets/ico_mapa.png" width="62" height="42" alt="mapa" />
       <% end %>
       <p>Rua Joaquim Murtinho, 531<br />Santa Teresa<br />Rio de Janeiro - RJ. Brasil.</p>
       <hr />

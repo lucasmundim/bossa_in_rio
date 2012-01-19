@@ -15,7 +15,7 @@
 
   <div class="field metade">
     <div class="arrival">
-      <%= f.label :arrival %>
+      <%= f.label :arrival, :for => 'reservation_arrival_text' %>
       <%= f.hidden_field :arrival, :class => "datepicker" %>
       <%= f.text_field :arrival_text, :class => "for-date" %>
       <span class="date_format">(dd/mm/yyyy)</span>
@@ -29,7 +29,7 @@
   </div>
 
   <div class="field metade">
-    <%= f.label :departure %>
+    <%= f.label :departure, :for => 'reservation_departure_text' %>
     <%= f.hidden_field :departure, :class => "datepicker" %>
     <%= f.text_field :departure_text, :class => "for-date" %>
     <span class="date_format">(dd/mm/yyyy)</span>
@@ -107,7 +107,7 @@
   <div id="transfer_details">
     <div class="field metade">
       <div class="arrival">
-        <%= f.label :transfer_arrival %>
+        <%= f.label :transfer_arrival, :for => 'reservation_transfer_arrival_text' %>
         <%= f.hidden_field :transfer_arrival, :class => "datepicker" %>
         <%= f.text_field :transfer_arrival_text, :class => "for-date" %>
         <span class="date_format">(dd/mm/yyyy)</span>
@@ -138,7 +138,7 @@
   <div class="clear"></div>
 
   <div id="contact_details_toggle">
-    <span><%= I18n.t('pages.reservation.fast_check_in') %> <a><%= I18n.t('pages.reservation.click_here') %></a>
+    <span><%= I18n.t('pages.reservation.fast_check_in') %> <a><%= I18n.t('pages.reservation.click_here') %></a></span>
   </div>
 
   <fieldset id="contact_details">
@@ -181,7 +181,7 @@
   <div id="terms-and-conditions">
     <%= f.check_box(:terms_and_conditions, {}, "yes", "no") %>
     <span>
-      <%= I18n.t('pages.reservation.terms_and_conditions_label') %> <a rel="#terms-and-conditions-modal" class="fancy-modal"><%= I18n.t('pages.reservation.terms_and_conditions') %></a>
+      <%= I18n.t('pages.reservation.terms_and_conditions_label') %> <a data-rel="#terms-and-conditions-modal" class="fancy-modal"><%= I18n.t('pages.reservation.terms_and_conditions') %></a>
     </span>
     <div id="terms-and-conditions-modal">
       <%=raw @page.snippets.section(:terms_conditions).rendered_body %>
