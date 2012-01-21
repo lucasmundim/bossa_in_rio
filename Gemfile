@@ -14,6 +14,7 @@ gem 'newrelic_rpm'
 gem 'spectator-validates_email', :require => 'validates_email'
 gem 'thin'
 gem 'twitter-bootstrap-rails', :git => 'http://github.com/seyhunak/twitter-bootstrap-rails.git'
+gem 'date_validator'
 
 # Gems used only for assets and not required
 # in production environments by default.

@@ -640,15 +640,28 @@ input.botVerde:hover {
   color: #c6ff3b;
 }
 
-select:focus, textarea:focus, input[type="text"]:focus, input[type="password"]:focus { border-color: #8b7a63; background-color: #fff; }
+select:focus, textarea:focus, input[type="text"]:focus, input[type="password"]:focus {
+  border-color: #8b7a63;
+  background-color: #fff;
+}
+
 input[type="checkbox"] {
   margin-right: 5px;
 }
-input.erro[type="text"], input.erro[type="checkbox"], textarea.erro { background-color:#fff; border-color: #cc0000; }
+
+input.erro[type="text"], input.erro[type="checkbox"], textarea.erro, #content select.erro {
+  background-color:#fff;
+  border-color: #cc0000;
+}
+
 input.erro[type="checkbox"] {
   outline: 2px solid #cc0000;
 }
-input.erro[type="text"]:focus, , input.erro[type="checkbox"]:focus, textarea.erro:focus { background-color:#fff; border-color: #990000; }
+
+input.erro[type="text"]:focus, , input.erro[type="checkbox"]:focus, textarea.erro:focus {
+  background-color:#fff;
+  border-color: #990000;
+}
 
 label span { color: #cc0000; font-weight: normal; font-size: 12px; font-style: italic; }
 
@@ -994,4 +1007,28 @@ sup.footnote a {
   width: 36px;
   height: 22px;
   line-height: 25px;
+}
+
+#transfer-service {
+  margin-bottom: 15px;
+}
+
+#loader {
+  float: left;
+  margin-top: 18px;
+  display: none;
+}
+
+button[disabled]:active, button[disabled],
+input[type="reset"][disabled]:active,
+input[type="reset"][disabled],
+input[type="button"][disabled]:active,
+input[type="button"][disabled],
+select[disabled] > input[type="button"],
+select[disabled] > input[type="button"]:active,
+input[type="submit"][disabled]:active,
+input[type="submit"][disabled] {
+  background-color: #ccc;
+  color: #fff;
+  cursor: default;
 }

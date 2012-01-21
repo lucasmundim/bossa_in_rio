@@ -103,3 +103,11 @@ $('sup.footnote a').live('click', function(event) {
 $('.toggle-list').live('click', function () {
   $(this).next('ul').fadeToggle();
 });
+
+$("#new_reservation").live("ajax:beforeSend", function(){
+   $('#loader').show();
+   $('#reservation-submit').attr('disabled', true);
+ }).live("ajax:complete", function(){
+   $('#loader').hide();
+   $('#reservation-submit').attr('disabled', false);
+ });

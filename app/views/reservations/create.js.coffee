@@ -11,6 +11,10 @@
   $('.mensagemErro').show()
   $('.mensagemSucesso').hide()
   <% @reservation.errors.keys.each do |field| %>
+    <% if [:arrival, :departure].include?(field) %>
+  $('#reservation_<%= field %>_text').addClass('erro')
+    <% else %>
   $('#reservation_<%= field %>').addClass('erro')
+    <% end %>
   <% end %>
 <% end %>

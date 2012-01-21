@@ -27,8 +27,10 @@ class Reservation
   field :mobile, :type => String
   field :obs, :type => String
 
-  validates_presence_of :first_name, :last_name, :email
+  validates_presence_of :first_name, :last_name, :email, :arrival, :departure, :room
   validates_acceptance_of :terms_and_conditions, :accept => 'yes'
+  validates :arrival, :date => { :before => :departure }
+  validates :departure, :date => { :after => :arrival }
 
   after_create :mail
 

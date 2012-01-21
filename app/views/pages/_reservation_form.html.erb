@@ -132,7 +132,7 @@
       <%= f.text_field :transfer_flight_number, :class => "medio" %>
       <div class="clear"></div>
     </div>
-
+    <div class="clear"></div>
     <div id="transfer-service"><%=raw @page.snippets.section(:transfer_service).rendered_body %></div>
   </div>
   <div class="clear"></div>
@@ -189,7 +189,8 @@
   </div>
 
   <div class="field">
-    <%= f.submit I18n.t('pages.reservation.send'), :class => "botVerde" %>
+    <%= f.submit I18n.t('pages.reservation.send'), :class => "botVerde", :id => 'reservation-submit' %>
+    <%= image_tag 'loader.gif', :id => 'loader' %>
     <div class="clear"></div>
   </div>
 <% end %>
