@@ -111,3 +111,11 @@ $("#new_reservation").live("ajax:beforeSend", function(){
    $('#loader').hide();
    $('#reservation-submit').attr('disabled', false);
  });
+
+$("#new_message").live("ajax:beforeSend", function(){
+   $('#loader').show();
+   $('#contact-submit').attr('disabled', true);
+  }).live("ajax:complete", function(){
+   $('#loader').hide();
+   $('#contact-submit').attr('disabled', false);
+ });

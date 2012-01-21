@@ -46,7 +46,8 @@
   <div class="clear"></div>
 
   <div class="field">
-    <%= f.submit "Enviar", :class => "botVerde" %>
+    <%= f.submit "Enviar", :class => "botVerde", :id => 'contact-submit' %>
+    <%= image_tag 'loader.gif', :id => 'loader' %>
     <div class="clear"></div>
   </div>
 <% end %>
