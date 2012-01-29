@@ -39,7 +39,7 @@ class PagesController < ApplicationController
 
   def reservation
     @reservation_types = [
-      I18n.t('pages.reservation.collective_room_2'),
+      # I18n.t('pages.reservation.collective_room_2'),
       I18n.t('pages.reservation.collective_room_4'),
       I18n.t('pages.reservation.collective_room_6'),
       I18n.t('pages.reservation.collective_room_10'),
