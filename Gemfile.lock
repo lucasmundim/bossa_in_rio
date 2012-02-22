@@ -17,12 +17,6 @@ GIT
       bson_ext (>= 1.3)
       mongoid (>= 2.1)
 
-GIT
-  remote: https://github.com/jim/carmen.git
-  revision: c1d0a937611dbf0a07880bb4822ba5afca782861
-  specs:
-    carmen (0.2.7)
-
 GEM
   remote: http://rubygems.org/
   specs:
@@ -73,6 +67,7 @@ GEM
       rack-test (>= 0.5.4)
       selenium-webdriver (~> 2.0)
       xpath (~> 0.1.4)
+    carmen (0.2.12)
     carrierwave (0.5.7)
       activesupport (~> 3.0)
     carrierwave-mongoid (0.1.3)
@@ -265,7 +260,7 @@ DEPENDENCIES
   bson_ext (~> 1.4)
   capistrano
   capybara
-  carmen!
+  carmen
   carrierwave
   carrierwave-mongoid
   coffee-rails (~> 3.1.1)

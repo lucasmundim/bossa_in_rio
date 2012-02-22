@@ -1,0 +1,161 @@
+# TODO: This is not localized in french, it is here only in order to not brake the site for a missing locale file
+
+fr:
+  time:
+    formats:
+      custom: "%d/%m/%Y"
+      custom_with_time: "%d/%m/%Y às %H:%M"
+      custom_time: "%H:%M"
+  mongoid:
+    models:
+      message: "Message"
+      reservation: "Reservation"
+    attributes:
+      message:
+        first_name: "First Name"
+        last_name: "Last Name"
+        country: "Country"
+        email: "E-mail"
+        message: "Message"
+      reservation:
+        arrival: "Arrival"
+        arrival_time: "Time"
+        departure: "Departure"
+        room: "Room"
+        quantity: "Guests"
+        first_name: "First Name"
+        last_name: "Last Name"
+        identification: "Passport Number"
+        gender: "Gender"
+        nationality: "Country"
+        email: "E-mail"
+        wants_transfer: "Wants transfer"
+        transfer_arrival: "Date"
+        transfer_arrival_time: "Time"
+        transfer_origin: "Origin"
+        transfer_flight_number: "Flight Number"
+        address: "Address"
+        city: "City"
+        phone: "Phone"
+        mobile: "Mobile"
+        obs: "Notes"
+        reference: "Reference"
+  named_routes_path:
+    photos: 'photos'
+  meta:
+    keywords: 'Bossa in Rio, Hostel, backpacker, flashpacker,Rio, Rio de Janeiro, Brazil, Santa Teresa, Lapa, Bossa, Bossa Nova, Hostel Boutique, Pousada, Guesthouse, Best Hostel, Great Hostel, Carnaval, Beach, Cheap, Room, Booking, Dorms, Bossa in Rio Hostel. tourism'
+    description: 'Bossa in Rio Hostel'
+  header:
+    logo:
+      title: 'Bossa in Rio Hostel'
+  footer:
+    title: 'Bossa in Rio Hostel'
+    contacts:
+      title: 'Contact Us'
+      twitter: 'Follow us on Twitter'
+      facebook: 'Add on Facebook'
+      skype: 'Contact us on Skype'
+    indications:
+      title: 'Bossa in Rio recommends'
+    developed_by: 'Developed by'
+    where:
+      title: 'Where we are'
+      references: '5 minute walk from Lapa <br>10 minute walk from Old Town<br> 20 minutes from Christ Statue'
+  menu:
+    hostel:
+      title: 'Hostel'
+      submenus:
+        hostel:
+          title: 'The Hostel'
+        services:
+          title: 'Services'
+        facilities:
+          title: 'Facilities'
+    rooms:
+      title: 'Rooms'
+      submenus:
+        suites:
+          title: 'Private Rooms'
+        dorms:
+          title: 'Dorms'
+    photos:
+      title: 'Photos'
+    location:
+      title: 'Location'
+      submenus:
+        location:
+          title: 'Location'
+        santa:
+          title: 'Santa Teresa'
+    reservation:
+      title: 'Prices and Booking'
+    contact:
+      title: 'Contact'
+  pages:
+    home:
+      breakfast:
+        title: 'The traditional Brazilian breakfast to start the day.'
+        body: 'Breakfast'
+      wifi:
+        title: 'Computers with internet access and WiFi throughout the hostel.'
+        body: 'Internet Access'
+      air:
+        title: 'Cool and pleasant weather in all rooms and suites in the hostel.'
+        body: 'Air conditioning'
+      security:
+        title: 'Individual locker, safe and luggage storage for your peace of mind.'
+        body: 'Safety'
+    hostel:
+      title: 'The Hostel'
+    services:
+      title: 'Services'
+    facilities:
+      title: 'Facilities'
+    rooms:
+      title: 'Rooms'
+      dorms_link: 'Looking for dorms?'
+    dorms:
+      title: 'Dorms'
+      rooms_link: 'Looking for private rooms?'
+    photos:
+      title: 'Photos'
+    location:
+      title: 'Location'
+    santa:
+      title: 'Santa Teresa'
+    reservation:
+      title: 'Prices and Booking'
+      form_title: 'Reservation form'
+      form_subtitle: 'Please fill the form and wait for a confirmation e-mail.'
+      form_success: 'Your reservation request was sent successfully'
+      form_error_title: 'There was an error submitting your reservation request'
+      form_error_subtitle: 'Check the fields below'
+      room_choose: 'Choose a room:'
+      wants_transfer: 'Would you like transfer service?'
+      fast_check_in: 'If you want to speed up your check in'
+      click_here: 'click here'
+      fast_check_in_subtitle: 'Please also complete the items below:'
+      send: 'Send'
+      male: 'Male'
+      female: 'Female'
+      collective_room_2: 'Dorm - 2 people'
+      collective_room_4: 'Dorm - 4 people'
+      collective_room_6: 'Dorm - 6 people'
+      collective_room_10: 'Dorm - 10 people'
+      double_room: 'Double room'
+      suite_standard: 'Standard Suite '
+      suite_master_1: 'Master Suite 1'
+      suite_master_2: 'Master Suite 2'
+      option_yes: "Yes"
+      option_no: "No"
+      terms_and_conditions: "Terms and Conditions"
+      terms_and_conditions_label: "I agree with the "
+    contact:
+      title: 'Contact'
+      success: 'Message sent successfully'
+      error_title: 'An error occured while sending your message'
+      error_sub_title: 'Check the fields below'
+      form_title: 'Contact us'
+      form_sub_title: 'Please fill in the form below to contact us:'
+    all:
+      click_here: 'Click here'
