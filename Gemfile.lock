@@ -260,7 +260,7 @@ DEPENDENCIES
   bson_ext (~> 1.4)
   capistrano
   capybara
-  carmen
+  carmen (= 0.2.12)
   carrierwave
   carrierwave-mongoid
   coffee-rails (~> 3.1.1)
