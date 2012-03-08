@@ -11,4 +11,15 @@ module ApplicationHelper
     end
     times_array
   end
+
+  def locale_for_facebook
+    case I18n.locale
+    when :en
+      'en_US'
+    when :fr
+      'fr_FR'
+    else
+      'pt_BR'
+    end
+  end
 end
