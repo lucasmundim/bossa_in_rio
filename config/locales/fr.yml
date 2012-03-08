@@ -1,5 +1,3 @@
-# TODO: This is not localized in french, it is here only in order to not brake the site for a missing locale file
-
 fr:
   time:
     formats:
@@ -9,41 +7,41 @@ fr:
   mongoid:
     models:
       message: "Message"
-      reservation: "Reservation"
+      reservation: "Réservation"
     attributes:
       message:
-        first_name: "First Name"
-        last_name: "Last Name"
-        country: "Country"
-        email: "E-mail"
+        first_name: "Prénom"
+        last_name: "Nom"
+        country: "Pays"
+        email: "Courriel"
         message: "Message"
       reservation:
-        arrival: "Arrival"
-        arrival_time: "Time"
-        departure: "Departure"
-        room: "Room"
-        quantity: "Guests"
-        first_name: "First Name"
-        last_name: "Last Name"
-        identification: "Passport Number"
-        gender: "Gender"
-        nationality: "Country"
-        email: "E-mail"
-        wants_transfer: "Wants transfer"
-        transfer_arrival: "Date"
-        transfer_arrival_time: "Time"
-        transfer_origin: "Origin"
-        transfer_flight_number: "Flight Number"
-        address: "Address"
-        city: "City"
-        phone: "Phone"
-        mobile: "Mobile"
-        obs: "Notes"
-        reference: "Reference"
+        arrival: "Arrivé"
+        arrival_time: "Horaire d’arrivé"
+        departure: "Départ"
+        room: "Chambre"
+        quantity: "Nombre de personnes"
+        first_name: "Prénom"
+        last_name: "Nom"
+        identification: "Numéro du Passeport"
+        gender: "Sexe"
+        nationality: "Nationalité"
+        email: "Courriel"
+        wants_transfer: "Souhaite transfer/service navette"
+        transfer_arrival: "Date du transfer"
+        transfer_arrival_time: "Horaire du transfer"
+        transfer_origin: "Lieu d’origine du transfer"
+        transfer_flight_number: "Numéro du vol"
+        address: "Adresse"
+        city: "Ville"
+        phone: "Nºde téléphone"
+        mobile: "Portable"
+        obs: "Obs:"
+        reference: "Réference"
   named_routes_path:
     photos: 'photos'
   meta:
-    keywords: 'Bossa in Rio, Hostel, backpacker, flashpacker,Rio, Rio de Janeiro, Brazil, Santa Teresa, Lapa, Bossa, Bossa Nova, Hostel Boutique, Pousada, Guesthouse, Best Hostel, Great Hostel, Carnaval, Beach, Cheap, Room, Booking, Dorms, Bossa in Rio Hostel. tourism'
+    keywords: 'Bossa in Rio, Hostel, backpacker, flashpacker,Rio, Rio de Janeiro, Brésil, Santa Teresa, Lapa, Bossa, Bossa Nova, Hostel Boutique, Pousada, Maison d’hôtes, Meilleur Hostel, Grand Hostel, Carnaval, Plage, Bon marché, Chambre, Réserver, Dortoir, Chambre collective, Bossa in Rio Hostel, tourisme'
     description: 'Bossa in Rio Hostel'
   header:
     logo:
@@ -51,111 +49,111 @@ fr:
   footer:
     title: 'Bossa in Rio Hostel'
     contacts:
-      title: 'Contact Us'
-      twitter: 'Follow us on Twitter'
-      facebook: 'Add on Facebook'
-      skype: 'Contact us on Skype'
+      title: 'Contactez-nous'
+      twitter: 'Suivez-nous sur Twitter'
+      facebook: 'Retrouvez-nous sur Facebook'
+      skype: 'Contactez-nous par Skype'
     indications:
-      title: 'Bossa in Rio recommends'
-    developed_by: 'Developed by'
+      title: 'Bossa in Rio indique'
+    developed_by: 'Réalisé par'
     where:
-      title: 'Where we are'
-      references: '5 minute walk from Lapa <br>10 minute walk from Old Town<br> 20 minutes from Christ Statue'
+      title: 'Où sommes-nous'
+      references: '5 minutes à pied du quartier de Lapa <br>10 minutes à pied du Centre Historique<br> à 20 minutes du Corcovado'
   menu:
     hostel:
       title: 'Hostel'
       submenus:
         hostel:
-          title: 'The Hostel'
+          title: 'Le Hostel'
         services:
           title: 'Services'
         facilities:
-          title: 'Facilities'
+          title: 'Installations'
     rooms:
-      title: 'Rooms'
+      title: 'Chambres'
       submenus:
         suites:
-          title: 'Private Rooms'
+          title: 'Suites/Chambres doubles'
         dorms:
-          title: 'Dorms'
+          title: 'Chambres collectives'
     photos:
       title: 'Photos'
     location:
-      title: 'Location'
+      title: 'Emplacement'
       submenus:
         location:
-          title: 'Location'
+          title: 'Emplacement'
         santa:
           title: 'Santa Teresa'
     reservation:
-      title: 'Prices and Booking'
+      title: 'Tarifs et Réservation'
     contact:
       title: 'Contact'
   pages:
     home:
       breakfast:
-        title: 'The traditional Brazilian breakfast to start the day.'
-        body: 'Breakfast'
+        title: 'Le traditionnel petit-déjeuner brésilien pour commencer la journée'
+        body: 'Petit-déjeuner'
       wifi:
-        title: 'Computers with internet access and WiFi throughout the hostel.'
-        body: 'Internet Access'
+        title: 'Ordinateurs avec accès internet et Wi-Fi dans le hostel entier.'
+        body: 'Accès Internet'
       air:
-        title: 'Cool and pleasant weather in all rooms and suites in the hostel.'
-        body: 'Air conditioning'
+        title: 'Température fraîche et agréable dans toutes les chambres, dortoirs et suites au hostel.'
+        body: 'Climatisation'
       security:
-        title: 'Individual locker, safe and luggage storage for your peace of mind.'
-        body: 'Safety'
+        title: 'Armoire individuelle, coffret et bagagerie pour votre tranquillité.'
+        body: 'Sécurité'
     hostel:
-      title: 'The Hostel'
+      title: 'Le Hostel'
     services:
       title: 'Services'
     facilities:
-      title: 'Facilities'
+      title: 'Installations'
     rooms:
-      title: 'Rooms'
-      dorms_link: 'Looking for dorms?'
+      title: 'Chambres'
+      dorms_link: 'Cherchant des chambres collectives?'
     dorms:
-      title: 'Dorms'
-      rooms_link: 'Looking for private rooms?'
+      title: 'Chambres collectives'
+      rooms_link: 'Cherchant des suites/chambres doubles?'
     photos:
       title: 'Photos'
     location:
-      title: 'Location'
+      title: 'Emplacement'
     santa:
       title: 'Santa Teresa'
     reservation:
-      title: 'Prices and Booking'
-      form_title: 'Reservation form'
-      form_subtitle: 'Please fill the form and wait for a confirmation e-mail.'
-      form_success: 'Your reservation request was sent successfully'
-      form_error_title: 'There was an error submitting your reservation request'
-      form_error_subtitle: 'Check the fields below'
-      room_choose: 'Choose a room:'
-      wants_transfer: 'Would you like transfer service?'
-      fast_check_in: 'If you want to speed up your check in'
-      click_here: 'click here'
-      fast_check_in_subtitle: 'Please also complete the items below:'
-      send: 'Send'
-      male: 'Male'
-      female: 'Female'
-      collective_room_2: 'Dorm - 2 people'
-      collective_room_4: 'Dorm - 4 people'
-      collective_room_6: 'Dorm - 6 people'
-      collective_room_10: 'Dorm - 10 people'
-      double_room: 'Double room'
-      suite_standard: 'Standard Suite '
-      suite_master_1: 'Master Suite 1'
-      suite_master_2: 'Master Suite 2'
-      option_yes: "Yes"
-      option_no: "No"
-      terms_and_conditions: "Terms and Conditions"
-      terms_and_conditions_label: "I agree with the "
+      title: 'Tarifs et Réservation'
+      form_title: 'Formulaire de réservation'
+      form_subtitle: 'Veuillez remplir le formulaire de réservation et attendre notre courriel de confirmation.'
+      form_success: 'L’envoi de votre demande de réservation a été réussi'
+      form_error_title: 'Il y a eu une erreur dans votre demande de réservation'
+      form_error_subtitle: 'Vérifiez les champs ci-dessous'
+      room_choose: 'Choisissez votre chambre:'
+      wants_transfer: 'Voudriez-vous embaucher le service navette?'
+      fast_check_in: 'Si vous voulez accélerer votre départ'
+      click_here: 'cliquez-ici'
+      fast_check_in_subtitle: 'Veuillez remplir aussi les informations ci-dessous:'
+      send: 'Envoyer'
+      male: 'Masculin'
+      female: 'Féminin'
+      collective_room_2: 'Dortoir - 2 personnes'
+      collective_room_4: 'Dortoir - 4 personnes'
+      collective_room_6: 'Dortoir - 6 personnes'
+      collective_room_10: 'Dortoir - 10 personnes'
+      double_room: 'Chambre double/Suite'
+      suite_standard: 'Suite Standard'
+      suite_master_1: 'Suite Master'
+      suite_master_2: 'Suite Supérieure'
+      option_yes: "Oui"
+      option_no: "Non"
+      terms_and_conditions: "Termes et Conditions"
+      terms_and_conditions_label: "Je suis d’accord"
     contact:
       title: 'Contact'
-      success: 'Message sent successfully'
-      error_title: 'An error occured while sending your message'
-      error_sub_title: 'Check the fields below'
-      form_title: 'Contact us'
-      form_sub_title: 'Please fill in the form below to contact us:'
+      success: 'Envoi du message réussi'
+      error_title: 'Il y a eu une erreur dans l’envoi de votre message'
+      error_sub_title: 'Vérifiez les champs ci-dessous'
+      form_title: 'Contactez-nous'
+      form_sub_title: 'Veuillez remplir le formulaire ci-dessous pour nous contacter:'
     all:
-      click_here: 'Click here'
+      click_here: 'Cliquez ici'
