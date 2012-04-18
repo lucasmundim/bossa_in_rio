@@ -8,8 +8,9 @@ BossaInRio::Application.configure do
   config.consider_all_requests_local       = false
   config.action_controller.perform_caching = true
 
-  # Disable Rails's static asset server (Apache or nginx will already do this)
-  config.serve_static_assets = false
+  # Enabling serve static assets
+  config.serve_static_assets = true
+  config.static_cache_control = "public, max-age=2592000" # caches assets by 1 month
 
   # Compress JavaScripts and CSS
   config.assets.compress = true
@@ -46,6 +47,13 @@ BossaInRio::Application.configure do
   # config.assets.precompile += %w( search.js )
   config.assets.precompile += %w( admin_application.js )
   config.assets.precompile += %w( admin_application.css )
+
+  # Enabling rack-cache
+  config.action_dispatch.rack_cache = {
+    :metastore    => Dalli::Client.new,
+    :entitystore  => 'file:tmp/cache/rack/body',
+    :allow_reload => false
+  }
 
   # Disable delivery errors, bad email addresses will be ignored
   # config.action_mailer.raise_delivery_errors = false

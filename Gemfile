@@ -28,6 +28,9 @@ gem 'coffee-rails', '~> 3.1.1'
 gem 'jquery-rails'
 gem 'fancybox-rails'
 
+# Memcache client gem
+gem 'dalli'
+
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
