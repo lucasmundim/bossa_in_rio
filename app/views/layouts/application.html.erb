@@ -8,13 +8,9 @@
   <meta name="description" content="<%= t('meta.description') %>" />
 
   <%= stylesheet_link_tag    "application" %>
-  <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
-  <%= render :partial => 'google_analytics' %>
 </head>
 <body>
-
-<%= render :partial => 'facebook' %>
 
 <div id="header">
   <%= link_to root_path, :class => "logoHome", :title => t('header.logo.title') do %>
@@ -150,6 +146,10 @@
     </div>
   </div>
 </div>
+
+<%= javascript_include_tag "application" %>
+<%= render :partial => 'google_analytics' %>
+<%= render :partial => 'facebook' %>
 
 </body>
 </html>
