@@ -123,6 +123,7 @@ fr:
       title: 'Santa Teresa'
     reservation:
       title: 'Tarifs et Réservation'
+      make_reservation_now: 'Make a reservation now!'
       form_title: 'Formulaire de réservation'
       form_subtitle: 'Veuillez remplir le formulaire de réservation et attendre notre courriel de confirmation.'
       form_success: 'L’envoi de votre demande de réservation a été réussi'

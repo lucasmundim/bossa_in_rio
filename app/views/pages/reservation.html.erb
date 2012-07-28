@@ -1,12 +1,12 @@
 <div class="tituloSecao">
-  <h2><%= t('pages.reservation.title') %></h2>
+  <h2>
+    <%= link_to I18n.t('pages.reservation.make_reservation_now'), "https://bossainriohostel.hotelproxy.net/reservations/step1.aspx?lang=#{I18n.locale.to_s.split('-').to_s}", class: 'botVerde' %>
+    <%= t('pages.reservation.title') %>
+  </h2>
 </div>
 
 <div class="conteudoPrincipalTotal reservation">
-  <div class="conteudoSecundario">
-    <%= render :partial => "reservation_form" %>
-  </div><!-- /conteudoSecundario -->
-
+  <%= render :partial => "reservation_form" %>
 
   <% @page.snippets.ordered.each do |snippet| %>
     <% unless snippet.section.in?([:terms_and_conditions, :transfer_service]) %>

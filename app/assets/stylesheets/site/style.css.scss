@@ -619,7 +619,7 @@ input.medio[type="text"], select.medio, textarea.medio { width:88%; }
   margin-right: 6px;
 }
 
-input.botVerde {
+input.botVerde, #content a.botVerde {
   -moz-border-radius: 4px;
   -webkit-border-radius: 4px;
   border-radius: 4px;
@@ -634,11 +634,23 @@ input.botVerde {
   padding: 6px 16px;
 }
 
-input.botVerde:hover {
+#content a.botVerde {
+  text-align: center;
+  width: 240px;
+  height: 30px;
+  line-height: 30px;
+  float: right;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+input.botVerde:hover, #content a.botVerde:hover {
   cursor:pointer;
   background-color: #293a00;
   color: #c6ff3b;
 }
+
+
 
 select:focus, textarea:focus, input[type="text"]:focus, input[type="password"]:focus {
   border-color: #8b7a63;
