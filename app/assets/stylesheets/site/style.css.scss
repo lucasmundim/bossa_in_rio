@@ -178,7 +178,7 @@ body#pgIn {
 
 .menu li a {
   display: inline-block;
-  width: 142px;
+  width: 116px;
   height: 30px;
   line-height: 30px;
   padding: 0;
@@ -636,10 +636,9 @@ input.botVerde, #content a.botVerde {
 
 #content a.botVerde {
   text-align: center;
-  width: 240px;
+  width: auto;
   height: 30px;
   line-height: 30px;
-  float: right;
   font-size: 20px;
   text-decoration: none;
 }
@@ -1043,4 +1042,8 @@ input[type="submit"][disabled] {
   background-color: #ccc;
   color: #fff;
   cursor: default;
+}
+
+.left {
+  float: left;
 }

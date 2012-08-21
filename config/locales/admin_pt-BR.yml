@@ -33,6 +33,8 @@ pt-BR:
     photos: "Fotos"
     santa: "Santa Teresa"
     reservation: "Reservas"
+    reviews: "Reviews"
+    media: "Bossa na Mídia"
     contact: "Contato"
   mongoid:
     models:

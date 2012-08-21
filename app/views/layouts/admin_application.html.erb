@@ -40,6 +40,13 @@
               </ul>
             </li>
             <li><%= link_to "Reserva", by_slug_admin_pages_path(:slug => "reservation") %></li>
+            <li class="dropdown">
+              <%= link_to "Reviews", by_slug_admin_pages_path(:slug => "reviews"), :class => "dropdown-toggle" %>
+              <ul class="dropdown-menu">
+                <li><%= link_to "Reviews", by_slug_admin_pages_path(:slug => "reviews") %></li>
+                <li><%= link_to "Bossa na Mídia", by_slug_admin_pages_path(:slug => "media") %></li>
+              </ul>
+            </li>
             <li><%= link_to "Contato", by_slug_admin_pages_path(:slug => "contact") %></li>
           </ul>
           <ul class="nav secondary-nav">

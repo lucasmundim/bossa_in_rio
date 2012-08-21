@@ -89,7 +89,14 @@ en:
         santa:
           title: 'Santa Teresa'
     reservation:
-      title: 'Prices and Booking'
+      title: 'Book Now'
+    reviews:
+      title: 'Reviews'
+      submenus:
+        reviews:
+          title: 'Reviews'
+        media:
+          title: 'In the News'
     contact:
       title: 'Contact'
   pages:
@@ -125,7 +132,7 @@ en:
     santa:
       title: 'Santa Teresa'
     reservation:
-      title: 'Prices and Booking'
+      title: 'Book Now'
       make_reservation_now: 'Make a reservation now!'
       form_title: 'Reservation form'
       form_subtitle: 'Please fill the form and wait for a confirmation e-mail.'
@@ -152,6 +159,8 @@ en:
       option_no: "No"
       terms_and_conditions: "Terms and Conditions"
       terms_and_conditions_label: "I agree with the "
+    media:
+      title: 'In the News'
     contact:
       title: 'Contact'
       success: 'Message sent successfully'

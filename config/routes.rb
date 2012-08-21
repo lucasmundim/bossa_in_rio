@@ -37,6 +37,8 @@ BossaInRio::Application.routes.draw do
       match '/photos' => 'pages#photos', :as => :photos
       match '/location' => 'pages#location', :as => :location
       match '/location/santa' => 'pages#santa', :as => :santa
+      match '/reviews' => 'pages#reviews', :as => :reviews
+      match '/media' => 'pages#media', :as => :media
       match '/reservation' => 'pages#reservation', :as => :reservation
       match '/contact' => 'pages#contact', :as => :contact
     end

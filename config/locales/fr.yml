@@ -87,6 +87,14 @@ fr:
           title: 'Santa Teresa'
     reservation:
       title: 'Tarifs et Réservation'
+
+    reviews:
+      title: 'Reviews'
+      submenus:
+        reviews:
+          title: 'Reviews'
+        media:
+          title: 'In the News'
     contact:
       title: 'Contact'
   pages:
@@ -149,6 +157,8 @@ fr:
       option_no: "Non"
       terms_and_conditions: "Termes et Conditions"
       terms_and_conditions_label: "Je suis d’accord"
+    media:
+      title: 'In the News'
     contact:
       title: 'Contact'
       success: 'Envoi du message réussi'

@@ -37,8 +37,16 @@ class PagesController < ApplicationController
     @page = Page.from_slug(:santa)
   end
 
+  def reviews
+    @page = Page.from_slug(:reviews)
+  end
+
+  def media
+    @page = Page.from_slug(:media)
+  end
+
   def reservation
-    redirect_to "https://bossainriohostel.hotelproxy.net/reservations/step1.aspx?lang=#{I18n.locale.to_s.split('-')[0].to_s}"
+    @page = Page.from_slug(:reservation)
   end
 
   def contact

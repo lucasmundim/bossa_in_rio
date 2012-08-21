@@ -86,7 +86,14 @@ pt-BR:
         santa:
           title: 'Santa Teresa'
     reservation:
-      title: 'Preços e Reservas'
+      title: 'Reserve Agora'
+    reviews:
+      title: 'Reviews'
+      submenus:
+        reviews:
+          title: 'Reviews'
+        media:
+          title: 'Bossa na Mídia'
     contact:
       title: 'Contato'
   pages:
@@ -122,7 +129,7 @@ pt-BR:
     santa:
       title: 'Santa Teresa'
     reservation:
-      title: 'Preços e Reservas'
+      title: 'Reserve Agora'
       make_reservation_now: 'Faça a reserva agora!'
       form_title: 'Formulário de reserva'
       form_subtitle: 'Por favor preencha o formulário e aguarde nosso email validando sua reserva.'
@@ -149,6 +156,10 @@ pt-BR:
       option_no: "Não"
       terms_and_conditions: 'Termos e Condições'
       terms_and_conditions_label: "Eu li e aceito os "
+    reviews:
+      title: 'Reviews'
+    media:
+      title: 'Bossa na Mídia'
     contact:
       title: 'Contato'
       success: 'Sua mensagem foi enviada com sucesso'
