@@ -52,7 +52,14 @@
         </ul>
       </li>
       <li>
-        <%= link_to t('menu.reservation.title'), reservation_path, :class => 'menu reservation' %>
+        <%= link_to t('menu.reservation.title'), "https://bossainriohostel.hotelproxy.net/reservations/step1.aspx?lang=#{I18n.locale.to_s.split('-')[0].to_s}", :class => 'menu reservation' %>
+      </li>
+      <li>
+        <%= link_to t('menu.reviews.title'), reviews_path, :class => 'menu', :"data-toggle-hover" => "true", :"data-rel" => 'sub-menu-reviews' %>
+        <ul id="sub-menu-reviews" style="display:none;">
+          <li><%= link_to t('menu.reviews.submenus.reviews.title'), reviews_path %></li>
+          <li><%= link_to t('menu.reviews.submenus.media.title'), media_path %></li>
+        </ul>
       </li>
       <li>
         <%= link_to t('menu.contact.title'), contact_path, :class => 'menu' %>

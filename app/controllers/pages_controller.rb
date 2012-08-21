@@ -38,18 +38,7 @@ class PagesController < ApplicationController
   end
 
   def reservation
-    @reservation_types = [
-      # I18n.t('pages.reservation.collective_room_2'),
-      I18n.t('pages.reservation.collective_room_4'),
-      I18n.t('pages.reservation.collective_room_6'),
-      I18n.t('pages.reservation.collective_room_10'),
-      I18n.t('pages.reservation.double_room'),
-      I18n.t('pages.reservation.suite_standard'),
-      I18n.t('pages.reservation.suite_master_1'),
-      I18n.t('pages.reservation.suite_master_2')
-    ]
-    @reservation = Reservation.new(:departure => Time.now.tomorrow)
-    @page = Page.from_slug(:reservation)
+    redirect_to "https://bossainriohostel.hotelproxy.net/reservations/step1.aspx?lang=#{I18n.locale.to_s.split('-')[0].to_s}"
   end
 
   def contact
