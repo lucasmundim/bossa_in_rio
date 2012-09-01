@@ -86,7 +86,7 @@ pt-BR:
         santa:
           title: 'Santa Teresa'
     reservation:
-      title: 'Reserve Agora'
+      title: 'Preços e Reservas'
     reviews:
       title: 'Reviews'
       submenus:
@@ -129,7 +129,7 @@ pt-BR:
     santa:
       title: 'Santa Teresa'
     reservation:
-      title: 'Reserve Agora'
+      title: 'Preços e Reservas'
       make_reservation_now: 'Faça a reserva agora!'
       form_title: 'Formulário de reserva'
       form_subtitle: 'Por favor preencha o formulário e aguarde nosso email validando sua reserva.'

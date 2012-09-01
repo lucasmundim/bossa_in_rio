@@ -89,7 +89,7 @@ en:
         santa:
           title: 'Santa Teresa'
     reservation:
-      title: 'Book Now'
+      title: 'Prices And Reservation'
     reviews:
       title: 'Reviews'
       submenus:
@@ -132,7 +132,7 @@ en:
     santa:
       title: 'Santa Teresa'
     reservation:
-      title: 'Book Now'
+      title: 'Prices And Reservation'
       make_reservation_now: 'Make a reservation now!'
       form_title: 'Reservation form'
       form_subtitle: 'Please fill the form and wait for a confirmation e-mail.'

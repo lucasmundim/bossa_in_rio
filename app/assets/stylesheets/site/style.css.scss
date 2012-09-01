@@ -190,7 +190,7 @@ body#pgIn {
   font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
 }
 
-.menu li a.reservation { width: 180px; }
+.menu li a.reservation { width: 190px; font-weight: bold; }
 
 .menu li a.menu {
   text-transform: uppercase;
@@ -788,6 +788,12 @@ h2:first-of-type {
 .conteudoPrincipalTotal.reservation h2 em {
   font-weight: normal;
   font-size: 12px;
+}
+
+.reservation a.botVerde {
+  position: absolute;
+  top: 50px;
+  right: 10px;
 }
 
 /* H3 */
