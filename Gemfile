@@ -1,9 +1,6 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.1.1'
-
-# Bundle edge Rails instead:
-# gem 'rails',     :git => 'git://github.com/rails/rails.git'
+gem 'rails'
 
 gem 'fog'
 
@@ -19,11 +16,11 @@ gem 'date_validator'
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
-  gem 'sass-rails',   '~> 3.1.4'
-  gem 'uglifier', '>= 1.0.3'
+  gem 'sass-rails'
+  gem 'uglifier'
 end
 
-gem 'coffee-rails', '~> 3.1.1'
+gem 'coffee-rails'
 
 gem 'jquery-rails'
 gem 'fancybox-rails'
@@ -68,12 +65,12 @@ gem 'rmagick'
 
 group :test do
   # Rspec
-  gem 'rspec-rails', '>= 2.7.0', :group => [:development, :test]
+  gem 'rspec-rails', :group => [:development, :test]
   # use the database_cleaner gem to reset the test database
-  gem 'database_cleaner', '>= 0.6.7', :group => :test
+  gem 'database_cleaner', :group => :test
   # include RSpec matchers from the mongoid-rspec gem
-  gem 'mongoid-rspec', '>= 1.4.4', :group => :test
-  gem 'factory_girl_rails', '>= 1.3.0', :group => :test
+  gem 'mongoid-rspec', :group => :test
+  gem 'factory_girl_rails', :group => :test
 
   gem 'capybara'
 end
