@@ -1053,3 +1053,18 @@ input[type="submit"][disabled] {
 .left {
   float: left;
 }
+
+.reservation-title {
+  margin-bottom: 0px;
+}
+
+.reservation-site {
+  width: 100%;
+
+  iframe {
+    display: block;
+    width: 700px;
+    height: 650px;
+    margin: 0 auto;
+  }
+}

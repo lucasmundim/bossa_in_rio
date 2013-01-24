@@ -1,4 +1,4 @@
-<div class="tituloSecao">
+<div class="tituloSecao reservation-title">
   <h2>
     <%= t('pages.reservation.title') %>
   </h2>
@@ -6,6 +6,10 @@
 
 <div class="conteudoPrincipalTotal reservation">
   <%= render :partial => "reservation_form" %>
+
+  <div class="reservation-site">
+    <iframe src="https://ssl2.motel-soft.com/bossa/frm_motel_Orders_new.aspx?dbkey=bossa&prclist=*all" frameborder="0" marginwidth="0" marginheight="0" width="800" height="600"></iframe>
+  </div>
 
   <% @page.snippets.ordered.each do |snippet| %>
     <% unless snippet.section.in?([:terms_and_conditions, :transfer_service]) %>
