@@ -7,13 +7,13 @@
 <div class="conteudoPrincipalTotal reservation">
   <%= render :partial => "reservation_form" %>
 
-  <div class="reservation-site">
-    <iframe src="https://ssl2.motel-soft.com/bossa/frm_motel_Orders_new.aspx?dbkey=bossa&prclist=*all" frameborder="0" marginwidth="0" marginheight="0" width="800" height="600"></iframe>
-  </div>
-
   <% @page.snippets.ordered.each do |snippet| %>
     <% unless snippet.section.in?([:terms_and_conditions, :transfer_service]) %>
       <%=raw snippet.rendered_body if snippet.status %>
     <% end %>
   <% end %>
+
+  <div class="reservation-site">
+    <iframe src="https://ssl2.motel-soft.com/bossa/frm_motel_Orders_new.aspx?dbkey=bossa&prclist=*all&lng=<%= I18n.locale == :'pt-BR' ? 'pt' : 'en' %>" frameborder="0" marginwidth="0" marginheight="0" width="800" height="600"></iframe>
+  </div>
 </div><!-- /conteudoPrincipalTotal -->
