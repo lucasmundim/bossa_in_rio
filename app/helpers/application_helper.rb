@@ -18,6 +18,21 @@ module ApplicationHelper
       'en_US'
     when :fr
       'fr_FR'
+    when :es
+      'es_ES'
+    else
+      'pt_BR'
+    end
+  end
+
+  def locale_for_trip_advisor_award
+    case I18n.locale
+    when :en
+      'en_US'
+    when :fr
+      'fr_FR'
+    when :es
+      'es_ES'
     else
       'pt_BR'
     end

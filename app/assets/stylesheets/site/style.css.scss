@@ -1068,3 +1068,21 @@ input[type="submit"][disabled] {
     margin: 0 auto;
   }
 }
+
+.awards {
+  .divisor-horizontal {
+    background: transparent url(/assets/divisor_horizontal.png) repeat-x center top;
+    height: 30px;
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .award {
+    display: inline-block;
+    margin: 0 40px;
+    vertical-align: top;
+  }
+
+  margin-top: 30px;
+  vertical-align: top;
+}

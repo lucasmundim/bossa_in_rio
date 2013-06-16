@@ -1,0 +1,171 @@
+es:
+  time:
+    formats:
+      custom: "%d/%m/%Y"
+      custom_with_time: "%d/%m/%Y às %H:%M"
+      custom_time: "%H:%M"
+  mongoid:
+    models:
+      message: "Mensagem"
+      reservation: "Reserva"
+    attributes:
+      message:
+        first_name: "Primeiro nome"
+        last_name: "Último nome"
+        country: "País"
+        email: "E-mail"
+        message: "Mensagem"
+      reservation:
+        arrival: "Chegada"
+        arrival_time: "Horário"
+        departure: "Partida"
+        room: "Quarto"
+        quantity: "Número de pessoas"
+        first_name: "Primeiro nome"
+        last_name: "Último nome"
+        identification: "Documento"
+        gender: "Sexo"
+        nationality: "Nacionalidade"
+        email: "E-mail"
+        wants_transfer: "Deseja transfer"
+        transfer_arrival: "Data"
+        transfer_arrival_time: "Hora"
+        transfer_origin: "Origem"
+        transfer_flight_number: "Número do Vôo"
+        address: "Endereço"
+        city: "Cidade"
+        phone: "Telefone"
+        mobile: "Celular"
+        obs: "Observação"
+        reference: "Referência"
+  named_routes_path:
+    photos: 'fotos'
+  meta:
+    keywords: 'Bossa in Rio, Hostel, backpacker, flashpacker, mochileiro, Rio, Rio de Janeiro, Santa Teresa, Lapa, Bossa, Bossa Nova, Hostel Boutique, Hostel de Charme, Pousada, Guesthouse, Albergue,  Melhor Hostel, Carnaval, Ano Novo, Praia, Barato, Quarto, Dormitõrio, Suites, Bossa in Rio Hostel, turismo'
+    description: "Criado por um casal de backpackers que já viajou por vários países nos 5 continentes, o Bossa in Rio foi cuidadosamente elaborado para proporcionar uma estadia inesquecível. Somos um hostel de charme localizado estrategicamente em Santa Teresa, o bairro mais charmoso da cidade, e oferecemos todas as facilidades que você possa querer. O Bossa in Rio é o lugar ideal para quem quer desfrutar de conforto, fazer amigos e curtir a cidade. Prepare-se para uma curta subida e uma excelente estadia! Esperamos por você!"
+  header:
+    logo:
+      title: 'Bossa in Rio Hostel'
+  footer:
+    title: 'Bossa in Rio Hostel'
+    contacts:
+      title: 'Mantenha contato'
+      twitter: 'Siga-nos no Twitter'
+      facebook: 'Adicione no Facebook'
+      skype: 'Entre em contato pelo skype'
+    indications:
+      title: 'Bossa in Rio indica'
+    developed_by: 'Desenvolvido por'
+    where:
+      title: 'Onde estamos'
+      references: 'A 5 minutos a pé a Lapa <br>A 10 minutos a pé do Centro Histórico<br> A 20 minutos do Cristo'
+  menu:
+    hostel:
+      title: 'Hostel'
+      submenus:
+        hostel:
+          title: 'O Hostel'
+        services:
+          title: 'Serviços'
+        facilities:
+          title: 'Instalações'
+    rooms:
+      title: 'Habitações'
+      submenus:
+        suites:
+          title: 'Suítes'
+        dorms:
+          title: 'Quartos Coletivos'
+    photos:
+      title: 'Fotos'
+    location:
+      title: 'Localização'
+      submenus:
+        location:
+          title: 'Localização'
+        santa:
+          title: 'Santa Teresa'
+    reservation:
+      title: 'Preços e Reservas'
+    reviews:
+      title: 'Reviews'
+      submenus:
+        reviews:
+          title: 'Reviews'
+        media:
+          title: 'Bossa na Mídia'
+    contact:
+      title: 'Contato'
+  pages:
+    home:
+      breakfast:
+        title: 'O tradicional café da manhã brasileiro, para começar bem o dia.'
+        body: 'Café da manhã'
+      wifi:
+        title: 'Computadores com acesso à internet e rede WiFi em todo o hostel.'
+        body: 'Banda larga'
+      air:
+        title: 'Clima fresco e agradável em todos os quartos e suítes do hostel.'
+        body: 'Ar condicionado'
+      security:
+        title: 'Armário individual, cofre e luggage storage, para sua tranquilidade.'
+        body: 'Segurança'
+    hostel:
+      title: 'O Hostel'
+    services:
+      title: 'Serviços'
+    facilities:
+      title: 'Instalações'
+    rooms:
+      title: 'Suítes'
+      dorms_link: 'Procurando por dormitórios?'
+    dorms:
+      title: 'Quartos Coletivos'
+      rooms_link: 'Procurando por suítes?'
+    photos:
+      title: 'Fotos'
+    location:
+      title: 'Localização'
+    santa:
+      title: 'Santa Teresa'
+    reservation:
+      title: 'Preços e Reservas'
+      make_reservation_now: 'Faça a reserva agora!'
+      form_title: 'Formulário de reserva'
+      form_subtitle: 'Por favor preencha o formulário e aguarde nosso email validando sua reserva.'
+      form_success: 'Seu pedido de reserva foi enviado com sucesso'
+      form_error_title: 'Ocorreu um erro ao enviar o seu pedido de reserva'
+      form_error_subtitle: 'Verifique os campos abaixo'
+      room_choose: 'Escolha um quarto:'
+      wants_transfer: 'Deseja serviço de transfer?'
+      fast_check_in: 'Se desejar agilizar seu check in'
+      click_here: 'clique aqui'
+      fast_check_in_subtitle: 'Por favor preencha também os itens abaixo:'
+      send: 'Enviar'
+      male: 'Masculino'
+      female: 'Feminino'
+      collective_room_2: 'Quarto coletivo - 2 pessoas'
+      collective_room_4: 'Quarto coletivo - 4 pessoas'
+      collective_room_6: 'Quarto coletivo - 6 pessoas'
+      collective_room_10: 'Quarto coletivo - 10 pessoas'
+      double_room: 'Quarto Double'
+      suite_standard: 'Suíte Standard'
+      suite_master_1: 'Suíte Máster 1'
+      suite_master_2: 'Suíte Máster 2'
+      option_yes: "Sim"
+      option_no: "Não"
+      terms_and_conditions: 'Termos e Condições'
+      terms_and_conditions_label: "Eu li e aceito os "
+    reviews:
+      title: 'Reviews'
+    media:
+      title: 'Bossa na Mídia'
+    contact:
+      title: 'Contato'
+      success: 'Sua mensagem foi enviada com sucesso'
+      error_title: 'Ocorreu um erro ao enviar a mensagem'
+      error_sub_title: 'Verifique os campos abaixo'
+      form_title: 'Entre em contato'
+      form_sub_title: 'Para contatar diretamente, favor preencher seus dados:'
+    all:
+      click_here: 'Clique aqui'
