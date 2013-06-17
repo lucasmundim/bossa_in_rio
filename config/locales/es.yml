@@ -6,166 +6,166 @@ es:
       custom_time: "%H:%M"
   mongoid:
     models:
-      message: "Mensagem"
+      message: "Mensaje"
       reservation: "Reserva"
     attributes:
       message:
-        first_name: "Primeiro nome"
-        last_name: "Último nome"
+        first_name: "Nombre"
+        last_name: "Apellido"
         country: "País"
         email: "E-mail"
-        message: "Mensagem"
+        message: "Mensaje"
       reservation:
-        arrival: "Chegada"
-        arrival_time: "Horário"
+        arrival: "Llegada"
+        arrival_time: "Horario"
         departure: "Partida"
-        room: "Quarto"
-        quantity: "Número de pessoas"
-        first_name: "Primeiro nome"
-        last_name: "Último nome"
-        identification: "Documento"
+        room: "Cuarto"
+        quantity: "Número de personas"
+        first_name: "Nombre"
+        last_name: "Apellido"
+        identification: "Documento/ID"
         gender: "Sexo"
-        nationality: "Nacionalidade"
+        nationality: "Nacionalidad"
         email: "E-mail"
-        wants_transfer: "Deseja transfer"
-        transfer_arrival: "Data"
+        wants_transfer: "Desea transfer"
+        transfer_arrival: "Fecha"
         transfer_arrival_time: "Hora"
-        transfer_origin: "Origem"
-        transfer_flight_number: "Número do Vôo"
-        address: "Endereço"
-        city: "Cidade"
-        phone: "Telefone"
+        transfer_origin: "Origen"
+        transfer_flight_number: "Número de vuelo"
+        address: "Dirección"
+        city: "Ciudad"
+        phone: "Teléfono"
         mobile: "Celular"
-        obs: "Observação"
-        reference: "Referência"
+        obs: "Observación"
+        reference: "Referencia"
   named_routes_path:
     photos: 'fotos'
   meta:
-    keywords: 'Bossa in Rio, Hostel, backpacker, flashpacker, mochileiro, Rio, Rio de Janeiro, Santa Teresa, Lapa, Bossa, Bossa Nova, Hostel Boutique, Hostel de Charme, Pousada, Guesthouse, Albergue,  Melhor Hostel, Carnaval, Ano Novo, Praia, Barato, Quarto, Dormitõrio, Suites, Bossa in Rio Hostel, turismo'
-    description: "Criado por um casal de backpackers que já viajou por vários países nos 5 continentes, o Bossa in Rio foi cuidadosamente elaborado para proporcionar uma estadia inesquecível. Somos um hostel de charme localizado estrategicamente em Santa Teresa, o bairro mais charmoso da cidade, e oferecemos todas as facilidades que você possa querer. O Bossa in Rio é o lugar ideal para quem quer desfrutar de conforto, fazer amigos e curtir a cidade. Prepare-se para uma curta subida e uma excelente estadia! Esperamos por você!"
+    keywords: 'Bossa in Rio, Hostel, backpacker, flashpacker, mochilero, Rio, Rio de Janeiro, Santa Teresa, Lapa, Bossa, Bossa Nova, Hostel Boutique, Hostel de estilo, Posada, Guesthouse, Albergue,  Mejor Hostel, Carnaval, Año Nuevo, Playa, Barato, Cuarto, Dormitorio, Suites, Bossa in Rio Hostel, turismo'
+    description: " Creado por una pareja de mochileros que ha viajado por varios países en los 5 continentes, el Bossa in Rio fue cuidadosamente elaborado para que tengas una estadía inolvidable. Somos un hostel boutique ubicado estratégicamente en Santa Teresa, el barrio con más encanto de la ciudad, y ofrecemos todas las facilidades que puedas necesitar. El Bossa in Rio es el lugar ideal para quien quiera disfrutar de confort, hacer amigos y recorrer la ciudad. ¡Prepárate para una corta subida y una excelente estadía! ¡Te esperamos!"
   header:
     logo:
       title: 'Bossa in Rio Hostel'
   footer:
     title: 'Bossa in Rio Hostel'
     contacts:
-      title: 'Mantenha contato'
-      twitter: 'Siga-nos no Twitter'
-      facebook: 'Adicione no Facebook'
-      skype: 'Entre em contato pelo skype'
+      title: 'Siga en contacto'
+      twitter: 'Síganos en Twitter'
+      facebook: 'Agréguenos en Facebook'
+      skype: 'Entre en contacto por skype'
     indications:
       title: 'Bossa in Rio indica'
-    developed_by: 'Desenvolvido por'
+    developed_by: 'Programado por'
     where:
-      title: 'Onde estamos'
-      references: 'A 5 minutos a pé a Lapa <br>A 10 minutos a pé do Centro Histórico<br> A 20 minutos do Cristo'
+      title: 'Dónde estamos'
+      references: 'A 5 minutos a pie de Lapa <br>A 10 minutos a pie del Centro Histórico<br> A 20 minutos del Cristo'
   menu:
     hostel:
       title: 'Hostel'
       submenus:
         hostel:
-          title: 'O Hostel'
+          title: 'El Hostel'
         services:
-          title: 'Serviços'
+          title: 'Servicios'
         facilities:
-          title: 'Instalações'
+          title: 'Instalaciones'
     rooms:
-      title: 'Habitações'
+      title: 'Habitaciones'
       submenus:
         suites:
-          title: 'Suítes'
+          title: 'Suites'
         dorms:
-          title: 'Quartos Coletivos'
+          title: 'Cuartos colectivos'
     photos:
       title: 'Fotos'
     location:
-      title: 'Localização'
+      title: 'Ubicación'
       submenus:
         location:
-          title: 'Localização'
+          title: 'Ubicación'
         santa:
           title: 'Santa Teresa'
     reservation:
-      title: 'Preços e Reservas'
+      title: 'Precios y reservas'
     reviews:
-      title: 'Reviews'
+      title: 'Comentarios'
       submenus:
         reviews:
-          title: 'Reviews'
+          title: 'Comentarios'
         media:
-          title: 'Bossa na Mídia'
+          title: 'Bossa en los Medios'
     contact:
-      title: 'Contato'
+      title: 'Contacto'
   pages:
     home:
       breakfast:
-        title: 'O tradicional café da manhã brasileiro, para começar bem o dia.'
-        body: 'Café da manhã'
+        title: 'El tradicional desayuno brasilero, para comenzar bien el día.'
+        body: 'Desayuno'
       wifi:
-        title: 'Computadores com acesso à internet e rede WiFi em todo o hostel.'
-        body: 'Banda larga'
+        title: 'Computadoras con accesso a Internet y red Wi-Fi en todo el hostel.'
+        body: 'Banda ancha'
       air:
-        title: 'Clima fresco e agradável em todos os quartos e suítes do hostel.'
-        body: 'Ar condicionado'
+        title: 'Clima fresco y agradable en todos los cuartos y suítes del hostel.'
+        body: 'Aire acondicionado'
       security:
-        title: 'Armário individual, cofre e luggage storage, para sua tranquilidade.'
-        body: 'Segurança'
+        title: 'Armario individual, cofre y guardador de equipaje, para su tranquilidad.'
+        body: 'Seguridad'
     hostel:
-      title: 'O Hostel'
+      title: 'El Hostel'
     services:
-      title: 'Serviços'
+      title: 'Servicios'
     facilities:
-      title: 'Instalações'
+      title: 'Instalaciones'
     rooms:
-      title: 'Suítes'
-      dorms_link: 'Procurando por dormitórios?'
+      title: 'Suites'
+      dorms_link: '¿Buscando dormitorios?'
     dorms:
-      title: 'Quartos Coletivos'
-      rooms_link: 'Procurando por suítes?'
+      title: '¿Cuartos colectivos'
+      rooms_link: '¿Buscando suites?'
     photos:
       title: 'Fotos'
     location:
-      title: 'Localização'
+      title: 'Ubicación'
     santa:
       title: 'Santa Teresa'
     reservation:
-      title: 'Preços e Reservas'
-      make_reservation_now: 'Faça a reserva agora!'
-      form_title: 'Formulário de reserva'
-      form_subtitle: 'Por favor preencha o formulário e aguarde nosso email validando sua reserva.'
-      form_success: 'Seu pedido de reserva foi enviado com sucesso'
-      form_error_title: 'Ocorreu um erro ao enviar o seu pedido de reserva'
-      form_error_subtitle: 'Verifique os campos abaixo'
-      room_choose: 'Escolha um quarto:'
-      wants_transfer: 'Deseja serviço de transfer?'
-      fast_check_in: 'Se desejar agilizar seu check in'
-      click_here: 'clique aqui'
-      fast_check_in_subtitle: 'Por favor preencha também os itens abaixo:'
+      title: 'Precios y reservas'
+      make_reservation_now: '¡Haga su reserva ahora!'
+      form_title: 'Formulario de reserva'
+      form_subtitle: 'Por favor, complete el formulario y aguarde ele mail de confirmación de la reserva.'
+      form_success: 'Su pedido de reserva fue enviado exitosamente.'
+      form_error_title: 'Ocurrió un error al enviar su pedido de reserva.'
+      form_error_subtitle: 'Verifique los campos abajo'
+      room_choose: 'Escoja un cuarto:'
+      wants_transfer: '¿Desea servicio de transfer?'
+      fast_check_in: 'Si desea agilizar su check-in'
+      click_here: 'Haga clic aqui'
+      fast_check_in_subtitle: 'Por favor, complete también los ítems abajo:'
       send: 'Enviar'
       male: 'Masculino'
-      female: 'Feminino'
-      collective_room_2: 'Quarto coletivo - 2 pessoas'
-      collective_room_4: 'Quarto coletivo - 4 pessoas'
-      collective_room_6: 'Quarto coletivo - 6 pessoas'
-      collective_room_10: 'Quarto coletivo - 10 pessoas'
-      double_room: 'Quarto Double'
-      suite_standard: 'Suíte Standard'
-      suite_master_1: 'Suíte Máster 1'
-      suite_master_2: 'Suíte Máster 2'
-      option_yes: "Sim"
-      option_no: "Não"
-      terms_and_conditions: 'Termos e Condições'
-      terms_and_conditions_label: "Eu li e aceito os "
+      female: 'Femenino'
+      collective_room_2: 'Cuarto colectivo - 2 personas'
+      collective_room_4: 'Cuarto colectivo - 4 personas'
+      collective_room_6: 'Cuarto colectivo - 6 personas'
+      collective_room_10: 'Cuarto colectivo - 10 personas'
+      double_room: 'Cuarto doble'
+      suite_standard: 'Suite Standard'
+      suite_master_1: 'Suite Master 1'
+      suite_master_2: 'Suite Master 2'
+      option_yes: "Sí"
+      option_no: "No"
+      terms_and_conditions: 'Términos y condiciones'
+      terms_and_conditions_label: "He leído y acepto los "
     reviews:
-      title: 'Reviews'
+      title: 'Comentarios'
     media:
-      title: 'Bossa na Mídia'
+      title: 'Bossa en los Medios'
     contact:
-      title: 'Contato'
-      success: 'Sua mensagem foi enviada com sucesso'
-      error_title: 'Ocorreu um erro ao enviar a mensagem'
-      error_sub_title: 'Verifique os campos abaixo'
-      form_title: 'Entre em contato'
-      form_sub_title: 'Para contatar diretamente, favor preencher seus dados:'
+      title: 'Contacto'
+      success: 'Su mensaje fue enviado con éxito.'
+      error_title: 'Ocurrió un error al enviar el mensaje.'
+      error_sub_title: 'Verifique los campos abajo'
+      form_title: 'Entre en contacto'
+      form_sub_title: 'Para entrar en contacto directamente, complete sus datos:'
     all:
-      click_here: 'Clique aqui'
+      click_here: 'Haga clic aquí'
