@@ -56,7 +56,7 @@ create_page_with(:facilities, [:main])
 create_page_with(:rooms, [:standard, :master1, :master2])
 
 #### Dorms Page
-create_page_with(:dorms, [:main, :dorms_2, :dorms_4, :dorms_6, :collective])
+create_page_with(:dorms, [:main, :dorms_2, :dorms_4, :dorms_6, :collective, :special_4, :special_5])
 
 #### Photos Page
 create_page_with(:photos, [:suites, :dorms, :common_areas, :courtyards_and_gardens])
