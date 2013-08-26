@@ -3,7 +3,7 @@
 </div>
 
 <div class="conteudoPrincipal">
-  <%=raw @page.snippets.section(:main).rendered_body %>
+  <%=raw @page.snippets.section(:main).rendered_body if @page.snippets.section(:main).status %>
 </div><!-- conteudoPrincipal -->
 
 <div class="conteudoPrincipalTotal">
