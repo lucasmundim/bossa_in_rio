@@ -7,7 +7,7 @@
 </div><!-- conteudoPrincipal -->
 
 <div class="conteudoPrincipalTotal">
-  <%= render :partial => 'room', :collection => [:dorms_2, :dorms_4, :dorms_6, :collective] %>
+  <%= render :partial => 'room', :collection => @page.snippets.ordered.map(&:section) - [:main] %>
 
   <hr />
   <span><%= t('pages.dorms.rooms_link') %><%= link_to t('pages.all.click_here'), rooms_path %></span>
