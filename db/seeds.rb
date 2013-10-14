@@ -30,6 +30,10 @@ def snippet_for(slug, section)
     {
       :locale => 'fr',
       :body => $configs[slug.to_s][section.to_s]["fr"]
+    },
+    {
+      :locale => 'es',
+      :body => $configs[slug.to_s][section.to_s]["es"]
     }]
   }
 end
@@ -68,7 +72,7 @@ create_page_with(:location, [:main, :directions])
 create_page_with(:santa, [:main])
 
 #### Reservation Page
-create_page_with(:reservation, [:new_year_package, :carnival_package, :high_season_package, :low_season_package, :promotions, :terms_conditions, :transfer_service])
+create_page_with(:reservation, [:new_year_package, :carnival_package, :high_season_package, :low_season_package, :promotions, :terms_conditions, :transfer_service, :book_now, :extra_reservations])
 
 #### Location Page
 create_page_with(:reviews, [:main])
