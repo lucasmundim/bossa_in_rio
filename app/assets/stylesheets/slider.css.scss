@@ -6,35 +6,7 @@
 
 //////////////   MIXINS   ////////////////
 
-.transform(@transform) {
-    transform: @transform;
-    -moz-transform: @transform;
-    -webkit-transform: @transform;
-    -o-transform: @transform;
-}
-.border-radius(@radius: 5px) {
-  border-radius: @radius;
-  -webkit-border-radius: @radius;
-  -moz-border-radius: @radius;
-}
-.transition-duration(@duration: 1s) {
-    transition-duration: @duration;
-    -moz-transition-duration: @duration;
-    -webkit-transition-duration: @duration;
-    -o-transition-duration: @duration;
-}
-.transform-origin(@origin) {
-    transform-origin: @origin;
-    -moz-transform-origin: @origin;
-    -webkit-transform-origin: @origin;
-    -o-transform-origin: @origin;
-}
-
-.opacity(@val) {
-    opacity: @val;
-    @filter: @val*100;
-    filter: ~"alpha(opacity=@{filter})";
-}
+@import "compass/css3";
 
 /////////////////////////////////////////////
 
@@ -51,37 +23,37 @@
 
     // all transition takes 1.5s
     .slide-image, .slide-image img, .slide-image .caption {
-        .transition-duration(1.5s);
+        @include transition-duration(1.5s);
     }
 
     // general properties for all transitions
     .slide-image {
-        .opacity(0);
-        .transform-origin(50% 50%);
+        @include opacity(0);
+        @include transform-origin(50% 50%);
     }
     .slide-image.current {
-        .opacity(1);
+        @include opacity(1);
     }
 
     // a rotate and zoom out transition
     &.transition-rotatezoomout .slide-image {
-        .transform(scale(0) rotate(40deg));
+        @include transform(scale(0) rotate(40deg));
     }
     &.transition-rotatezoomout .slide-image.current {
-        .transform(scale(1) rotate(0deg));
+        @include transform(scale(1) rotate(0deg));
     }
 
     // a rotate and zoom in transition
     &.transition-rotatezoomin .slide-image {
-        .transform(scale(2) rotate(30deg));
+        @include transform(scale(2) rotate(30deg));
     }
     &.transition-rotatezoomin .slide-image.current {
-        .transform(scale(1) rotate(0deg));
+        @include transform(scale(1) rotate(0deg));
     }
 
     // left transition
     &.transition-left .slide-image {
-        .opacity(1);
+        @include opacity(1);
         left: -100%;
     }
     &.transition-left .slide-image.current {
@@ -94,7 +66,7 @@
 
     // top transition
     &.transition-top .slide-image {
-        .opacity(1);
+        @include opacity(1);
         top: -100%;
     }
     &.transition-top .slide-image.current {
@@ -107,13 +79,13 @@
 
     // oblique transition
     &.transition-oblique .slide-image {
-        .transform(matrix(1,1,0,1,-100%,0));
+        @include transform(matrix(1,1,0,1,-100%,0));
     }
     &.transition-oblique .slide-image.current {
-        .transform(matrix(1,0,0,1,0,0));
+        @include transform(matrix(1,0,0,1,0,0));
     }
     &.transition-oblique .slide-image.current ~ .slide-image {
-        .transform(matrix(1,1,0,1,100%,0));
+        @include transform(matrix(1,1,0,1,100%,0));
     }
 
     // top fade transition
@@ -134,42 +106,42 @@
 
     // zoom in
     &.transition-zoomin .slide-image {
-        .transform(scale(2));
+        @include transform(scale(2));
     }
     &.transition-zoomin .slide-image.current {
-        .transform(scale(1));
+        @include transform(scale(1));
     }
 
     // zoom out
     &.transition-zoomout .slide-image {
-        .transform(scale(0));
+        @include transform(scale(0));
     }
     &.transition-zoomout .slide-image.current {
-        .transform(scale(1));
+        @include transform(scale(1));
     }
 
     // flip
     &.transition-flip .slide-image {
-        .transform(scale(-1, 1));
+        @include transform(scale(-1, 1));
     }
     &.transition-flip .slide-image.current {
-        .transform(scale(1, 1));
+        @include transform(scale(1, 1));
     }
 
     // flip
     &.transition-cardflip .slide-image {
-        .transform(scale(-1, 0.2));
+        @include transform(scale(-1, 0.2));
     }
     &.transition-cardflip .slide-image.current {
-        .transform(scale(1, 1));
+        @include transform(scale(1, 1));
     }
 
     // Skew flip
     &.transition-skewflip .slide-image {
-        .transform(skew(90deg, 90deg));
+        @include transform(skew(90deg, 90deg));
     }
     &.transition-skewflip .slide-image.current {
-        .transform(skew(0deg, 0deg));
+        @include transform(skew(0deg, 0deg));
     }
 }
 
@@ -365,8 +337,8 @@
     }
 
     .slide-pager a {
-        .transition-duration(0.5s);
-        .border-radius(5px);
+        @include transition-duration(0.5s);
+        @include border-radius(5px);
     }
     .slide-pager a.current {
         padding: 0 4px;
@@ -424,7 +396,7 @@
         border: none;
     }
     .slide-image .caption {
-        .opacity(0.8);
+        @include opacity(0.8);
         z-index: 3;
         position: absolute;
         right: 0;
@@ -432,7 +404,7 @@
         padding: 5px 10px;
         font-weight: bold;
         font-size: 14px;
-        .border-radius(5px 0 0 5px);
+        @include border-radius(5px 0 0 5px);
     }
 }
 

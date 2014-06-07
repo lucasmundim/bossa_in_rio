@@ -1,14 +1,14 @@
 <h1>Reservas</h1>
 
 <% unless @reservations.empty? %>
-  <table class="zebra-striped">
+  <table class="table table-striped">
     <tr>
       <th>Nome</th>
       <th>Sobrenome</th>
       <th>País</th>
       <th colspan="2"></th>
     </tr>
-  
+
     <% @reservations.each do |reservation| %>
       <tr>
         <td><%= reservation.first_name %></td>

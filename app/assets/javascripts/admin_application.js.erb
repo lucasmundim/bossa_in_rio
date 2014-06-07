@@ -6,9 +6,9 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require jquery-ui
+//= require jquery.ui.all
 //= require fancybox
-//= require twitter/bootstrap
+//= require bootstrap
 //= require_tree ./admin
 
 $(document).ready(function() {
@@ -38,25 +38,18 @@ $(document).ready(function() {
     }
   });
 
-  $(".photos-listing.tab-content").height($(".photos-listing.tab-content").height());
-
-  $(".modal").modal({
-    backdrop: true,
-    keyboard: true
-  })
-
-  $(".photos-listing").delegate("li > a", "mouseenter", function () {
+  $(".photos-listing").on("mouseenter", ".media-grid > li > a", function () {
     $(this).find(".edit-thumb").show();
-  }).delegate("li > a", "mouseleave", function () {
+  }).on("mouseleave", ".media-grid > li > a", function () {
     $(this).find(".edit-thumb").hide();
-  }).delegate("li a", "click", function (e) {
+  }).on("click", ".media-grid > li > a", function (e) {
     e.preventDefault();
     return false;
-  }).delegate(".edit-thumb", "click", function () {
-    $($(this).attr('data-modal')).modal('show');
+  }).on("click", ".edit-thumb", function () {
+    $($(this).attr('data-target')).modal('show');
   });
 
-  $(".modal.photos-modal li a").live("click", function (e) {
+  $("body").on("click", ".photos-modal li a", function (e) {
     $(this).parents("ul").find("a").removeClass("active");
     $(this).addClass("active");
     $(this).parents("li").find('input[type=radio]').attr('checked', 'checked');

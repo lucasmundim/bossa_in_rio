@@ -5,7 +5,7 @@
 // the compiled file.
 //
 //= require jquery
-//= require jquery-ui
+//= require jquery.ui.all
 //= require jquery_ujs
 //= require fancybox
 //= require slider
@@ -79,43 +79,22 @@ jQuery.fn.reset = function () {
   });
 }
 
-$('#reservation_wants_transfer_sim').live('click', function() {
-  $('#transfer_details').show();
-});
-
-$('#reservation_wants_transfer_no').live('click', function() {
-  $('#transfer_details').hide();
-});
-
-$('#contact_details_toggle a').live('click', function() {
-  $('#contact_details').show();
-  $('#contact_details_toggle').hide();
-});
-
-$("a.fancy-modal").live('click', function () {
+$("body").on('click', 'a.fancy-modal', function () {
   $.fancybox($($(this).attr('data-rel')).html(), {padding: 20, width: 600, height: 400, autoScale: false, autoDimensions: false});
 });
 
-$('sup.footnote a').live('click', function(event) {
+$('body').on('click', 'sup.footnote a', function(event) {
   event.preventDefault();
 });
 
-$('.toggle-list').live('click', function () {
+$('body').on('click', '.toggle-list', function () {
   $(this).next('ul').fadeToggle();
 });
 
-$("#new_reservation").live("ajax:beforeSend", function(){
-   $('#loader').show();
-   $('#reservation-submit').attr('disabled', true);
- }).live("ajax:complete", function(){
-   $('#loader').hide();
-   $('#reservation-submit').attr('disabled', false);
- });
-
-$("#new_message").live("ajax:beforeSend", function(){
+$("body").on("ajax:beforeSend", '#new_message', function(){
    $('#loader').show();
    $('#contact-submit').attr('disabled', true);
-  }).live("ajax:complete", function(){
+  }).on("ajax:complete", '#new_message', function(){
    $('#loader').hide();
    $('#contact-submit').attr('disabled', false);
  });

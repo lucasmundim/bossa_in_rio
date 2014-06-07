@@ -1,5 +1,5 @@
 $(document).ready(function () {
-  $('.alert-messages').html('<div class="alert-message info"><%= content_tag :div, flash[:notice] %></div>');
+  $('.alert-messages').html('<div class="alert alert-info"><%= content_tag :div, flash[:notice] %></div>');
 
   $('#<%= dom_id(@photo, :modal) %>').modal('hide');
 

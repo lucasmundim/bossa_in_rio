@@ -1,14 +1,14 @@
 <h1>Mensagens</h1>
 
 <% unless @messages.empty? %>
-  <table class="zebra-striped">
+  <table class="table table-striped">
     <tr>
       <th>Nome</th>
       <th>Sobrenome</th>
       <th>País</th>
       <th colspan="2"></th>
     </tr>
-  
+
     <% @messages.each do |message| %>
       <tr>
         <td><%= message.first_name %></td>

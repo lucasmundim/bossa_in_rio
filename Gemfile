@@ -1,6 +1,8 @@
 source 'http://rubygems.org'
+ruby '2.1.1'
 
-gem 'rails'
+gem 'bundler'
+gem 'rails', '>= 3.2'
 
 gem 'fog'
 
@@ -10,19 +12,22 @@ gem 'rpm_contrib'
 gem 'newrelic_rpm'
 gem 'spectator-validates_email', :require => 'validates_email'
 gem 'thin'
-gem 'twitter-bootstrap-rails', :git => 'http://github.com/seyhunak/twitter-bootstrap-rails.git'
 gem 'date_validator'
 
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
   gem 'sass-rails'
+  gem 'compass-rails'
   gem 'uglifier'
+  gem 'yui-compressor'
+  gem 'bootstrap-sass'
 end
 
 gem 'coffee-rails'
 
 gem 'jquery-rails'
+gem 'jquery-ui-rails'
 gem 'fancybox-rails'
 
 # Memcache client gem
@@ -38,12 +43,7 @@ gem 'dalli'
 gem 'capistrano'
 
 # To use debugger
-gem 'ruby-debug19', :require => 'ruby-debug', :group => [:development, :test]
-
-# Javascript runtime
-group :development do
-  gem "therubyracer", :require => 'v8'
-end
+gem 'debugger', :group => [:development, :test]
 
 # Mongoid
 gem "mongoid", "~> 2.3"

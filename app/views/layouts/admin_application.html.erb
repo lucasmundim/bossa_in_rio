@@ -9,70 +9,78 @@
 <body>
 
 <div class="container">
-  <div style="z-index: 5;" class="topbar-wrapper">
-    <div data-dropdown="dropdown" class="topbar">
-      <div class="topbar-inner">
-        <div class="container">
-          <h3><%= link_to "Bossa in Rio", admin_pages_path %></h3>
-          <ul class="nav">
-            <li><%= link_to "Home", by_slug_admin_pages_path(:slug => "home") %></li>
-            <li class="dropdown">
-              <%= link_to "Hostel", by_slug_admin_pages_path(:slug => "hostel"), :class => "dropdown-toggle" %>
-              <ul class="dropdown-menu">
-                <li><%= link_to "Hostel", by_slug_admin_pages_path(:slug => "hostel") %></li>
-                <li><%= link_to "Serviços", by_slug_admin_pages_path(:slug => "services") %></li>
-                <li><%= link_to "Instalações", by_slug_admin_pages_path(:slug => "facilities") %></li>
-              </ul>
-            </li>
-            <li class="dropdown">
-              <%= link_to "Habitações", by_slug_admin_pages_path(:slug => "rooms"), :class => "dropdown-toggle" %>
-              <ul class="dropdown-menu">
-                <li><%= link_to "Suítes", by_slug_admin_pages_path(:slug => "rooms") %></li>
-                <li><%= link_to "Quartos Coletivos", by_slug_admin_pages_path(:slug => "dorms") %></li>
-              </ul>
-            </li>
-            <li><%= link_to "Fotos", by_slug_admin_pages_path(:slug => "photos") %></li>
-            <li class="dropdown">
-              <%= link_to "Localização", by_slug_admin_pages_path(:slug => "location"), :class => "dropdown-toggle" %>
-              <ul class="dropdown-menu">
-                <li><%= link_to "Localização", by_slug_admin_pages_path(:slug => "location") %></li>
-                <li><%= link_to "Santa Teresa", by_slug_admin_pages_path(:slug => "santa") %></li>
-              </ul>
-            </li>
-            <li><%= link_to "Reserva", by_slug_admin_pages_path(:slug => "reservation") %></li>
-            <li class="dropdown">
-              <%= link_to "Reviews", by_slug_admin_pages_path(:slug => "reviews"), :class => "dropdown-toggle" %>
-              <ul class="dropdown-menu">
-                <li><%= link_to "Reviews", by_slug_admin_pages_path(:slug => "reviews") %></li>
-                <li><%= link_to "Bossa na Mídia", by_slug_admin_pages_path(:slug => "media") %></li>
-              </ul>
-            </li>
-            <li><%= link_to "Contato", by_slug_admin_pages_path(:slug => "contact") %></li>
-          </ul>
-          <ul class="nav secondary-nav">
-            <li><%= link_to "Mensagens", admin_messages_path %></li>
-            <li><%= link_to "Reservas", admin_reservations_path %></li>
-          </ul>
-        </div>
-      </div><!-- /topbar-inner -->
-    </div><!-- /topbar -->
+  <div class="navbar navbar-default navbar-inverse navbar-fixed-top">
+    <%= link_to "Bossa in Rio", admin_pages_path, class: 'navbar-brand' %>
+    <ul class="nav navbar-nav">
+      <li><%= link_to "Home", by_slug_admin_pages_path(:slug => "home") %></li>
+      <li class="dropdown">
+        <%= link_to '#', class: "dropdown-toggle", data: { toggle: 'dropdown' } do %>
+          Hostel
+          <b class="caret"></b>
+        <% end -%>
+
+        <ul class="dropdown-menu">
+          <li><%= link_to "Hostel", by_slug_admin_pages_path(:slug => "hostel") %></li>
+          <li><%= link_to "Serviços", by_slug_admin_pages_path(:slug => "services") %></li>
+          <li><%= link_to "Instalações", by_slug_admin_pages_path(:slug => "facilities") %></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <%= link_to '#', class: "dropdown-toggle", data: { toggle: 'dropdown' } do %>
+           Habitações
+           <b class="caret"></b>
+        <% end -%>
+        <ul class="dropdown-menu">
+          <li><%= link_to "Suítes", by_slug_admin_pages_path(:slug => "rooms") %></li>
+          <li><%= link_to "Quartos Coletivos", by_slug_admin_pages_path(:slug => "dorms") %></li>
+        </ul>
+      </li>
+      <li><%= link_to "Fotos", by_slug_admin_pages_path(:slug => "photos") %></li>
+      <li class="dropdown">
+        <%= link_to '#', class: "dropdown-toggle", data: { toggle: 'dropdown' } do %>
+          Localização
+          <b class="caret"></b>
+        <% end -%>
+
+        <ul class="dropdown-menu">
+          <li><%= link_to "Localização", by_slug_admin_pages_path(:slug => "location") %></li>
+          <li><%= link_to "Santa Teresa", by_slug_admin_pages_path(:slug => "santa") %></li>
+        </ul>
+      </li>
+      <li><%= link_to "Reserva", by_slug_admin_pages_path(:slug => "reservation") %></li>
+      <li class="dropdown">
+        <%= link_to '#', class: "dropdown-toggle", data: { toggle: 'dropdown' } do %>
+          Reviews
+          <b class="caret"></b>
+        <% end -%>
+
+        <ul class="dropdown-menu">
+          <li><%= link_to "Reviews", by_slug_admin_pages_path(:slug => "reviews") %></li>
+          <li><%= link_to "Bossa na Mídia", by_slug_admin_pages_path(:slug => "media") %></li>
+        </ul>
+      </li>
+      <li><%= link_to "Contato", by_slug_admin_pages_path(:slug => "contact") %></li>
+    </ul>
+    <ul class="nav navbar-nav pull-right">
+      <li><%= link_to "Mensagens", admin_messages_path %></li>
+    </ul>
   </div>
 
   <div class="alert-messages">
     <% unless flash[:notice].blank? %>
-      <div class="alert-message info">
+      <div class="alert alert-info">
         <%= content_tag :div, flash[:notice] %>
       </div>
     <% end %>
 
     <% unless flash[:error].blank? %>
-      <div class="alert-message error">
+      <div class="alert alert-danger">
         <%= content_tag :div, flash[:error] %>
       </div>
     <% end %>
 
     <% unless flash[:alert].blank? %>
-      <div class="alert-message warning">
+      <div class="alert alert-warning">
         <%= content_tag :div, flash[:alert] %>
       </div>
     <% end %>

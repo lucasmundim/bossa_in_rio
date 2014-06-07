@@ -13,8 +13,9 @@
     </div>
   <% end %>
 
-  <div class="clearfix image-field">
+  <div class="form-group image-field">
     <%= f.label :image, "Arquivo" %>
+
     <div class="input">
       <%= f.file_field :image %>
       <%= f.hidden_field :image_cache %>
@@ -25,9 +26,9 @@
     <% end if @photo.image? %>
   </div>
 
-  <ul class="tabs" data-tabs="tabs">
+  <ul class="nav nav-tabs" data-tabs="tabs">
     <% I18n.available_locales.each_with_index do |locale, index| %>
-      <li class="<%= "active" if index == 0 %>"><a href="#<%= locale %>"><%= locale %></a></li>
+      <li class="<%= "active" if index == 0 %>"><a href="#<%= locale %>" data-toggle="tab"><%= locale %></a></li>
     <% end %>
   </ul>
 
@@ -35,10 +36,10 @@
     <% I18n.available_locales.each_with_index do |locale, index| %>
       <% I18n.with_locale(locale) do %>
         <div id="<%= locale %>" class="tab-pane <%= "active" if index == 0 %>">
-          <div class="clearfix">
+          <div class="form-group">
             <%= label_tag "translations[#{locale}][caption]", "Legenda" %>
-            <div class="input">
-              <%= text_field_tag "translations[#{locale}][caption]", @photo.translation_for(locale).caption, :class => "span9" %>
+            <div>
+              <%= text_field_tag "translations[#{locale}][caption]", @photo.translation_for(locale).caption, :class => "form-control" %>
             </div>
           </div>
         </div>
@@ -47,7 +48,7 @@
   </div>
 
   <div class="actions">
-    <%= f.submit :class => "btn primary" %>
+    <%= f.submit :class => "btn btn-primary" %>
 
     <%= link_to "Cancelar", admin_page_path(@page) %>
   </div>

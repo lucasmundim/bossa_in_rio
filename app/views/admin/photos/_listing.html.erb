@@ -1,9 +1,9 @@
 <h3>Fotos</h3>
 
 <% if @imageable.photos.present? %>
-  <ul class="tabs" data-tabs="tabs">
-    <li class="active"><a href="#list-view">Listagem</a></li>
-    <li><a href="#thumbs-view">Thumbnails</a></li>
+  <ul class="nav nav-tabs" data-tabs="tabs">
+    <li class="active"><a href="#list-view" data-toggle="tab">Listagem</a></li>
+    <li><a href="#thumbs-view" data-toggle="tab">Thumbnails</a></li>
   </ul>
 
   <div class="photos-listing tab-content">
@@ -19,4 +19,4 @@
   <p>Nenhuma foto cadastrada</p>
 <% end %>
 
-<%= link_to "Adicionar Foto", new_imageable_photo_path(@imageable), :class => "btn primary" %>
+<%= link_to "Adicionar Foto", new_imageable_photo_path(@imageable), :class => "btn btn-primary" %>

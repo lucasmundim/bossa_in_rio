@@ -2,11 +2,11 @@
  * This is a manifest file that'll automatically include all the stylesheets available in this directory
  * and any sub-directories. You're free to add application-wide styles to this file and they'll appear at
  * the top of the compiled file, but it's generally better to create a new file per style scope.
- *= require twitter/bootstrap
  *= require fancybox
- *= require_tree ./admin
  *= require_self
 */
+
+@import "bootstrap";
 
 body {
   padding-top: 60px;
@@ -25,18 +25,23 @@ body {
 }
 
 #thumbs-view {
-  ul {
-    li {
+  > ul {
+    list-style: none;
+    margin: 20px 0px 0 -20px;
+    padding: 0;
+
+    > li {
       float: left;
       padding: 0;
       margin: 0 0 18px 20px;
 
       &.placeholder { border: 1px solid #DDDDDD; border-radius: 4px; }
 
-      a {
+      > a {
         cursor: move;
         position: relative;
         margin: 0;
+        display: block;
 
         .edit-thumb {
           color: #404040;
@@ -53,10 +58,11 @@ body {
   }
 }
 
-.modal.photos-modal {
-  width: 830px;
-  margin-left: -415px;
+.photos-listing {
+  overflow: auto;
+}
 
+.modal.photos-modal {
   .form-stacked { margin: 0; padding: 0; }
 
   input[type=radio] {
@@ -73,6 +79,31 @@ body {
       -webkit-box-shadow: 0 2px 4px rgba(0,105,214,.25);
          -moz-box-shadow: 0 2px 4px rgba(0,105,214,.25);
               box-shadow: 0 2px 4px rgba(0,105,214,.25);
+    }
+  }
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    > li {
+      margin: 0;
+      padding: 0;
+
+      display: inline-block;
+      vertical-align: top;
+
+      a {
+        display: inline-block;
+      }
+
+      a.active, a:hover {
+        .img-thumbnail {
+          border-color: #0069d6;
+          @include box-shadow(0 1px 4px rgba(0,105,214,0.25));
+        }
+      }
     }
   }
 

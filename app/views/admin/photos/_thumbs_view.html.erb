@@ -2,37 +2,42 @@
   <% @imageable.photos.ordered.each do |photo| %>
     <li id="<%= dom_id(photo) %>">
       <a href="#">
-        <%= image_tag photo.image_thumb_version.url %>
-        <span class="edit-thumb" style="display: none;" data-modal="#<%= dom_id(photo, :modal) %>">tamanho</span>
+        <%= image_tag photo.image_thumb_version.url, class: 'img-thumbnail' %>
+        <span class="edit-thumb" style="display: none;" data-toggle="modal" data-target="#<%= dom_id(photo, :modal) %>">tamanho</span>
       </a>
     </li>
   <% end %>
 </ul>
 
 <% @imageable.photos.ordered.each do |photo| %>
-  <div id="<%= dom_id(photo, :modal) %>" class="modal fade out photos-modal" style="display: none;">
-    <%= form_for photo, :url => imageable_photo_path(@imageable, photo), :remote => true, :html => {:class => "form-stacked"} do |f| %>
-    <div class="modal-header">
-      <a class="close" href="#">x</a>
-      <h3>Escolha o tamanho da foto</h3>
-    </div>
-    <div class="modal-body">
-      <ul class="media-grid">
-        <% photo.image.versions.except(:thumb, :panel).each do |version, url| %>
-          <li>
-            <label>
-              <%= f.radio_button :thumb_version, version, :id => dom_id(photo, "thumb_version_#{version}") %>
-              <a href="#" class="<%= 'active' if photo.thumb_version == version.to_s %>">
-                <%= image_tag(photo.image.send(version).url) %>
-              </a>
-            </label>
-          </li>
+  <div id="<%= dom_id(photo, :modal) %>" class="modal fade photos-modal" style="display: none;">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <%= form_for photo, :url => imageable_photo_path(@imageable, photo), :remote => true, :html => {:class => "form-stacked"} do |f| %>
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h4 class="modal-title">Escolha o tamanho da foto</h4>
+          </div>
+          <div class="modal-body">
+            <ul class="media-grid">
+              <% photo.image.versions.except(:thumb, :panel).each do |version, url| %>
+              <li>
+                <label>
+                  <%= f.radio_button :thumb_version, version, :id => dom_id(photo, "thumb_version_#{version}") %>
+                  <a href="#" class="<%= 'active' if photo.thumb_version == version.to_s %>">
+                    <%= image_tag(photo.image.send(version).url, class: 'img-thumbnail') %>
+                  </a>
+                </label>
+              </li>
+              <% end %>
+            </ul>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+            <%= f.submit "Alterar", :class => "btn btn-primary" %>
+          </div>
         <% end %>
-      </ul>
+      </div>
     </div>
-    <div class="modal-footer">
-      <%= f.submit "Alterar", :class => "btn primary" %>
-    </div>
-    <% end %>
   </div>
 <% end %>

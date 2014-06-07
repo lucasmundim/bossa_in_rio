@@ -6,7 +6,8 @@
  *= require fancybox
  *= require slider
  *= require_self
- *= require_tree ./site
+ *= require site/jquery-qtip
+ *= require site/style
 */
 
 #fancybox-wrap tr { background-color: inherit }
