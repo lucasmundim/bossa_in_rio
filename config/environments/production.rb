@@ -85,13 +85,13 @@ BossaInRio::Application.configure do
   config.active_support.deprecation = :notify
 
   CarrierWave.configure do |config|
-    config.root = Rails.root.join('tmp')
-    config.cache_dir = 'carrierwave'
-
-    config.s3_access_key_id = ENV['AWS_ACCESS_KEY_ID']
-    config.s3_secret_access_key = ENV['AWS_SECRET_ACCESS_KEY']
-    config.s3_bucket = ENV['S3_BUCKET']
-    config.s3_region = ENV['S3_REGION']
+    config.fog_credentials = {
+      :provider               => 'AWS',       # required
+      :aws_access_key_id      => ENV['AWS_ACCESS_KEY_ID'] || '',       # required
+      :aws_secret_access_key  => ENV['AWS_SECRET_ACCESS_KEY'] || '',       # required
+      :region                 => ENV['S3_REGION']  # optional, defaults to 'us-east-1'
+    }
+    config.fog_directory  = ENV['S3_BUCKET'] || 'bossainrio'                     # required
   end
 
   config.action_mailer.delivery_method = :smtp

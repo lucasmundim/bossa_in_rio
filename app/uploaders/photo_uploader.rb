@@ -8,7 +8,7 @@ class PhotoUploader < CarrierWave::Uploader::Base
   # include CarrierWave::ImageScience
 
   # Choose what kind of storage to use for this uploader:
-  storage (Rails.env.production? ? :s3 : :file)
+  storage (Rails.env.production? ? :fog : :file)
   # storage :fog
 
   # Override the directory where uploaded files will be stored.
