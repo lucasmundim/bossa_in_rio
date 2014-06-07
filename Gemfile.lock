@@ -1,5 +1,5 @@
 GIT
-  remote: http://github.com/vicentemundim/mongoid_globalize.git
+  remote: https://github.com/vicentemundim/mongoid_globalize.git
   revision: dbbf5846b9d043f3e427340a00e8c45f9bfab77d
   specs:
     mongoid_globalize (0.1.3)
@@ -7,7 +7,7 @@ GIT
       mongoid (>= 2.1)
 
 GEM
-  remote: http://rubygems.org/
+  remote: https://rubygems.org/
   specs:
     RedCloth (4.2.9)
     actionmailer (3.2.18)

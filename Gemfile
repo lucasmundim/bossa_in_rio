@@ -1,4 +1,4 @@
-source 'http://rubygems.org'
+source 'https://rubygems.org'
 ruby '2.1.1'
 
 gem 'bundler'
@@ -51,7 +51,7 @@ gem "bson_ext", "~> 1.4"
 
 # I18n
 gem 'rails-i18n'
-gem 'mongoid_globalize', :git => 'http://github.com/vicentemundim/mongoid_globalize.git'
+gem 'mongoid_globalize', :git => 'https://github.com/vicentemundim/mongoid_globalize.git'
 gem 'i18n_routing'
 gem "carmen", "0.2.12"
 
