@@ -62,6 +62,8 @@ gem 'carrierwave-mongoid', :require => 'carrierwave/mongoid'
 
 gem 'rmagick'
 
+# 12 Factor Application
+gem 'rails_12factor', group: :production
 
 group :test do
   # Rspec
