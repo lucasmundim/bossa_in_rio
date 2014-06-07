@@ -50,10 +50,25 @@ BossaInRio::Application.configure do
   config.assets.precompile += %w( admin_application.css )
 
   # Enabling rack-cache
+  cache_servers = (ENV["MEMCACHIER_SERVERS"] || "").split(",")
+  cache_options = {
+    username: ENV["MEMCACHIER_USERNAME"],
+    password: ENV["MEMCACHIER_PASSWORD"],
+    compress: true,
+    failover: true,
+    socket_timeout: 1.5,
+    socket_failure_delay: 0.2,
+    value_max_bytes: 10485760
+  }
+
+  # Use a different cache store in production.
+  config.cache_store = :dalli_store, cache_servers, cache_options
+
+  client = Dalli::Client.new(cache_servers, cache_options)
+
   config.action_dispatch.rack_cache = {
-    :metastore    => Dalli::Client.new,
-    :entitystore  => 'file:tmp/cache/rack/body',
-    :allow_reload => false
+    metastore: client,
+    entitystore: client
   }
 
   # Disable delivery errors, bad email addresses will be ignored
