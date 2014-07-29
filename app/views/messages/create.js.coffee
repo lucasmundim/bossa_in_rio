@@ -1,10 +1,10 @@
   $('#new_message input').removeClass('erro')
   $('#new_message textarea').removeClass('erro')
-<% if @message.errors.empty? %>
+<% if @message.present? && @message.errors.empty? %>
   $('.mensagemErro').hide()
   $('.mensagemSucesso').show()
   $('#new_message').reset()
-<% else %>
+<% elsif @message.present? %>
   $('.mensagemErro').show()
   $('.mensagemSucesso').hide()
   <% @message.errors.keys.each do |field| %>
