@@ -19,7 +19,7 @@ Documento: <%= @reservation.identification %>
 
 Sexo: <%= @reservation.gender %>
 
-Nacionalidade: <%= Carmen::country_name(@reservation.nationality) %>
+Nacionalidade: <%= Carmen::Country.coded(@reservation.nationality).try(:name) %>
 
 E-mail: <%= @reservation.email %>
 

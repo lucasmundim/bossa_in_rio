@@ -41,7 +41,7 @@
 </p>
 
 <p>
-  Nacionalidade: <%= Carmen::country_name(@reservation.nationality) %>
+  Nacionalidade: <%=Carmen::Country.coded(@reservation.nationality).try(:name) %>
 </p>
 
 <p>

@@ -10,10 +10,8 @@ class ApplicationController < ActionController::Base
   def set_locale
     if params[:i18n_locale].present?
       I18n.locale = params[:i18n_locale] || "pt-BR"
-      Carmen.default_locale = params[:i18n_locale].split("-").first.to_sym
     else
       I18n.locale = :"pt-BR"
-      Carmen.default_locale = :"pt"
     end
   end
 

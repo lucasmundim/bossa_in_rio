@@ -1,11 +1,11 @@
 Contato recebido em <%= l @message.created_at, :format => :custom_with_time %>
 ===============================================
- 
+
 Nome: <%= @message.first_name %>
 
 Sobrenome: <%= @message.last_name %>
 
-País: <%= Carmen::country_name(@message.country) %>
+País: <%= Carmen::Country.coded(@message.country).try(:name) %>
 
 E-mail: <%= @message.email %>
 

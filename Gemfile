@@ -53,7 +53,8 @@ gem "bson_ext", "~> 1.4"
 gem 'rails-i18n'
 gem 'mongoid_globalize', :git => 'https://github.com/vicentemundim/mongoid_globalize.git'
 gem 'i18n_routing'
-gem "carmen", "0.2.12"
+gem "carmen-rails"
+gem "carmen"
 
 gem 'RedCloth'
 

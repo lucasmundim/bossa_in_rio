@@ -13,7 +13,7 @@
       <tr>
         <td><%= reservation.first_name %></td>
         <td><%= reservation.last_name %></td>
-        <td><%= Carmen::country_name(reservation.nationality) %></td>
+        <td><%= Carmen::Country.coded(reservation.nationality).try(:name) %></td>
         <td><%= link_to "exibir", admin_reservation_path(reservation) %></td>
         <td><%= link_to "remover", admin_reservation_path(reservation), :method => :delete, :confirm => "Você tem certeza?" %></td>
       </tr>

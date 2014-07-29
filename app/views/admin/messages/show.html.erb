@@ -13,7 +13,7 @@
 </p>
 
 <p>
-  País: <%= Carmen::country_name(@message.country) %>
+  País: <%= Carmen::Country.coded(@message.country).try(:name) %>
 </p>
 
 <p>
