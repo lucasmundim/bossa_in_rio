@@ -37,4 +37,15 @@ module ApplicationHelper
       'pt_BR'
     end
   end
+
+  def locale_for_reservation
+    case I18n.locale
+    when :'pt-BR'
+      'pt'
+    when :es
+      'sp'
+    else
+      'en'
+    end
+  end
 end

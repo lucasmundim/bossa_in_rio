@@ -14,7 +14,7 @@
   <% end %>
 
   <div class="reservation-site">
-    <iframe src="https://ssl2.motel-soft.com/bossa/frm_motel_Orders_new.aspx?dbkey=bossa&prclist=*all&lng=<%= I18n.locale == :'pt-BR' ? 'pt' : 'en' %>" frameborder="0" marginwidth="0" marginheight="0" width="800" height="600"></iframe>
+    <iframe src="https://secure.minihotelpms.com/bossa/frm_motel_Orders_new.aspx?dbkey=bossa&prclist=*all&lng=<%= locale_for_reservation %>" frameborder="0" marginwidth="0" marginheight="0" width="800" height="600"></iframe>
   </div>
 
   <%=raw @page.snippets.section(:extra_reservations).rendered_body if @page.snippets.section(:extra_reservations) %>
