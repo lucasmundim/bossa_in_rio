@@ -1060,6 +1060,23 @@ input[type="submit"][disabled] {
 
 .reservation-site {
   width: 100%;
+  position: relative;
+
+  &:before {
+    content: "";
+    background: transparent image-url('loader.gif') no-repeat center;
+    display: none;
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+
+    margin: 0 auto;
+  }
+
+  &.loading:before {
+    display: block;
+  }
 
   iframe {
     display: block;

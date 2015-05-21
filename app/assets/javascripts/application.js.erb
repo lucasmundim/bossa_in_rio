@@ -98,3 +98,9 @@ $("body").on("ajax:beforeSend", '#new_message', function(){
    $('#loader').hide();
    $('#contact-submit').attr('disabled', false);
  });
+
+$('.reservation-site').addClass('loading')
+
+$('.reservation-site iframe').on('load', function () {
+  $('.reservation-site').removeClass('loading')
+})
