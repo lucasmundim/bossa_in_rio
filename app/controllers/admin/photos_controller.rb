@@ -27,7 +27,7 @@ class Admin::PhotosController < Admin::ApplicationController
       @imageable.save
     end
 
-    if @photo.update_attributes(params[:photo])
+    if @photo.update_attributes(photo_params)
       respond_to do |format|
         format.html { redirect_to redirect_to_imageable, :notice => 'Foto alterada com sucesso.' }
         format.js do
