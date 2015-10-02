@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby '2.1.1'
+ruby '2.1.7'
 
 gem 'bundler'
 gem 'rails', '>= 3.2'
@@ -77,4 +77,5 @@ group :test do
 
   gem 'capybara'
 end
+
 gem 'therubyracer', platforms: :ruby, group: :development
