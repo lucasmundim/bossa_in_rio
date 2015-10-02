@@ -1,9 +1,9 @@
 development:
-  host: localhost
+  host: <%= ENV['MONGODB_HOST'] %>
   database: bossa_in_rio_development
 
 test:
-  host: localhost
+  host: <%= ENV['MONGODB_HOST'] %>
   database: bossa_in_rio_test
 
 # set these environment variables on your prod server

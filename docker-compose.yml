@@ -1,0 +1,24 @@
+web:
+  build: .
+  command: bundle exec rails server thin -p 3000
+  ports:
+    - "3000:3000"
+  volumes:
+    - .:/app
+  links:
+    - mongodb
+  environment:
+    - MONGODB_HOST=mongodb
+    - LANG=en_US.UTF-8
+    - SOUND_CLOUD_CLIENT_ID=YOUR_CLIENT_ID
+  volumes_from:
+    - bundle
+
+mongodb:
+  image: mongo:2.6.11
+
+bundle:
+  image: bossainrio_web
+  command: "echo Nothing"
+  volumes:
+    - /bundle
