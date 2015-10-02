@@ -9,13 +9,17 @@ web:
     - mongodb
   environment:
     - MONGODB_HOST=mongodb
+    - MONGODB_USER=admin
+    - MONGODB_PASS=secret
     - LANG=en_US.UTF-8
     - SOUND_CLOUD_CLIENT_ID=YOUR_CLIENT_ID
   volumes_from:
     - bundle
 
 mongodb:
-  image: mongo:2.6.11
+  image: tutum/mongodb:3.0
+  environment:
+    - MONGODB_PASS=secret
 
 bundle:
   image: bossainrio_web

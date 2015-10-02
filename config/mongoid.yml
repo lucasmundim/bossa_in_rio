@@ -22,10 +22,10 @@ development:
         #   mode: :secondary_preferred
 
         # The name of the user for authentication.
-        # user: 'user'
+        user: '<%= ENV['MONGODB_USER'] %>'
 
         # The password of the user for authentication.
-        # password: 'password'
+        password: '<%= ENV['MONGODB_PASS'] %>'
 
         # The user's database roles.
         # roles:
@@ -34,10 +34,10 @@ development:
         # Change the default authentication mechanism. Valid options are: :scram,
         # :mongodb_cr, :mongodb_x509, and :plain. (default on 3.0 is :scram, default
         # on 2.4 and 2.6 is :plain)
-        # auth_mech: :scram
+        auth_mech: :scram
 
         # The database or source to authenticate the user against. (default: admin)
-        # auth_source: admin
+        auth_source: admin
 
         # Force a the driver cluster to behave in a certain manner instead of auto-
         # discovering. Can be one of: :direct, :replica_set, :sharded. Set to :direct
