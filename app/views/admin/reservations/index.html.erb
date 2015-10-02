@@ -15,7 +15,7 @@
         <td><%= reservation.last_name %></td>
         <td><%= Carmen::Country.coded(reservation.nationality).try(:name) %></td>
         <td><%= link_to "exibir", admin_reservation_path(reservation) %></td>
-        <td><%= link_to "remover", admin_reservation_path(reservation), :method => :delete, :confirm => "Você tem certeza?" %></td>
+        <td><%= link_to "remover", admin_reservation_path(reservation), method: :delete, data: { confirm: "Você tem certeza?" } %></td>
       </tr>
     <% end %>
   </table>

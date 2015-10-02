@@ -19,22 +19,12 @@ def snippet_for(slug, section)
 
   {
     :section => section.to_sym,
-    :translations => [{
-      :locale => 'pt-BR',
-      :body => $configs[slug.to_s][section.to_s]["pt-BR"]
-    },
-    {
-      :locale => 'en',
-      :body => $configs[slug.to_s][section.to_s]["en"]
-    },
-    {
-      :locale => 'fr',
-      :body => $configs[slug.to_s][section.to_s]["fr"]
-    },
-    {
-      :locale => 'es',
-      :body => $configs[slug.to_s][section.to_s]["es"]
-    }]
+    :body_translations => {
+      'pt-BR' => $configs[slug.to_s][section.to_s]["pt-BR"],
+      'en' => $configs[slug.to_s][section.to_s]["en"],
+      'fr' => $configs[slug.to_s][section.to_s]["fr"],
+      'es' => $configs[slug.to_s][section.to_s]["es"]
+    }
   }
 end
 

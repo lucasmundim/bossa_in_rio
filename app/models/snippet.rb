@@ -1,28 +1,23 @@
 class Snippet
   include Mongoid::Document
-  include Mongoid::Globalize
 
   field :section
   field :status, :type => Boolean, :default => true
   field :order, :default => 0
 
-  translates do
-    field :body
-  end
+  field :body, localize: true
 
   has_many :photos, :as => :imageable
 
   embedded_in :page
 
-  accepts_nested_attributes_for :translations
-
   validates_presence_of :section
   validates_uniqueness_of :section
 
-  scope :ordered, order_by(:order.asc)
+  scope :ordered, -> { order_by(:order.asc) }
 
   def rendered_body
-    RedCloth.new(body).to_html
+    RedCloth.new(body.nil? ? body_translations['en'] : body).to_html
   end
 
   class << self

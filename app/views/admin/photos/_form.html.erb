@@ -37,9 +37,9 @@
       <% I18n.with_locale(locale) do %>
         <div id="<%= locale %>" class="tab-pane <%= "active" if index == 0 %>">
           <div class="form-group">
-            <%= label_tag "translations[#{locale}][caption]", "Legenda" %>
+            <%= label_tag "caption_translations[#{locale}]", "Legenda" %>
             <div>
-              <%= text_field_tag "translations[#{locale}][caption]", @photo.translation_for(locale).caption, :class => "form-control" %>
+              <%= text_field_tag "caption_translations[#{locale}]", @photo.caption, :class => "form-control" %>
             </div>
           </div>
         </div>

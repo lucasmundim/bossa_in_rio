@@ -18,13 +18,13 @@ describe Photo do
 
     context "normal version" do
       it "should scale down the image to fit within 800 by 800 pixels" do
-        subject.image.should be_no_larger_than(800, 800)
+        expect(subject.image).to be_no_larger_than(800, 800)
       end
     end
 
     context "thumb version" do
       it "should scale down the image to be exactly 90 by 90 pixels, croping it if necessary" do
-        subject.image.thumb.should have_dimensions(90, 90)
+        expect(subject.image.thumb).to have_dimensions(90, 90)
       end
     end
   end

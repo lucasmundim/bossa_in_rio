@@ -21,7 +21,7 @@ describe Snippet do
 
   describe "rendering body" do
     it "should render the textiled body into a HTML" do
-      subject.rendered_body.should == RedCloth.new(subject.body).to_html
+      expect(subject.rendered_body).to eq RedCloth.new(subject.body).to_html
     end
   end
 
@@ -32,7 +32,7 @@ describe Snippet do
     end
 
     it "should return the first section matching the given value" do
-      page.snippets.section(section).should == page.snippets.where(:section => section).first
+      expect(page.snippets.section(section)).to eq page.snippets.where(:section => section).first
     end
   end
 end

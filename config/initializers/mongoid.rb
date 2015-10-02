@@ -1,3 +1,2 @@
-Mongoid.add_language("pt-BR")
-Mongoid.add_language("es")
-Mongoid.add_language("fr")
+Mongoid.logger.level = Logger::INFO
+Mongo::Logger.logger.level = Logger::INFO

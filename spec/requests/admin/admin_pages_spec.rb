@@ -9,15 +9,11 @@ describe "Admin::Pages", :type => :feature do
     Page.create :slug => "home", :snippets_attributes => [
       {
         :section => "bottom_left",
-        :translations => [
-          { :locale => 'pt-BR', :body => "Some contents here" }
-        ]
+        :body_translations => { 'pt-BR' => "Some contents here" }
       },
       {
         :section => "bottom_right",
-        :translations => [
-          { :locale => 'pt-BR', :body => "Some more contents here" }
-        ]
+        :body_translations => { 'pt-BR' => "Some more contents here" }
       }
     ]
   end
@@ -31,14 +27,14 @@ describe "Admin::Pages", :type => :feature do
     it "should list the existing pages" do
       visit admin_pages_path
       Page.all.each do |page_data|
-        page.should have_content(I18n.t("admin_pages.#{page_data.slug}"))
+        expect(page).to have_content(I18n.t("admin_pages.#{page_data.slug}"))
       end
     end
 
     it "should display a link to the details of each of the existing pages" do
       visit admin_pages_path
       Page.all.each do |page_data|
-        page.should have_link(I18n.t("admin_pages.#{page_data.slug}"))
+        expect(page).to have_link(I18n.t("admin_pages.#{page_data.slug}"))
       end
     end
   end
@@ -49,26 +45,26 @@ describe "Admin::Pages", :type => :feature do
       within("table") do
         click_link I18n.t("admin_pages.#{home_page.slug}")
       end
-      current_path.should eq(admin_page_path(home_page))
+      expect(current_path).to eq(admin_page_path(home_page))
     end
 
     it "should list the snippets within that page" do
       visit admin_page_path(home_page)
       home_page.snippets.each do |snippet|
-        page.should have_content(I18n.t("sections.#{snippet.section}"))
+        expect(page).to have_content(I18n.t("sections.#{snippet.section}"))
       end
     end
 
     it "should display a link to the details of each existing snippets" do
       visit admin_page_path(home_page)
       home_page.snippets.each do |snippet|
-        page.should have_link(I18n.t("sections.#{snippet.section}"))
+        expect(page).to have_link(I18n.t("sections.#{snippet.section}"))
       end
     end
 
     it "should display a link to add a photo for the page" do
       visit admin_page_path(home_page)
-      page.should have_link("Adicionar Foto")
+      expect(page).to have_link("Adicionar Foto")
     end
   end
 end

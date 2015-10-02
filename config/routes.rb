@@ -1,6 +1,6 @@
 BossaInRio::Application.routes.draw do
   namespace :admin do
-    match '/' => redirect('/admin/pages')
+    get '/' => redirect('/admin/pages')
 
     resources :messages
 
@@ -28,19 +28,19 @@ BossaInRio::Application.routes.draw do
   # FIX: localized routes are not working properly, not using them for now...
   # localized(I18n.available_locales, :verbose => true) do
     scope "/:i18n_locale", :constraints => {:i18n_locale => /#{I18n.available_locales.join('|')}/i} do
-      match '/' => 'pages#index', :as => :home
-      match '/hostel' => 'pages#hostel', :as => :hostel
-      match '/hostel/services' => 'pages#services', :as => :services
-      match '/hostel/facilities' => 'pages#facilities', :as => :facilities
-      match '/rooms' => 'pages#rooms', :as => :rooms
-      match '/rooms/dorms' => 'pages#dorms', :as => :dorms
-      match '/photos' => 'pages#photos', :as => :photos
-      match '/location' => 'pages#location', :as => :location
-      match '/location/santa' => 'pages#santa', :as => :santa
-      match '/reviews' => 'pages#reviews', :as => :reviews
-      match '/media' => 'pages#media', :as => :media
-      match '/reservation' => 'pages#reservation', :as => :reservation
-      match '/contact' => 'pages#contact', :as => :contact
+      get '/' => 'pages#index', :as => :home
+      get '/hostel' => 'pages#hostel', :as => :hostel
+      get '/hostel/services' => 'pages#services', :as => :services
+      get '/hostel/facilities' => 'pages#facilities', :as => :facilities
+      get '/rooms' => 'pages#rooms', :as => :rooms
+      get '/rooms/dorms' => 'pages#dorms', :as => :dorms
+      get '/photos' => 'pages#photos', :as => :photos
+      get '/location' => 'pages#location', :as => :location
+      get '/location/santa' => 'pages#santa', :as => :santa
+      get '/reviews' => 'pages#reviews', :as => :reviews
+      get '/media' => 'pages#media', :as => :media
+      get '/reservation' => 'pages#reservation', :as => :reservation
+      get '/contact' => 'pages#contact', :as => :contact
     end
   # end
 

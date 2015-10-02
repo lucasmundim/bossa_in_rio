@@ -5,15 +5,11 @@ describe "Photos Page", :type => :feature do
     page = Page.create :slug => :photos, :snippets_attributes => [
       {
         :section => :some_section,
-        :translations => [
-          { :locale => 'pt-BR', :body => "Some contents here" }
-        ]
+        :body_translations => { 'pt-BR' => "Some contents here" }
       },
       {
         :section => :other_section,
-        :translations => [
-          { :locale => 'pt-BR', :body => "Some more contents here" }
-        ]
+        :body_translations => { 'pt-BR' => "Some more contents here" }
       }
     ]
 
@@ -25,9 +21,9 @@ describe "Photos Page", :type => :feature do
   before do
     photos_page.snippets.each do |snippet|
       3.times do |i|
-        snippet.photos.create :image => File.open(Rails.root.join('spec/fixtures/my_photo.png')), :translations => [
-          {:locale => 'pt-BR', :caption => "A sample image #{i} for #{snippet.rendered_body}"}
-        ]
+        snippet.photos.create :image => File.open(Rails.root.join('spec/fixtures/my_photo.png')), :caption_translations => {
+          'pt-BR' => "A sample image #{i} for #{snippet.rendered_body}"
+        }
       end
     end
   end
@@ -44,7 +40,7 @@ describe "Photos Page", :type => :feature do
     it "should display all snippets" do
       within('.fotos') do
         photos_page.snippets.each do |snippet|
-          page.html.should include(snippet.rendered_body)
+          expect(page.html).to include(snippet.rendered_body)
         end
       end
     end
@@ -53,7 +49,7 @@ describe "Photos Page", :type => :feature do
       within('.fotos') do
         all_photos.each do |photo|
           image_link = page.find("a[href='#{photo.image.url}']")
-          image_link['rel'].should == 'photos'
+          expect(image_link['rel']).to eq 'photos'
         end
       end
     end
@@ -62,7 +58,7 @@ describe "Photos Page", :type => :feature do
       within('.fotos') do
         all_photos.each do |photo|
           image_link = page.find("a[href='#{photo.image.url}']")
-          image_link['title'].should == photo.caption
+          expect(image_link['title']).to eq photo.caption
         end
       end
     end
@@ -71,7 +67,7 @@ describe "Photos Page", :type => :feature do
       within('.fotos') do
         all_photos.each do |photo|
           image_link = page.find("a[href='#{photo.image.url}']")
-          image_link.should have_css("img[src='#{photo.image.thumb.url}']")
+          expect(image_link).to have_css("img[src='#{photo.image.thumb.url}']")
         end
       end
     end

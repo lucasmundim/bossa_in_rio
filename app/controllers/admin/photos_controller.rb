@@ -6,8 +6,9 @@ class Admin::PhotosController < Admin::ApplicationController
   end
 
   def create
-    @photo = @imageable.photos.build params[:photo]
-    if @photo.set_translations(params[:translations]) && @imageable.save
+    @photo = @imageable.photos.build photo_params
+    @photo.caption_translations = params[:caption_translations]
+    if @photo.save && @imageable.save
       redirect_to redirect_to_imageable, :notice => 'Foto adicionada com sucesso.'
     else
       render :action => "new"
@@ -21,8 +22,8 @@ class Admin::PhotosController < Admin::ApplicationController
   def update
     @photo = Photo.find params[:id]
 
-    if params[:translations]
-      @photo.set_translations(params[:translations])
+    if params[:caption_translations]
+      @photo.caption_translations = params[:caption_translations]
       @imageable.save
     end
 
@@ -75,5 +76,9 @@ class Admin::PhotosController < Admin::ApplicationController
       else
         admin_page_path(@page)
       end
+    end
+
+    def photo_params
+      params.require(:photo).permit!
     end
 end

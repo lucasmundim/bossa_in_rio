@@ -31,18 +31,6 @@ RSpec.configure do |config|
   # rspec-rails.
   config.infer_base_class_for_anonymous_controllers = false
 
-  # Clean up the database
-  require 'database_cleaner'
-
-  config.before(:suite) do
-    DatabaseCleaner.strategy = :truncation
-    DatabaseCleaner.orm = "mongoid"
-  end
-
-  config.before(:each) do
-    DatabaseCleaner.clean
-  end
-
   Capybara.configure do |config|
     config.match = :prefer_exact
     config.ignore_hidden_elements = false

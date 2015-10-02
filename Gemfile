@@ -2,57 +2,42 @@ source 'https://rubygems.org'
 ruby '2.1.7'
 
 gem 'bundler'
-gem 'rails', '>= 3.2'
+gem 'rails', '~> 4.0.0'
+
+gem 'sass-rails', '~> 4.0.2'
+gem 'uglifier', '>= 1.3.0'
+gem 'coffee-rails', '~> 4.0.0'
+gem 'therubyracer', platforms: :ruby
+gem 'jquery-rails'
+gem 'turbolinks'
+gem 'jbuilder', '~> 1.2'
+gem 'capistrano', group: :development
+# debugger
+gem 'byebug', :group => [:development, :test]
 
 gem 'fog'
-
 gem 'rest-client', :require => 'rest_client'
-
-gem 'rpm_contrib'
+gem 'rpm_contrib', '~> 2.2.0'
 gem 'newrelic_rpm'
-gem 'spectator-validates_email', :require => 'validates_email'
+gem 'email_validator'
 gem 'thin'
 gem 'date_validator'
 
-# Gems used only for assets and not required
-# in production environments by default.
-group :assets do
-  gem 'sass-rails'
-  gem 'compass-rails'
-  gem 'uglifier'
-  gem 'yui-compressor'
-  gem 'bootstrap-sass'
-end
-
-gem 'coffee-rails'
-
-gem 'jquery-rails'
+gem 'compass-rails'
+gem 'yui-compressor'
+gem 'bootstrap-sass'
 gem 'jquery-ui-rails'
 gem 'fancybox-rails'
 
 # Memcache client gem
 gem 'dalli'
 
-# To use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.0.0'
-
-# Use unicorn as the web server
-# gem 'unicorn'
-
-# Deploy with Capistrano
-gem 'capistrano'
-
-# To use debugger
-gem 'byebug', :group => [:development, :test]
-
 # Mongoid
-gem "mongoid", "~> 2.3"
-gem "bson_ext", "~> 1.4"
+gem "mongoid", "~> 5.0"
 
 # I18n
 gem 'rails-i18n'
-gem 'mongoid_globalize', :git => 'https://github.com/vicentemundim/mongoid_globalize.git'
-gem 'i18n_routing'
+# gem 'i18n_routing' Will change to https://github.com/enriclluelles/route_translator
 gem "carmen-rails"
 gem "carmen"
 
@@ -64,18 +49,16 @@ gem 'carrierwave-mongoid', :require => 'carrierwave/mongoid'
 gem 'rmagick'
 
 # 12 Factor Application
-gem 'rails_12factor', group: :production
+group :production do
+  gem 'rails_12factor'
+end
 
 group :test do
-  # Rspec
   gem 'rspec-rails', :group => [:development, :test]
-  # use the database_cleaner gem to reset the test database
-  gem 'database_cleaner', :group => :test
-  # include RSpec matchers from the mongoid-rspec gem
-  gem 'mongoid-rspec', :group => :test
-  gem 'factory_girl_rails', :group => :test
-
+  gem 'database_cleaner', git: 'https://github.com/DatabaseCleaner/database_cleaner.git'
+  gem 'mongoid-rspec'
+  gem 'factory_girl_rails'
   gem 'capybara'
 end
 
-gem 'therubyracer', platforms: :ruby, group: :development
+gem 'mongoid_i18n_rails', '~> 0.0.7'

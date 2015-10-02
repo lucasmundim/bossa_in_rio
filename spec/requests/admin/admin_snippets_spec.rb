@@ -9,21 +9,21 @@ describe "Admin::Snippets", :type => :feature do
     Page.create :slug => "home", :snippets_attributes => [
       {
         :section => "bottom_left",
-        :translations => [
-          { :locale => 'pt-BR', :body => "Some contents here" },
-          { :locale => 'en', :body => "Some english contents here" },
-          { :locale => 'fr', :body => "Some french contents here" },
-          { :locale => 'es', :body => "Some spanish contents here" }
-        ]
+        :body_translations => {
+          'pt-BR' => "Some contents here",
+          'en' => "Some english contents here",
+          'fr' => "Some french contents here",
+          'es' => "Some spanish contents here"
+        }
       },
       {
         :section => "bottom_right",
-        :translations => [
-          { :locale => 'pt-BR', :body => "Some more contents here" },
-          { :locale => 'en', :body => "Some english contents here" },
-          { :locale => 'fr', :body => "Some french contents here" },
-          { :locale => 'es', :body => "Some spanish contents here" }
-        ]
+        :body_translations => {
+          'pt-BR' => "Some more contents here",
+          'en' => "Some english contents here",
+          'fr' => "Some french contents here",
+          'es' => "Some spanish contents here"
+        }
       }
     ]
   end
@@ -35,14 +35,17 @@ describe "Admin::Snippets", :type => :feature do
   it "should go the the snippet details page after clicking on a snippet in the listing" do
     visit admin_page_path(home_page)
     click_link I18n.t("sections.#{snippet.section}")
-    current_path.should eq(edit_admin_page_snippet_path(home_page, snippet))
+    expect(current_path).to eq(edit_admin_page_snippet_path(home_page, snippet))
   end
 
   describe "when editing a snippet" do
     it "should display the snippet body data for each locale" do
-      visit edit_admin_page_snippet_path(home_page, snippet)
-      field = page.find_field("Texto", visible: true).value
-      #field.text.should eq(snippet.translation_for("pt-BR").body)
+      ['pt-BR', 'en', 'fr', 'es'].each do |locale|
+        I18n.locale = :"#{locale}"
+        visit edit_admin_page_snippet_path(home_page, snippet, i18n_locale: locale)
+        field = page.find("#body_translations_#{locale}").value
+        expect(field).to eq(snippet.body)
+      end
     end
   end
 end

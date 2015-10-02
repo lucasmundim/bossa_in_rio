@@ -16,7 +16,7 @@
           <%= image_tag photo.image.thumb.url %>
         <% end %>
       </td>
-      <td class="photo-delete"><%= link_to "remover", imageable_photo_path(@imageable, photo), :method => :delete, :confirm => "Você tem certeza?" %></td>
+      <td class="photo-delete"><%= link_to "remover", imageable_photo_path(@imageable, photo), method: :delete, data: { confirm: "Você tem certeza?" } %></td>
     </tr>
   <% end %>
   </tbody>
