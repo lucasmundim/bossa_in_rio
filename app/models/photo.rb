@@ -12,7 +12,7 @@ class Photo
 
   belongs_to :imageable, :polymorphic => true
 
-  validates_presence_of :image
+  validates_presence_of :image, on: :create
 
   def image_thumb_version
     if thumb_version and image.versions.keys.include? thumb_version.to_sym
