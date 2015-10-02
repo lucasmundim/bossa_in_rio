@@ -77,3 +77,4 @@ group :test do
 
   gem 'capybara'
 end
+gem 'therubyracer', platforms: :ruby, group: :development

@@ -131,6 +131,7 @@ GEM
     jquery-ui-rails (4.2.1)
       railties (>= 3.2.16)
     json (1.8.1)
+    libv8 (3.16.14.11)
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
@@ -187,11 +188,11 @@ GEM
     rake (10.3.2)
     rdoc (3.12.2)
       json (~> 1.4)
+    ref (2.0.0)
     rest-client (1.6.7)
       mime-types (>= 1.16)
     rmagick (2.13.2)
     rpm_contrib (2.1.11)
-      newrelic_rpm (>= 3.1.1)
       newrelic_rpm (>= 3.1.1)
     rspec (3.0.0)
       rspec-core (~> 3.0.0)
@@ -229,6 +230,9 @@ GEM
       colorize
       net-scp (>= 1.1.2)
       net-ssh (>= 2.8.0)
+    therubyracer (0.12.2)
+      libv8 (~> 3.16.14.0)
+      ref
     thin (1.6.2)
       daemons (>= 1.0.9)
       eventmachine (>= 1.0.0)
@@ -286,6 +290,10 @@ DEPENDENCIES
   rspec-rails
   sass-rails
   spectator-validates_email
+  therubyracer
   thin
   uglifier
   yui-compressor
+
+BUNDLED WITH
+   1.10.6
