@@ -1,6 +1,6 @@
 require "spec_helper"
 
-describe "Home Page" do
+describe "Home Page", :type => :feature do
   let!(:home_page) do
     page = Page.create :slug => :home, :snippets_attributes => [
       {

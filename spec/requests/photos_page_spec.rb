@@ -1,6 +1,6 @@
 require "spec_helper"
 
-describe "Photos Page" do
+describe "Photos Page", :type => :feature do
   let!(:photos_page) do
     page = Page.create :slug => :photos, :snippets_attributes => [
       {

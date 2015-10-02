@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe "Admin::Photos" do
+describe "Admin::Photos", :type => :feature do
   before do
     page.driver.browser.authorize('bossainrio', 'bossainriotest')
   end
