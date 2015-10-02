@@ -43,7 +43,7 @@ gem 'dalli'
 gem 'capistrano'
 
 # To use debugger
-gem 'debugger', :group => [:development, :test]
+gem 'byebug', :group => [:development, :test]
 
 # Mongoid
 gem "mongoid", "~> 2.3"
