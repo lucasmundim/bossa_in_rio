@@ -94,8 +94,8 @@ GEM
     factory_girl_rails (4.5.0)
       factory_girl (~> 4.5.0)
       railties (>= 3.0.0)
-    fancybox-rails (0.3.0)
-      railties (>= 3.1.0)
+    fancybox2-rails (0.2.8)
+      railties (>= 3.1.0, < 5.0)
     fog (1.22.1)
       fog-brightbox
       fog-core (~> 1.22)
@@ -271,7 +271,7 @@ DEPENDENCIES
   date_validator
   email_validator
   factory_girl_rails
-  fancybox-rails
+  fancybox2-rails (~> 0.2.8)
   fog
   jbuilder (~> 1.2)
   jquery-rails

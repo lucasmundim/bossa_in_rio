@@ -27,7 +27,7 @@ gem 'compass-rails'
 gem 'yui-compressor'
 gem 'bootstrap-sass'
 gem 'jquery-ui-rails'
-gem 'fancybox-rails'
+gem 'fancybox2-rails', '~> 0.2.8'
 
 # Memcache client gem
 gem 'dalli'
