@@ -189,8 +189,6 @@ GEM
     rest-client (1.6.7)
       mime-types (>= 1.16)
     rmagick (2.13.2)
-    rpm_contrib (2.2.0)
-      newrelic_rpm (>= 3.1.1)
     rspec (3.0.0)
       rspec-core (~> 3.0.0)
       rspec-expectations (~> 3.0.0)
@@ -286,7 +284,6 @@ DEPENDENCIES
   rails_12factor
   rest-client
   rmagick
-  rpm_contrib (~> 2.2.0)
   rspec-rails
   sass-rails (~> 4.0.2)
   therubyracer

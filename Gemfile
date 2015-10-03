@@ -17,7 +17,6 @@ gem 'byebug', :group => [:development, :test]
 
 gem 'fog'
 gem 'rest-client', :require => 'rest_client'
-gem 'rpm_contrib', '~> 2.2.0'
 gem 'newrelic_rpm'
 gem 'email_validator'
 gem 'thin'
