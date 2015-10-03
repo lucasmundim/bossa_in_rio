@@ -62,3 +62,4 @@ group :test do
 end
 
 gem 'mongoid_i18n_rails', '~> 0.0.7'
+gem 'rack-cache'
