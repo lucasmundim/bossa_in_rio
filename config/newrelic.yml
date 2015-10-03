@@ -1,35 +1,49 @@
----
-production:
-  error_collector:
-    capture_source: true
-    enabled: true
-    ignore_errors: ActionController::RoutingError
-  apdex_t: 0.5
-  ssl: false
-  monitor_mode: true
+#
+# This file configures the New Relic Agent.  New Relic monitors Ruby, Java,
+# .NET, PHP, Python and Node applications with deep visibility and low
+# overhead.  For more information, visit www.newrelic.com.
+#
+# Generated October 03, 2015
+#
+# This configuration file is custom generated for bossa-in-rio Heroku
+#
+# For full documentation of agent configuration options, please refer to
+# https://docs.newrelic.com/docs/agents/ruby-agent/installation-configuration/ruby-agent-configuration
+
+common: &default_settings
+  # Required license key associated with your New Relic account.
   license_key: <%= ENV["NEW_RELIC_LICENSE_KEY"] %>
-  developer_mode: false
+
+  # Your application name. Renaming here affects where data displays in New
+  # Relic.  For more details, see https://docs.newrelic.com/docs/apm/new-relic-apm/maintenance/renaming-applications
   app_name: <%= ENV["NEW_RELIC_APP_NAME"] %>
-  transaction_tracer:
-    record_sql: obfuscated
-    enabled: true
-    stack_trace_threshold: 0.5
-    transaction_threshold: apdex_f
-  capture_params: false
+
+  # To disable the agent regardless of other settings, uncomment the following:
+  # agent_enabled: false
+
+  # Logging level for log/newrelic_agent.log
   log_level: info
-  disable_active_messaging: true
-  disable_cassandra_instrumentation: true
-  disable_crack: true
-  disable_curb: true
-  disable_elastic_search_instrumentation: true
-  disable_kyototycoon: true
-  disable_paperclip: true
-  disable_resque: true
-  disable_redis: true
-  disable_riak_client: true
-  disable_ripple: true
-  disable_sinatra_template: true
-  disable_thinking_sphinx: true
-  disable_typhoeus: true
-  disable_ultrasphinx: true
-  disable_workling: true
+
+
+# Environment-specific settings are in this section.
+# RAILS_ENV or RACK_ENV (as appropriate) is used to determine the environment.
+# If your application has other named environments, configure them here.
+development:
+  <<: *default_settings
+  app_name: bossa-in-rio (Development)
+
+  # NOTE: There is substantial overhead when running in developer mode.
+  # Do not use for production or load testing.
+  developer_mode: true
+
+test:
+  <<: *default_settings
+  # It doesn't make sense to report to New Relic from automated test runs.
+  monitor_mode: false
+
+staging:
+  <<: *default_settings
+  app_name: bossa-in-rio (Staging)
+
+production:
+  <<: *default_settings
