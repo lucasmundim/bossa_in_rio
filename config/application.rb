@@ -28,6 +28,8 @@ module BossaInRio
     # config.i18n.default_locale = :de
     config.i18n.default_locale = "pt-BR"
 
+    config.autoload_paths += %W(#{config.root}/lib)
+
     # Enable cache store
     config.cache_store = :dalli_store
 
