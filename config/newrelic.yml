@@ -1,8 +1,4 @@
 ---
-development:
-  disable_mongodb: true
-test:
-  disable_mongodb: true
 production:
   error_collector:
     capture_source: true
