@@ -144,6 +144,5 @@ production:
       uri: <%= ENV['MONGOLAB_URI'] %>
       options:
         auth_mech: :scram
-        auth_source: admin
         read:
           mode: :primary
