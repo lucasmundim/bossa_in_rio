@@ -171,7 +171,7 @@
             color: black;
         }
         .loader .spinner {
-            background: url(loader.gif) no-repeat;
+            background: url(asset-path("loader.gif", image)) no-repeat;
         }
     }
 
@@ -200,7 +200,7 @@
             color: white;
         }
         .loader .spinner {
-            background: url(load_light.gif) no-repeat;
+            background: url(asset-path("load_light.gif", image)) no-repeat;
         }
     }
 
@@ -260,7 +260,7 @@
             color: black;
         }
         .loader .spinner {
-            background: url(load_dark.gif) no-repeat;
+            background: url(asset-path("load_dark.gif", image)) no-repeat;
         }
     }
 
@@ -299,7 +299,7 @@
           }
         }
         .loader .spinner {
-            background: url(load_dark.gif) no-repeat;
+            background: url(asset-path("load_dark.gif", image)) no-repeat;
         }
     }
 
@@ -315,7 +315,7 @@
           display: none;
         }
         .loader .spinner {
-            background: url(load_dark.gif) no-repeat;
+            background: url(asset-path("load_dark.gif", image)) no-repeat;
         }
     }
 
@@ -407,4 +407,3 @@
         @include border-radius(5px 0 0 5px);
     }
 }
-
