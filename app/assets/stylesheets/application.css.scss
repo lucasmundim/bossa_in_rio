@@ -17,5 +17,5 @@
   color: #333;
   height: 260px;
 
-  .loader .spinner { background: url(asset-url("loader.gif")) no-repeat; }
+  .loader .spinner { background: url(asset-url("loader.gif", image)) no-repeat; }
 }
