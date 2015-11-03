@@ -41,11 +41,11 @@ module ApplicationHelper
   def locale_for_reservation
     case I18n.locale
     when :'pt-BR'
-      'pt'
+      430
     when :es
-      'sp'
+      397
     else
-      'en'
+      397
     end
   end
 end
