@@ -106,7 +106,8 @@
       <div class="redes">
         <p>
           <%= link_to 'http://twitter.com/#!/bossainrio', :target => "_blank", :title => t('footer.contacts.twitter') do %>
-            <img src="/assets/ico_twitter.png" width="32" height="30" alt="Twitter" />
+            <img src="<%= asset_path('ico_twitter.png') %>" width="32" height="30" alt="Twitter" />
+
             Twitter
           <% end %>
         </p>
@@ -114,7 +115,7 @@
       <div class="redes">
         <p class="facebook">
           <%= link_to 'https://www.facebook.com/pages/Bossa-in-Rio-Hostel/256042857754765', :target => "_blank", :title => t('footer.contacts.facebook') do %>
-            <img src="/assets/ico_facebook.png" width="32" height="30" alt="Facebook" />
+            <%= image_tag "ico_facebook.png", width: 32, height: 30, alt: "Facebook" %>
             Facebook
           <% end %>
         </p>
