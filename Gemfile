@@ -62,3 +62,6 @@ end
 
 gem 'mongoid_i18n_rails', '~> 0.0.7'
 gem 'rack-cache'
+
+gem 'momentjs-rails'
+gem 'moment_timezone-rails'
