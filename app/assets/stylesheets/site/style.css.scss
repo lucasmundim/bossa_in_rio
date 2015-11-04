@@ -1,3 +1,29 @@
+/*
+ *= depend_on_asset "ico_skype.png"
+ *= depend_on_asset "ico_twitter.png"
+ *= depend_on_asset "ico_facebook.png"
+ *= depend_on_asset "madeira01.jpg"
+ *= depend_on_asset "madeira02.jpg"
+ *= depend_on_asset "bg_topo.png"
+ *= depend_on_asset "bg_conteudo.png"
+ *= depend_on_asset "bg_footer.png"
+ *= depend_on_asset "bg_footer.png"
+ *= depend_on_asset "bg_conteudo.png"
+ *= depend_on_asset "bg_branco85.png"
+ *= depend_on_asset "bg_freebox.png"
+ *= depend_on_asset "divisor_vertical.png"
+ *= depend_on_asset "balao_cristo.png"
+ *= depend_on_asset "balao_bonde.png"
+ *= depend_on_asset "ico_play.png"
+ *= depend_on_asset "flag_sprite.png"
+ *= depend_on_asset "flag_sprite.png"
+ *= depend_on_asset "flag_sprite.png"
+ *= depend_on_asset "flag_sprite.png"
+ *= depend_on_asset "alerta.png"
+ *= depend_on_asset "free.png"
+ *= depend_on_asset "loader.gif"
+ *= depend_on_asset "divisor_horizontal.png"
+*/
 /* Bossa in Rio stylesheet */
 
 /* reset */
@@ -1064,7 +1090,7 @@ input[type="submit"][disabled] {
 
   &:before {
     content: "";
-    background: transparent image-url('loader.gif') no-repeat center;
+    background: transparent url(asset-path("loader.gif", image)) no-repeat center;
     display: none;
     width: 100%;
     height: 100%;

@@ -8,6 +8,7 @@
  *= require_self
  *= require site/jquery-qtip
  *= require site/style
+ *= depend_on_asset "loader.gif"
 */
 
 #fancybox-wrap tr { background-color: inherit }
