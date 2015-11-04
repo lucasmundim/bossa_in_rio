@@ -15,6 +15,7 @@
  *= depend_on_asset "ico_play.png"
  *= depend_on_asset "ico_skype.png"
  *= depend_on_asset "ico_twitter.png"
+ *= depend_on_asset "ico_whatsapp.png"
  *= depend_on_asset "loader.gif"
  *= depend_on_asset "madeira01.jpg"
  *= depend_on_asset "madeira02.jpg"
@@ -64,6 +65,15 @@ ol > li {
 
 .icon-facebook {
   background: url(asset-path("ico_facebook.png", image)) no-repeat scroll 0 0 transparent;
+  display: block;
+  height: 30px;
+  line-height: 30px;
+  text-indent: 38px;
+  width: 50px;
+}
+
+.icon-whatsapp {
+  background: url(asset-path("ico_whatsapp.png", image)) no-repeat scroll 0 0 transparent;
   display: block;
   height: 30px;
   line-height: 30px;
