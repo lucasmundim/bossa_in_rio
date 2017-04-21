@@ -6,6 +6,7 @@
  *= depend_on_asset "bg_conteudo.png"
  *= depend_on_asset "bg_footer.png"
  *= depend_on_asset "bg_freebox.png"
+ *= depend_on_asset "bg_freebox_empty.png"
  *= depend_on_asset "bg_topo.png"
  *= depend_on_asset "divisor_horizontal.png"
  *= depend_on_asset "divisor_vertical.png"
@@ -296,6 +297,16 @@ body#pgIn {
   float: left;
   margin: 20px 9px 20px 10px;
   background: transparent url(asset-path("bg_freebox.png", image)) no-repeat center bottom;
+
+  a { text-decoration: none; }
+}
+
+.freeBoxEmpty {
+  width: 220px;
+  height: 103px;
+  float: left;
+  margin: 20px 9px 20px 10px;
+  background: transparent url(asset-path("bg_freebox_empty.png", image)) no-repeat center bottom;
 
   a { text-decoration: none; }
 }
@@ -892,6 +903,18 @@ h4.toggle-list + ul {
 }
 
 .freeBox a:hover {
+  cursor: default;
+}
+
+.freeBoxEmpty h4 {
+  font-size: 16px;
+  line-height: 16px;
+  margin: 0;
+  padding: 0;
+  color: #335a28;
+}
+
+.freeBoxEmpty a:hover {
   cursor: default;
 }
 
