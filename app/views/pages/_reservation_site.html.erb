@@ -1,32 +1,9 @@
 <div id="container">
-<iframe id="be_iframe" width="100%" frameborder="0" scrolling="no"></iframe>
+<iframe id="be_iframe" width="100%" height="2300" frameborder="0" scrolling="no"></iframe>
 <script>// <![CDATA[
-    function getParameterByName(name,defaultValue) {
-        name = name.replace(/[\[]/, "\[").replace(/[\]]/, "\]");
-        var regex = new RegExp("[\?&]" + name + "=([^&#]*)"),
-            results = regex.exec(location.search);
-        return results == null ? defaultValue : decodeURIComponent(results[1].replace(/\+/g, " "));
-    }
     document.addEventListener("DOMContentLoaded", function(event) {
-      var toDate = getParameterByName("to","");
-      var tomorrow = moment().tz("America/Sao_Paulo").add(1, 'day').format("YYYY-MM-DD");
-      var fromDate = getParameterByName("from", tomorrow);
-      var end_date = getParameterByName("end_date","");
-      var start_date = getParameterByName("start_date","");
-
-      var num_adults = getParameterByName("num_adults",0);
-      var nAdults = getParameterByName("nAdults",0);
-      var nChilds = getParameterByName("nChilds",0);
-      var nBabies = getParameterByName("nBabies",0);
-      var url = "https://www.sistemahoteleiro.com/motor-reservas/reservas?hotelToken=2608c309bb616b1aa3957bf1cdef5e45&from="+fromDate+"&to="+toDate+ "&num_adults="+num_adults+"&nAdults="+nAdults+"&nChilds="+ nChilds +"&nBabies="+nBabies+"&start_date="+start_date+"&end_date="+end_date+"&language=<%= locale_for_reservation %>&currency=DEFAULT";
+      var url = "https://admin.hqbeds.com.br/<%= locale_for_reservation %>/hqb/2GLZM3VgqY/availability";
       document.getElementById("be_iframe").src = url;
-    });
-// ]]></script>
-<script src="https://sistemahoteleiro.com/lib/iframeResizer.min.js"></script>
-<script>// <![CDATA[
-    iFrameResize({
-        checkOrigin: false,
-        enablePublicMethods: true
     });
 // ]]></script>
 </div>
